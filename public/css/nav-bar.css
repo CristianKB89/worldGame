@@ -1,9 +1,4 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-home{
+.nav-home{
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -12,7 +7,12 @@
       width: 100vw;
         height: 50px;
      position: relative;
-  }
+     background-color: #fff;
+}
+.nav-home a{
+    text-decoration: none;
+    color: #000;
+}
 .nav-toggle{
     background-color: #eee;
     height: 500px;
@@ -21,10 +21,45 @@
     top: 50px;
     left: -100%;
 }
+
+.nav-bar-img {
+    width: 75px;
+}
+
 .active{
     left: 0;
     width: 90%;
 }
+.login-toggle{
+    background-color: #eee;
+    width: 0;
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    border: 1px solid #bbb;
+}
+.active-login{
+    right: 0;
+    width: 120px;
+    height: 80px;
+}
+.nav-toggle, .login-toggle{
+    transition: all 0.2s ease-in-out;
+}
+.menu-nav, .login-toggle-nav{
+    cursor: pointer;
+}
+.login-toggle ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.login-toggle ul li{
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
 
 .nav-toggle ul{
     list-style: none;

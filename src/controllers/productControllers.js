@@ -3,6 +3,9 @@ const productController ={
         res.render("product-detail", {
             title: "Product Detail"
         })
+    },
+    productDetail: (req, res) => {
+        res.render("product-detail");
     }
 }
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>Registrarse</title>
+</head>
+<body class="bg-form">
+    <%- include('nav-bar') %>
+    <form class="signup-form" action="">
+        <h2>Registrarse</h2>
+        <label for="Usuario">
+            <input type="text" name="Usuario" id="Usuario" placeholder="Usuario">
+        </label>
+        <label for="email">
+            <input type="email" name="email" id="email" placeholder="Email">
+        </label>
+        <label for="Contraseña">
+            <input type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña">
+        </label>
+        <label class="form-img" for="img">
+            <input type="file" name="img" id="img" placeholder="Imagen">
+        </label>
+        <button type="submit">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="">Inicia sesión</a></p>
+    </form>
+</body>
+</html>
