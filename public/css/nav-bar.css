@@ -21,6 +21,11 @@
     top: 50px;
     left: -100%;
 }
+
+.nav-bar-img {
+    width: 75px;
+}
+
 .active{
     left: 0;
     width: 90%;
