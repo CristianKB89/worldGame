@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.homeContainer {
+    width: 100%;
+}
+
+.homeContainer .homeBanner {
+    position: relative;
+    width: 100%;
+}
+
+.homeContainer .homeBanner picture img {
+    width: 100%;
+}
+
+.homeContainer .homeBanner .homeBannerTxt {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    width: 100%;
+    z-index: 99;
+}
+
+.homeContainer .homeBanner .homeBannerTxt h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.homeContainer .homeBanner .homeBannerTxt a {
+    font-size: 15px;
+    padding: 5px 0;
+    color: #054b16;
+    background-color: #9bf00e;
+    text-decoration: none;
+    font-weight: 900;
+    width: 220px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.homeContainer .homeIcons ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 15px 0;
+    width: 100%;
+    justify-content: center;
+}
+
+.homeContainer .homeIcons ul li {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    width: 40%;
+}
+
+.homeContainer .homeIcons ul li i {
+    font-size:40px;
+    margin-bottom: 5px;
+    color: #107c10;
+}
+
+.homeContainer .homeIcons ul li a {
+    color: #107c10;
+    font-size: 15px;
+    font-weight:600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.homeContainer .homeAds {
+    padding: 0 2%;
+    width: 100%;
+}
+
+.homeContainer .homeAds .Ad {
+    margin-bottom: 3px;
+}
+
+.homeContainer .homeAds .Ad .AdImg {
+    background-position: center;
+    background-size: cover;
+    height: 35vh;
+    width: 100%;
+}
+
+.homeContainer .homeAds .Ad .AdTxt {
+    color: #fff;
+    padding: 40px 15px;
+}
+
+.homeContainer .homeAds .Ad .AdTxt h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.homeContainer .homeAds .Ad .AdTxt p{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.homeContainer .homeAds .Ad .AdTxt a{
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.homeContainer .homeFreeGames {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.homeContainer .homeRecomended {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.homeContainer .homeRecomended h2 {
+    width: 100%;
+    color: #4b4b4b;
+    font-size: 26px;
+    margin: 0 0 25px 7%;
+}

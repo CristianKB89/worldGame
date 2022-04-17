@@ -1,0 +1,18 @@
+<a href="#" class="cardGame">
+  <div>
+    <img src="./img/haloimgmuestra2.jpg" alt="banner" style="width: 100%;">
+    <% if (discount> 0) { %>
+      <P>ON SALE</P>
+      <% } %>
+        <h3>Halo infinite</h3>
+        <% if (discount==100) { %>
+          <h4>Free this week!</h4>
+        <% } else if (discount > 0) { %>
+          <h4>$<%= discount %></h4>
+          <h4>$99999</h4>
+          
+        <% } else { %>
+          <h4>$99999</h4>
+        <% } %>
+  </div>
+</a>
