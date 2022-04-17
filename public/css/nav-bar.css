@@ -1,0 +1,115 @@
+.nav-home{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      width: 100vw;
+        height: 50px;
+     position: relative;
+     background-color: #fff;
+}
+.nav-home a{
+    text-decoration: none;
+    color: #000;
+}
+.nav-toggle{
+    background-color: #eee;
+    height: 500px;
+    width: 0;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+}
+.active{
+    left: 0;
+    width: 90%;
+}
+.login-toggle{
+    background-color: #eee;
+    width: 0;
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    border: 1px solid #bbb;
+}
+.active-login{
+    right: 0;
+    width: 120px;
+    height: 80px;
+}
+.nav-toggle, .login-toggle{
+    transition: all 0.2s ease-in-out;
+}
+.menu-nav, .login-toggle-nav{
+    cursor: pointer;
+}
+.login-toggle ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.login-toggle ul li{
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+
+.nav-toggle ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.nav-toggle ul li{
+    border: 1px solid #ddd;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+}
+.nav-toggle ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 850px){
+    .nav-home{
+        padding: 0 20px;
+    }
+    .nav-home img{
+        border-right: 2px solid #222;
+        padding-right: 15px; ;
+    }
+    .nav-toggle{
+        background-color: #fff;
+        width: 100%;
+        height: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        align-items: center;
+        position:static
+    }
+    .nav-toggle ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .nav-toggle ul li{
+        width: auto;
+        height: auto;
+        border: none;
+    }
+    .menu-nav{
+        display: none;
+    }
+    .search-nav{
+        display: none;
+    }
+    .cart-shopping{
+        margin-right: 10px;
+    }
+}
