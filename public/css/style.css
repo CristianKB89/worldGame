@@ -1,4 +1,10 @@
 @import url('./general.css');
 @import url('./nav-bar.css');
+<<<<<<< HEAD
 @import url('./signup.css');
 @import url('./footer.css');
+=======
+@import url('./index.css');
+@import url('./cardGame.css');
+/* font-family: 'Open Sans', sans-serif; */
+>>>>>>> origin/dev_jimmy
