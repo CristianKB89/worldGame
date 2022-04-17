@@ -1,14 +1,81 @@
 <!DOCTYPE html>
-<html>
-  <%- include('partials/head') %>
-  <head>
-    <title><%= title %></title>
-  </head>
+<html lang="en">
+<%- include('partials/head', { title: "World Game" }) %>
+
   <body>
     <%- include('nav-bar') %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %>!</p>
-
-    <%- include('partials/footer') %>
+      <main class="homeContainer">
+        <section class="homeBanner">
+          <picture>
+            <source srcset="./img/haloimgmuestra320.jpg" media="(max-width: 768px)">
+            <img src="./img/haloimgmuestra.jpg" alt="banner">
+          </picture>
+          <div class="homeBannerTxt">
+            <h2>Halo Infinite</h2>
+            <p>Play now!Play now!Play now!Play now!Play now!</p>
+            <a href="#">Free</a>
+          </div>
+        </section>
+        <section class="homeIcons">
+          <ul>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="#">All games</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="#">Save up</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="#">Free 2 play</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="#">Login</a>
+            </li>
+          </ul>
+        </section>
+        <section class="homeAds">
+          <section class="Ad" style="background-color: #2f302f;">
+            <div class="AdImg"  style="background-image: url(./img/haloimgmuestra.jpg);">
+            </div>
+            <div class="AdTxt">
+              <h3>Halo infinite</h3>
+              <p>Become spartan!</p>
+              <a href="#">Get it now ></a>
+            </div>
+          </section>
+          <section class="Ad" style="background-color: #107c10;">
+            <div class="AdImg"  style="background-image: url(./img/haloimgmuestra.jpg);">
+            </div>
+            <div class="AdTxt">
+              <h3>Halo infinite</h3>
+              <p>Become spartan!</p>
+              <a href="#">Get it now ></a>
+            </div>
+          </section>
+          <section class="Ad" style="background-color: #2f302f;">
+            <div class="AdImg"  style="background-image: url(./img/haloimgmuestra.jpg);">
+            </div>
+            <div class="AdTxt">
+              <h3>Halo infinite</h3>
+              <p>Become spartan!</p>
+              <a href="#">Get it now ></a>
+            </div>
+          </section>
+        </section>
+        <section class="homeFreeGames">
+          <%- include('partials/cardGame', { discount: 100 }) %>
+          <%- include('partials/cardGame', { discount: 100 }) %>
+        </section>
+        <section class="homeRecomended">
+          <h2>Recomended for you</h2>
+          <%- include('partials/cardGame', { discount: 50 }) %>
+          <%- include('partials/cardGame', { discount: 0 }) %>
+        </section>
+      </main>
+      <%- include('partials/footer') %>
   </body>
+
 </html>
