@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -5,6 +11,7 @@ footer {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
+    background-color: rgba(242, 242, 242, 1);
 }
 
 .footer-social-networks-icons-box {
@@ -52,4 +59,21 @@ footer {
     
 }
 
-@media (min-width: 769px){}
+@media (min-width: 769px){
+    .footer-lists-box{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-list{
+        width: 15em;
+    }
+
+    .footer-social-networks-icons-box {
+        width: 40%;
+    }
+
+    .social-networks-icons{
+        text-align: start;
+    }
+}
