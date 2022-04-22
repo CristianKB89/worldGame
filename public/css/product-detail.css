@@ -1,0 +1,21 @@
+.det-container{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.det-header{
+    border: 1px dashed green;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.det-img{
+    width: 100%;
+}
+

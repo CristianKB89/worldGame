@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head', { title: "Titulo del juego" }) %>
+<%- include('./partials/head', { title: "Titulo del juego" }) %>
+
     <body>
         <%- include('nav-bar') %>
-        <main>
-            
-        </main>
-        <%- include('./partials/footer.ejs') %>
+            <main>
+                <div class="det-container">
+                    <div class="det-header">
+                        <div class="det-img">
+                            <img src="/public/images/img_product_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Categoria</h1>
+                    </div>
+                    <div>
+                        <h1>Detalles</h1>
+                    </div>
+                    <div>
+                        <h1>Datos Desarrollo</h1>
+                    </div>
+                    <div>
+                        <h1>Plataformas</h1>
+                    </div>
+                    <div>
+                        <h1>Funcionalidades</h1>
+                    </div>
+                </div>
+            </main>
+            <%- include('./partials/footer.ejs') %>
     </body>
+
 </html>
