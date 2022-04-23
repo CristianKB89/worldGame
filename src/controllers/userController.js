@@ -4,6 +4,9 @@ const userController = {
     },
     signup: (req, res) => {
         res.render('signup');
+    },
+    login: (req, res) => {
+        res.render('login');
     }
 }
 

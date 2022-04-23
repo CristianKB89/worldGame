@@ -8,6 +8,7 @@
         height: 50px;
      position: relative;
      background-color: #fff;
+     z-index: 2000;
 }
 .nav-home a{
     text-decoration: none;
@@ -29,19 +30,24 @@
 .active{
     left: 0;
     width: 90%;
+    z-index: 1000;
 }
 .login-toggle{
     background-color: #eee;
-    width: 0;
+    width: 120px;
+    height: 80px;
     position: absolute;
-    top: 50px;
-    right: -100%;
+    top: -100px;
+    right: 0;
     border: 1px solid #bbb;
+    z-index: 1000;
+    
 }
 .active-login{
     right: 0;
-    width: 120px;
-    height: 80px;
+    top: 50px;
+    z-index: 1000;
+    
 }
 .nav-toggle, .login-toggle{
     transition: all 0.2s ease-in-out;
