@@ -1,4 +1,4 @@
-const productController ={
+const productsController ={
     getProducts: (req, res) => {
         res.render("product-detail", {
             title: "Product Detail"
@@ -12,4 +12,4 @@ const productController ={
     }
 }
 
-module.exports = productController;
+module.exports = productsController;

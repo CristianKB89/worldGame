@@ -1,0 +1,229 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.det-main{
+    background-color: #2f2f2f;
+    color: white;
+    width: 100%;
+}
+.det-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.det-header{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.det-overlay{
+    background-color: #000000a3;
+    background: #333232a3;
+    backdrop-filter: blur(16px);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.det-back-img{
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.det-back-img img{
+    width: 100%;
+}
+
+.det-content{
+    margin-bottom: 0;
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.det-img-prd{
+    height: 100%;
+    margin-inline-end: 1rem;
+}
+
+.det-img-prd img{
+    width: 100px;
+    height: 120px;
+}
+
+.det-det-prd{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.det-det-prd-1{
+    display: flex;
+}
+
+.det-det-prd-1 h1{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: unset;
+    margin-bottom: 0.5rem;
+}
+
+.det-des{
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    opacity: 0.65;
+}
+
+.det-price{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.det-cont-1{
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    position: inherit;
+}
+
+.det-cont-1_1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.det-row-1{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.det-acce{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5rem;
+    margin-inline-end: 2rem;
+    margin-top: 1rem;
+}
+
+.det-acce i{
+    vertical-align: top;
+}
+
+.det-i-acc{
+    background-color: #3a5b99;
+    border-radius: 0.3125rem;
+    fill: #fff;
+    height: 1.5rem;
+    margin-inline-end: 0.5rem;
+    padding: 0.25rem;
+    width: 1.5rem;
+}
+
+.det-i-idioms{
+    background-color: #505050;
+    border-radius: 0.3125rem;
+    fill: #fff;
+    height: 1.5rem;
+    margin-inline-end: 0.5rem;
+    padding: 0.25rem;
+    width: 1.5rem;
+}
+
+.det-buttons button{
+    border: 0px;
+    margin: 5px;
+    background: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.det-but-green button{
+    width: 100%;
+    background-color: #008746;
+    align-items: center;
+    justify-content: center;
+}
+
+.det-but-grey{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.det-but-grey button{
+    background-color: #484e58;
+}
+
+.det-but-game{
+    cursor: pointer;
+}
+
+.det-but-1{
+    width: 85%;
+    cursor: pointer;
+}
+.det-but-2{
+    border-radius: 50%;
+    display: inline-block;
+    font-size: .5rem;
+    height: 2.5rem;
+    min-width: unset;
+    padding: unset;
+    text-align: center;
+    white-space: nowrap;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.det-cat{
+   background-color: #151517; 
+   padding-top: 1rem;
+   margin-bottom: 1rem;
+   display: flex;
+   padding-bottom: 1rem;
+}
+
+.det-cat-content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.det-cat-content img{
+    display: flex;
+    top: unset;
+    left: unset;
+    position: unset;
+    margin-inline-end: 1rem;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 0 10px;
+}
+
+.det-cat-content h1{
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: unset;
+    margin-bottom: 0.5rem;
+    margin: 0%;
+}
+
+.det-cat-content span{
+    color: ffffffa6;
+}
+
