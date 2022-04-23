@@ -49,9 +49,9 @@
     z-index: 1000;
     
 }
-.nav-toggle, .login-toggle{
+/* .nav-toggle, .login-toggle{
     transition: all 0.2s ease-in-out;
-}
+} */
 .menu-nav, .login-toggle-nav{
     cursor: pointer;
 }

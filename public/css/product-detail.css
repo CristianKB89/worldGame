@@ -170,8 +170,13 @@ body{
     background-color: #484e58;
 }
 
+.det-but-game{
+    cursor: pointer;
+}
+
 .det-but-1{
     width: 85%;
+    cursor: pointer;
 }
 .det-but-2{
     border-radius: 50%;
@@ -183,6 +188,7 @@ body{
     text-align: center;
     white-space: nowrap;
     width: 2.5rem;
+    cursor: pointer;
 }
 
 .det-cat{
