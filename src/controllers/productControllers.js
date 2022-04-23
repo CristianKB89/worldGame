@@ -6,6 +6,9 @@ const productController ={
     },
     productDetail: (req, res) => {
         res.render("product-detail");
+    },
+    gameList: (req, res) => {
+        res.render("gamesList");
     }
 }
 
