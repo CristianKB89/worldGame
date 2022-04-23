@@ -22,6 +22,6 @@ let upload = multer({storage});
 
 router.get('/', usersController.getUsers);
 router.get('/signup', usersController.signup);
-router.get('/login', userController.login);
+router.get('/login', usersController.login);
 
 module.exports = router;
