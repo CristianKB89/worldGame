@@ -67,7 +67,7 @@
 }
 
 .homeContainer .homeIcons ul li i {
-    font-size:40px;
+    font-size: 40px;
     margin-bottom: 5px;
     color: #107c10;
 }
@@ -75,7 +75,7 @@
 .homeContainer .homeIcons ul li a {
     color: #107c10;
     font-size: 15px;
-    font-weight:600;
+    font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -86,19 +86,34 @@
 }
 
 .homeContainer .homeAds .Ad {
+    width: 100%;
     margin-bottom: 3px;
+    position: relative;
+}
+
+.homeContainer .homeAds .Ad .AdTwo {
+    width: 100%;
 }
 
 .homeContainer .homeAds .Ad .AdImg {
     background-position: center;
     background-size: cover;
-    height: 35vh;
+    height: 50vh;
     width: 100%;
 }
 
 .homeContainer .homeAds .Ad .AdTxt {
+    background-color: #2f302f;
+    bottom: 0;
     color: #fff;
+    left: 0;
     padding: 40px 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.homeContainer .homeAds .AdTwo .Ad:nth-child(1) .AdTxt {
+    background-color: #107c10;
 }
 
 .homeContainer .homeAds .Ad .AdTxt h3 {
@@ -106,12 +121,12 @@
     margin-bottom: 30px;
 }
 
-.homeContainer .homeAds .Ad .AdTxt p{
+.homeContainer .homeAds .Ad .AdTxt p {
     font-size: 15px;
     margin-bottom: 30px;
 }
 
-.homeContainer .homeAds .Ad .AdTxt a{
+.homeContainer .homeAds .Ad .AdTxt a {
     font-size: 15px;
     text-decoration: none;
     font-weight: 900;
@@ -120,11 +135,52 @@
 }
 
 .homeContainer .homeFreeGames {
-    align-items: center;
+    align-items: flex-start;
+    background-position: center;
+    background-size: cover;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 0;
+    margin-bottom: 30px;
+    padding: 30px 5%;
     width: 100%;
+}
+
+.homeContainer .homeFreeGames .homeGame {
+    width: 290px;
+    background-color: #107c10;
+    margin: 10px 0;
+}
+
+.homeContainer .homeFreeGames .homeGame .homeGameImg,
+.homeContainer .homeFreeGames .homeGame .homeGameImg img {
+    width: 100%;
+}
+
+.homeContainer .homeFreeGames .homeGame .homeGameTxt {
+    color: #fff;
+    padding: 20px;
+}
+
+.homeContainer .homeFreeGames .homeGame .homeGameTxt h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.homeContainer .homeFreeGames .homeGame .homeGameTxt a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.homeContainer .homeFreeGames h2 {
+    width: 100%;
+    font-size: 26px;
+    margin: 0 0 25px 2%;
+    color: #fff;
 }
 
 .homeContainer .homeRecomended {
@@ -140,4 +196,111 @@
     color: #4b4b4b;
     font-size: 26px;
     margin: 0 0 25px 7%;
+}
+
+@media screen and (min-width: 768px) {
+    .homeContainer .homeBanner .homeBannerTxt {
+        top: auto;
+        bottom: 100px;
+    }
+
+    .homeContainer .homeBanner .homeBannerTxt h2 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
+    .homeContainer .homeBanner .homeBannerTxt p {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .homeContainer .homeIcons ul li {
+        margin: 35px 0;
+        width: 23%;
+    }
+
+    .homeContainer .homeAds {
+        padding: 0 1%;
+    }
+
+    .homeContainer .homeAds .Ad {
+        margin-bottom: 5px;
+    }
+
+    .homeContainer .homeAds .Ad .AdImg {
+        height: 85vh;
+    }
+
+    .homeContainer .homeAds .AdTwo .Ad:nth-child(1) .AdImg {
+        height: 60vh;
+    }
+
+    .homeContainer .homeAds .Ad .AdTxt {
+        background-color: #ffffff00;
+        padding: 40px 0 65px 25px;
+    }
+
+    .homeContainer .homeAds .AdTwo .Ad:nth-child(1) .AdTxt {
+        background-color: #107c10;
+    }
+
+    .homeContainer .homeAds .Ad .AdTxt h3 {
+        font-size: 46px;
+    }
+
+    .homeContainer .homeAds .Ad .AdTxt p {
+        font-size: 20px;
+    }
+
+    .homeContainer .homeFreeGames .homeGame {
+        width: 290px;
+        background-color: #107c10;
+        margin: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+    .homeContainer .homeBanner .homeBannerTxt {
+        align-items: flex-start;
+        bottom: 0;
+        height: 100%;
+        justify-content: center;
+        padding: 0 200px 0 72px;
+        top: auto;
+    }
+
+    .homeContainer .homeIcons ul li {
+        margin: 35px 0;
+        width: 13%;
+    }
+
+    .homeContainer .homeAds {
+        padding: 0 .7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .homeContainer .homeAds .Ad {
+        width: 49.8%;
+        display: flex;
+        justify-self: stretch;
+    }
+
+    .homeContainer .homeAds .Ad .AdImg {
+        height: auto;
+    }
+
+    .homeContainer .homeAds .AdTwo {
+        width: 49.8%;
+    }
+
+    .homeContainer .homeAds .AdTwo .Ad {
+        width: 100%;
+    }
+
+    .homeContainer .homeAds .AdTwo .Ad .AdImg {
+        height: 60vh;
+    }
+
 }
