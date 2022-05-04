@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head', { title: "Login" }) %>
+</head>
+<body class="bg-form">
+    <%- include('nav-bar') %>
+    <form class="signup-form" action="">
+        <h2>Agregar Juego</h2>
+        <label for="title">
+            <input type="text" name="title" id="title" placeholder="titulo del juego">
+        </label>
+        <label for="description">
+            <textarea placeholder="descripción" name="description" id="description" cols="35" rows="10"></textarea>
+        </label>
+        <label for="price">
+            <input type="number" name="price" id="price" placeholder="precio">
+        </label>
+        <label for="discount">
+            <input type="number" name="discount" id="discount" placeholder="descuento">
+        </label>
+        <label for="imgCard">
+            <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
+        </label>
+        <label for="imgDetail">
+            <input type="file" name="imgDetail" id="imgDetail" placeholder="Imagen para el detalle">
+        </label>
+    
+        <select name="" id="">
+            <option value="">generos</option>
+        </select>
+        <p>Plataforma</p>
+        <label for="xbox"><input class="checkbox-product"class="checkbox-product" type="checkbox" name="plataforma" id="xbox"> X-box </label>
+        <label for="play"><input class="checkbox-product" type="checkbox" name="plataforma" id="play"> PlayStation </label>
+        <label for="pc"><input class="checkbox-product" type="checkbox" name="plataforma" id="pc"> PC </label>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

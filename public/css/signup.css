@@ -53,6 +53,15 @@
     border: none;
     width: 100%;
 }
+.signup-form .checkbox-product{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #eee;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 10px;
+}
 @media screen and (min-width: 450px){
     .signup-form{
         width: 400px;
