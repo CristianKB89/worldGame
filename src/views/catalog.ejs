@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', { title: "World Game Catalogo" }) %>
+
+    <body>
+        <%- include('nav-bar')  %> 
+        <main class="catalogContainer">
+            <section class="catalogTitle">
+                <h1>CATÁLOGO DE JUEGOS WORLD GAME</h1>
+                <form action="" class="catalogSearch">
+                    <label for="searchCatalog">Explora el catálogo completo.</label>
+                    <div>
+                        <input type="text" name="searchCatalog" id="searchCatalog" placeholder="BUSCAR TODOS LOS JUEGOS">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <section class="calogListContainer">
+                <section class="catalogFilters">
+                    <h2>Filtros</h2>
+                    <form action="">
+                        <button type="reset">Borrar Filtros</button>
+                        <h5><i class="fa-solid fa-angle-right"></i> Jugar en</h5>
+                        <label for="xbox">
+                            <input type="radio" name="playOn" id="xbox" />
+                            Xbox
+                        </label>
+                        <label for="play">
+                            <input type="radio" name="playOn" id="play" />
+                            Play Station
+                        </label>
+                        <label for="pc">
+                            <input type="radio" name="playOn" id="pc" />
+                            Pc
+                        </label>
+
+
+                        <h5><i class="fa-solid fa-angle-right"></i> Genero</h5>
+                        <label for="action">
+                            <input type="radio" name="genre" id="action" />
+                            Accion
+                        </label>
+                        <label for="indie">
+                            <input type="radio" name="genre" id="indie" />
+                            Indie
+                        </label>
+                        <label for="shooter">
+                            <input type="radio" name="genre" id="shooter" />
+                            Shooter
+                        </label>
+
+
+                        <h5><i class="fa-solid fa-angle-right"></i> Ofertas</h5>
+                        <label for="none">
+                            <input type="radio" name="sale" id="none" />
+                            Ninguno
+                        </label>
+                        <label for="less">
+                            <input type="radio" name="sale" id="less" />
+                            Menos 50%
+                        </label>
+                        <label for="more">
+                            <input type="radio" name="sale" id="more" />
+                            Mas 50%
+                        </label>
+
+                        <button type="submit" class="filterSubmit">Aplicar</button>
+                    </form>
+                </section>
+                <section class="catalogList">
+                    <div class="catalogListTxt">
+                        <div>
+                            <h2>Todos los juegos</h2>
+                            <p>Mostrando 1-50 de 2396 resultados</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <%- include('partials/cardGame', { discount: 50 }) %>
+                        <%- include('partials/cardGame', { discount: 0 }) %>
+                        <%- include('partials/cardGame', { discount: 15 }) %>
+                        <%- include('partials/cardGame', { discount: 0 }) %>
+                        <%- include('partials/cardGame', { discount: 50 }) %>
+                        <%- include('partials/cardGame', { discount: 0 }) %>
+                        <%- include('partials/cardGame', { discount: 15 }) %>
+                        <%- include('partials/cardGame', { discount: 0 }) %>
+                    </div>
+                </section>
+            </section>
+            <section class="catalogPromo">
+                <div class="catalogPromoTxt">
+                    <h4>Descubre tu siguiente juego favorito</h4>
+                    <p>Juega lo mejor de lo mejor<br/>Mira los mejores calificados</p>
+                    <a href="#">Ir ahora</a>
+                </div>
+                <div 
+                    class="catalogPromoImg"  
+                    style="background-image: url(/img/haloimgmuestra768.jpg);">
+                </div>
+            </section>
+            <section class="catalogDigital">
+                <h4>¡Los discos ya son cosa del pasado!</h4>
+                <p>La mejor manera de jugar es el gaming digital</p>
+            </section>
+        </main>
+        <%- include('partials/footer')  %> 
+    </body>
+
+</html>
