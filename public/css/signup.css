@@ -62,6 +62,16 @@
     color: #333;
     border-radius: 10px;
 }
+.error{
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+    color: red;
+    font-size: 13px;
+}
+.form-create-product{
+    padding:20px;
+}
 @media screen and (min-width: 450px){
     .signup-form{
         width: 400px;
