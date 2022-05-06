@@ -18,7 +18,7 @@
         </p>
     <% } %>
 
-    <form class="signup-form" action="/users/signup" method="POST" enctype="multipart/form-data">
+    <form class="signup-form" action="/users/signup" method="POST">
         <h2>Registrarse</h2>
         <label for="userName"> 
             <input type="text" name="userName" id="userName" placeholder="Username" value="<%= locals.oldData?oldData.userName:null %>">
