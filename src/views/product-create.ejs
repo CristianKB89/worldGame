@@ -43,6 +43,12 @@
                 <span class="error"><%= errors.imgDetail.msg %></span>
             <%}%>
         </label>
+        <label for="ratingAge">
+            <input type="number" min="0" max="21" name="ratingAge" id="ratingAge"placeholder="Clasificación de edad">
+            <% if (locals.errors && errors.imgDetail){%>
+                <span class="error"><%= errors.imgDetail.msg %></span>
+            <%}%>
+        </label>
     
         <select name="genre" id="">
             <option value="">Generos</option>
