@@ -8,5 +8,8 @@ const indexController = {
         let obtainedProduct = products.filter((specificProduct) => specificProduct.productName.toLowerCase().includes(searchedProduct));
         res.render('./users/results', {products, searchedProduct, obtainedProduct});
     } */
+    comunidad: (req, res) =>{
+        res.render('community')
+    }
 }
 module.exports = indexController;

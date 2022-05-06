@@ -5,6 +5,10 @@
 @import url('./index.css');
 @import url('./cardGame.css');
 @import url('./product-detail.css');
+<<<<<<< HEAD
 @import url('./catalog.css');
 @import url('./shoppingCart.css');
+=======
+@import url('./community.css');
+>>>>>>> origin/dev_kevinFarukh
 /* font-family: 'Open Sans', sans-serif; */
