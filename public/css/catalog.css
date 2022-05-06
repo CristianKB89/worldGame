@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.catalogContainer {
+    width: 100%;
+}
+
+.catalogContainer .catalogTitle {
+    padding: 48px 0 0 0;
+    width: 100%;
+}
+
+.catalogContainer .catalogTitle h1 {
+    color: #107c10;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.catalogContainer .catalogTitle h1::after {
+    background-color: #9bf00e;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    content: "";
+    display: block;
+    height: 9px;
+    margin: 20px auto;
+    width: 45px;
+}
+
+.catalogContainer .catalogTitle .catalogSearch {
+    background-color: #e7e7e7;
+    margin-top: -70px;
+    padding: 70px 0 40px;
+    text-align: center;
+}
+
+.catalogContainer .catalogTitle .catalogSearch label {
+    font-weight: 500;
+}
+
+.catalogContainer .catalogTitle .catalogSearch div {
+    border: 1px solid #868686;
+    display: flex;
+    margin: 40px auto 0;
+    width: 80%;
+}
+
+.catalogContainer .catalogTitle .catalogSearch div input {
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    width: 90%;
+}
+
+.catalogContainer .catalogTitle .catalogSearch div button {
+    width: 10%;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+.catalogContainer .calogListContainer {
+    width: 100%;
+    padding: 50px 0 0;
+}
+
+.catalogContainer .calogListContainer .catalogFilters {
+    width: 100%;
+    padding: 0 3% 30px;
+}
+
+.catalogContainer .calogListContainer .catalogFilters h2 {
+    font-size: 22px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form button {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    color: #4b4b4b;
+    font-weight: 900;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form button:hover {
+    text-decoration: underline;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form h5 {
+    background-color: #f0f0f0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    padding: 10px 20px;
+    width: 60%;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form label input {
+    margin-left: 20px;
+}
+
+.catalogContainer .calogListContainer .catalogFilters form .filterSubmit {
+    color: #107c10;
+    font-size: 20px;
+    margin: 15px 0 0 20px;
+}
+
+.catalogContainer .calogListContainer .catalogList .catalogListTxt {
+    width: 100%;
+    padding: 0 3%;
+}
+
+.catalogContainer .calogListContainer .catalogList .catalogListTxt p {
+    font-size: 13px;
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.catalogContainer .calogListContainer .catalogList .list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalogContainer .catalogPromo {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.catalogContainer .catalogPromo .catalogPromoTxt {
+    background-color: #2f2f2f;
+    color: #ffffff;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.catalogContainer .catalogPromo .catalogPromoTxt h4 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.catalogContainer .catalogPromo .catalogPromoTxt p {
+    margin-bottom: 20px;
+}
+
+.catalogContainer .catalogPromo .catalogPromoTxt a {
+    background-color: #9bf00e;
+    color: #054b16;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease .3s;
+}
+
+.catalogContainer .catalogPromo .catalogPromoTxt a:hover {    
+    background-color: #fff;
+}
+
+.catalogContainer .catalogPromo .catalogPromoImg {
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+}
+
+.catalogContainer .catalogDigital {
+    border: 2px solid #054b16;
+    margin: 40px auto;
+    padding: 50px 30px;
+    text-align: center;
+    width: 90%;
+}
+
+.catalogContainer .catalogDigital h4 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .catalogContainer .catalogTitle h1 {
+        font-size: 62px;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch {
+        margin-top: -100px;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch label {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch div {
+        margin: 60px auto 0;
+        width: 60%;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch div input {
+        padding: 10px 10px;
+    }
+
+    .catalogContainer .calogListContainer .catalogFilters {
+        padding: 0 5% 30px;
+    }
+
+    .catalogContainer .calogListContainer .catalogList .catalogListTxt {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .catalogContainer .catalogPromo {
+        flex-direction: row;
+    }
+
+    .catalogContainer .catalogPromo .catalogPromoTxt {
+        background-color: #107c10;
+        text-align: left;
+        padding: 70px 2% 70px 5%;
+        width: 50%;
+    }
+
+    .catalogContainer .catalogPromo .catalogPromoTxt h4 {
+        font-size: 46px;
+    }
+
+    .catalogContainer .catalogPromo .catalogPromoTxt p {
+        font-size: 18px;
+    }
+
+    .catalogContainer .catalogPromo .catalogPromoImg {
+        width: 50%;
+        align-self: stretch;
+        height: auto;
+    }
+
+    .catalogContainer .catalogDigital h4 {
+        font-size: 34px;
+    }
+
+    .catalogContainer .catalogDigital p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+
+    .catalogContainer .catalogTitle h1 {
+        max-width: 750px;
+        margin: 45px auto;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch {
+        margin-top: -110px;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch div {
+        margin: 60px auto 0;
+        width: 40%;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch {
+        padding: 70px 0;
+    }
+
+    .catalogContainer .calogListContainer {
+        padding: 50px 3% 0;
+        display: flex;
+    }
+
+    .catalogContainer .calogListContainer .catalogFilters {
+        width: 25%;
+        padding: 0 0 30px;
+    }
+
+    .catalogContainer .calogListContainer .catalogFilters form h5 {
+        width: 90%;
+    }
+    .catalogContainer .calogListContainer .catalogList {
+        width: 75%;
+        padding: 0 3% 50px;
+    }
+
+    .catalogContainer .catalogPromo {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1220px){
+
+    .catalogContainer .catalogTitle h1 {
+        font-size: 86px;
+        max-width: 1000px;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch {
+        margin-top: -120px;
+        padding-top: 120px;
+    }
+
+    .catalogContainer .catalogTitle .catalogSearch div {
+        width: 25%;
+    }
+
+    .catalogContainer .calogListContainer {
+        width: 75%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+
+    .catalogContainer .catalogPromo {
+        width: 75%;
+    }
+
+    .catalogContainer .catalogPromo .catalogPromoTxt {
+        padding: 120px 8%;
+    }
+
+    .catalogContainer .catalogDigital {
+        width: 75%;
+    }
+
+}

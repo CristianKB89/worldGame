@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cartContainer {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.cartContainer .cartEmtpy {
+    margin: 50px 0 30px;
+    width: 100%;
+}
+
+.cartContainer .cartEmtpy div {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.cartContainer .cartEmtpy div h3 {
+    display: inline;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cartContainer .cartEmtpy div a {
+    color: #0067b8;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.cartContainer .cartEmtpy div a:hover {
+    text-decoration: underline;
+}
+
+.cartContainer .cartEmtpy p {
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.cartContainer .cartListContainer {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.cartContainer .cartListContainer h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cartContainer .cartListContainer .cartList {
+    width: 100%;
+}
+
+.cartContainer .cartListContainer .cartList article {
+    align-items: flex-end;
+    border-bottom: 1px solid #d1d1d1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.cartContainer .cartListContainer .cartList article div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.cartContainer .cartListContainer .cartList article div img {
+    display: none;
+}
+
+.cartContainer .cartListContainer .cartList article div h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.cartContainer .cartListContainer .cartList article span {
+    display: flex;
+    align-items: flex-end;
+}
+
+.cartContainer .cartListContainer .cartList article span p {
+    display: none;
+}
+
+.cartContainer .cartListContainer .cartList article span h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.cartContainer .cartListContainer .cartList article i {
+    font-size: 18px;
+    color: #d1d1d1;
+    transition: all ease .3s;
+}
+
+.cartContainer .cartListContainer .cartList article i:hover {
+    color: #107c10;
+}
+
+.cartContainer .cartPay {
+    align-items: center;
+    border: 1px solid #107c10;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 30px;
+    padding: 30px 5%;
+    width: 100%;
+}
+
+.cartContainer .cartPay h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cartContainer .cartPay a {
+    color: #107c10;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease .3s;
+}
+
+.cartContainer .cartPay a:hover {
+    color: #054b16;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+
+    .cartContainer {
+        width: 90%;
+    }
+
+    .cartContainer .cartListContainer .cartList article {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cartContainer .cartListContainer .cartList article div {
+        display: flex;
+        align-items: flex-end;
+        grid-column: 1 / 4;
+    }
+
+    .cartContainer .cartListContainer .cartList article span {
+        grid-column: 4 / 4;
+        margin: 0 auto;
+    }
+
+    .cartContainer .cartListContainer .cartList article span p {
+        color: #8f8f8f;
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        margin-right: 10px;
+        line-height: 13px;
+    }
+
+    .cartContainer .cartListContainer .cartList article i {
+        grid-column: 5/5;
+        margin: 0 auto;
+    }
+
+    .cartContainer .cartPay h3 {
+        font-size: 26px;
+    }
+
+}
+
+@media screen and (min-width: 1084px) {
+
+    .cartContainer {
+        width: 75%;
+    }
+
+    .cartContainer .cartList {
+        border: 1px solid #8f8f8f;
+        padding: 10px;
+    }
+
+    .cartContainer .cartListContainer .cartList article:last-child{
+        border: none;
+        margin-bottom: 0;
+    }
+
+    .cartContainer .cartListContainer .cartList article div img {
+        width: 60px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .cartContainer .cartPay a {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (min-width: 1220px) {
+
+    .cartContainer {
+        width: 70%;
+    }
+}

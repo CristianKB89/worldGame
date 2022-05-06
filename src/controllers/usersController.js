@@ -11,6 +11,9 @@ const usersController = {
     },
     login: (req, res) => {
         res.render('login');
+    },
+    userProfile: (req, res) => {
+        res.render('userProfile');
     }
 }
 
