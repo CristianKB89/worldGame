@@ -4,6 +4,9 @@ const productsController ={
     },
     productDetail: (req, res) => {
         res.render("product-detail");
+    },
+    shoppingCart: (req, res) => {
+        res.render("shoppingCart");
     }
 }
 

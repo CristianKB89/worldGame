@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', { title: "Carro de compra" }) %>
+
+    <body>
+        <%- include('nav-bar') %>
+
+            <main class="cartContainer">
+                <section class="cartEmtpy">
+                    <div>
+                        <h3>
+                            Carro
+                        </h3>
+                        <a href="/products/">Continuar comprando</a>
+                    </div>
+                    <hr>
+                    <p>Tu carro está vacío.</p>
+                </section>
+                <section class="cartListContainer">
+                    <h1>Carro de compras</h1>
+                    <div class="cartList">
+                        <article>
+                            <div>
+                                <img src="/img/haloimgmuestra2.jpg" alt="">
+                                <h3>Halo infinite</h3>
+                            </div>
+                            <span>
+                                <p>0%</p>
+                                <h4>$900000</h4>
+                            </span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </article>
+                        <article>
+                            <div>
+                                <img src="/img/haloimgmuestra2.jpg" alt="">
+                                <h3>Halo infinite</h3>
+                            </div>
+                            <span>
+                                <p>0%</p>
+                                <h4>$900000</h4>
+                            </span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </article>
+                        <article>
+                            <div>
+                                <img src="/img/haloimgmuestra2.jpg" alt="">
+                                <h3>Halo infinite</h3>
+                            </div>
+                            <span>
+                                <p>0%</p>
+                                <h4>$900000</h4>
+                            </span>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </article>
+                    </div>
+                </section>
+                <section class="cartPay">
+                    <p>total:</p>
+                    <h3>$999999</h3>
+                    <a href="">comprar</a>
+                </section>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
+</html>
