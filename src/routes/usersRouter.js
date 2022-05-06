@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require ('multer');
 const path = require('path');
 const usersController = require('../controllers/usersController');
+const singupValidations = require('../middlewares/signupValidationsMiddleware');
 // const registerValidations = require('../middlewares/registerValidationsMiddleware');
 
 //---------------------------------------------- Multer Configurations -----------------------------------------------------------------------
@@ -22,6 +23,7 @@ let upload = multer({storage});
 
 router.get('/', usersController.getUsers);
 router.get('/signup', usersController.signup);
+router.post('/signup', singupValidations, usersController.register);
 router.get('/login', usersController.login);
 
 module.exports = router;
