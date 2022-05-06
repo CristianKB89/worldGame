@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', { title: "Perfil de usuario" }) %>
+
+    <body>
+        <%- include('nav-bar') %>
+            <main>
+                <section>
+                    <img src="/img/userImg.jpg" alt="userNick">
+                    <h1>userNick</h1>
+                    <h4>username</h4>
+                    <p>email</p>
+                    <a href="#">Editar perfil</a>
+                    <a href="#">Cerrar sesion   </a>
+                </section>
+                <section>
+                    <h2>Mi biblioteca</h2>
+                    <div>
+                        <h4>No hay nada, aun!</h4>
+                        <p>Conose tu sigiente juego favorito</p>
+                        <a href="/products">Ir ahora</a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <div>
+                              <img src="/img/haloimgmuestra2.jpg" alt="banner">
+                                  <h3>Halo infinite</h3>
+                                  <h4>Comprado: dd/mm/aaaa</h4>
+                            </div>
+                          </a>
+                    </div>
+                </section><section class="catalogPromo">
+                    <div class="catalogPromoTxt">
+                        <h4>Amplia tu biblioteca de juegos</h4>
+                        <p>Juega lo mejor de lo mejor<br/>Mira los mejores calificados</p>
+                        <a href="#">Ir ahora</a>
+                    </div>
+                    <div 
+                        class="catalogPromoImg"  
+                        style="background-image: url(/img/haloimgmuestra768.jpg);">
+                    </div>
+                </section>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
+</html>
