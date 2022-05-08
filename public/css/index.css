@@ -46,6 +46,11 @@
     width: 220px;
     text-transform: uppercase;
     margin-top: 10px;
+    transition: all ease .3s;
+}
+
+.homeContainer .homeBanner .homeBannerTxt a:hover {
+    background-color: #fff;
 }
 
 .homeContainer .homeIcons ul {
@@ -58,26 +63,30 @@
 }
 
 .homeContainer .homeIcons ul li {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 20px 0;
     width: 40%;
 }
 
-.homeContainer .homeIcons ul li i {
-    font-size: 40px;
-    margin-bottom: 5px;
-    color: #107c10;
-}
-
 .homeContainer .homeIcons ul li a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #107c10;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.homeContainer .homeIcons ul li a i {
+    font-size: 40px;
+    margin-bottom: 5px;
+    color: #107c10;
+}
+
+.homeContainer .homeIcons ul li a:hover {
+    color: #054b16;
 }
 
 .homeContainer .homeAds {
@@ -134,6 +143,10 @@
     color: #fff;
 }
 
+.homeContainer .homeAds .Ad .AdTxt a:hover {
+    text-decoration: underline;
+}
+
 .homeContainer .homeFreeGames {
     align-items: flex-start;
     background-position: center;
@@ -142,7 +155,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 30px;
-    padding: 30px 5%;
+    padding: 60px 5%;
     width: 100%;
 }
 
@@ -174,6 +187,10 @@
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
+}
+
+.homeContainer .homeFreeGames .homeGame .homeGameTxt a:hover {
+    text-decoration: underline;
 }
 
 .homeContainer .homeFreeGames h2 {
@@ -252,6 +269,10 @@
         font-size: 20px;
     }
 
+    .homeContainer .homeFreeGames {
+        padding: 80px 5%;
+    }
+
     .homeContainer .homeFreeGames .homeGame {
         width: 290px;
         background-color: #107c10;
@@ -267,6 +288,10 @@
         justify-content: center;
         padding: 0 200px 0 72px;
         top: auto;
+    }
+
+    .homeContainer .homeIcons {
+        padding: 20px 0;
     }
 
     .homeContainer .homeIcons ul li {
@@ -301,6 +326,18 @@
 
     .homeContainer .homeAds .AdTwo .Ad .AdImg {
         height: 60vh;
+    }
+
+    .homeContainer .homeFreeGames {
+        padding: 100px 5%;
+    }
+
+    .homeContainer .homeFreeGames h2, .homeContainer .homeRecomended h2 {
+        font-size: 34px;
+    }
+
+    .homeContainer .homeRecomended {
+        padding: 70px 0;
     }
 
 }

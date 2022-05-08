@@ -9,8 +9,21 @@ const usersController = {
     signup: (req, res) => {
         res.render('signup');
     },
+    register: (req, res) => {
+        let errorsValidation = validationResult(req);
+        console.log(errorsValidation);
+        let oldData = req.body;
+        console.log(oldData);
+        if(errorsValidation.errors.length > 0){
+            return res.render('signup',{errors: errorsValidation.errors, oldData})
+        }
+        res.send('hola');
+    },
     login: (req, res) => {
         res.render('login');
+    },
+    userProfile: (req, res) => {
+        res.render('userProfile');
     }
 }
 

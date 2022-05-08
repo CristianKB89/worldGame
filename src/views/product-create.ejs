@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head', { title: "Login" }) %>
+</head>
+<body class="bg-form">
+    <%- include('nav-bar') %>
+    <form class="signup-form" action="/products/create" method="POST">
+        <h2 class="form-create-product">Agregar Juego</h2>
+        <label for="title">
+            <input type="text" name="title" id="title" placeholder="Título del juego">
+            <% if (locals.errors && errors.title){%>
+                <span class="error"><%= errors.title.msg %></span>
+            <%}%>
+        </label>
+        <label for="description">
+            <textarea placeholder="Descripción" name="description" id="description" cols="38" rows="5"></textarea>
+            <% if (locals.errors && errors.description){%>
+                <span class="error"><%= errors.description.msg %></span>
+            <%}%>
+        </label>
+        <label for="price">
+            <input type="number" name="price" id="price" placeholder="Precio">
+            <% if (locals.errors && errors.price){%>
+                <span class="error"><%= errors.price.msg %></span>
+            <%}%>
+        </label>
+        <label for="discount">
+            <input type="number" name="discount" id="discount" placeholder="Descuento">
+            <% if (locals.errors && errors.discount){%>
+                <span class="error"><%= errors.discount.msg %></span>
+            <%}%>
+        </label>
+        <label for="imgCard">
+            <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
+            <% if (locals.errors && errors.imgCard){%>
+                <span class="error"><%= errors.imgCard.msg %></span>
+            <%}%>
+        </label>
+        <label for="imgDetail">
+            <input type="file" name="imgDetail" id="imgDetail" placeholder="Imagen para el detalle">
+            <% if (locals.errors && errors.imgDetail){%>
+                <span class="error"><%= errors.imgDetail.msg %></span>
+            <%}%>
+        </label>
+        <label for="ratingAge">
+            <input type="number" min="0" max="21" name="ratingAge" id="ratingAge"placeholder="Clasificación de edad">
+            <% if (locals.errors && errors.imgDetail){%>
+                <span class="error"><%= errors.imgDetail.msg %></span>
+            <%}%>
+        </label>
+    
+        <select name="genre" id="">
+            <option value="">Generos</option>
+        </select>
+        <% if (locals.errors && errors.genre){%>
+            <span class="error"><%= errors.genre.msg %></span>
+        <%}%>
+        <p>Plataforma</p>
+        <label for="xbox"><input class="checkbox-product"class="checkbox-product" type="checkbox" name="platform" id="xbox"> X-box </label>
+        <label for="play"><input class="checkbox-product" type="checkbox" name="platform" id="play"> PlayStation </label>
+        <label for="pc"><input class="checkbox-product" type="checkbox" name="platform" id="pc"> PC </label>
+        <% if (locals.errors && errors.platform){%>
+            <span class="error"><%= errors.platform.msg %></span>
+        <%}%>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

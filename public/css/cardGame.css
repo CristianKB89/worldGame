@@ -8,18 +8,25 @@
 .cardGame {
     text-decoration: none;
     margin: 10px;
+    border-bottom: 2px solid #ffffff;
+    transition: all ease .3s;
+}
+
+.cardGame:hover {
+    border-bottom: 2px solid #4e4e4e;
 }
 
 .cardGame div {
     background-color: #fff;
     color: #000;
     width: 140px;
+    height: 330px;
     padding-bottom: 25px;
 }
 
 .cardGame div img {
     margin-bottom: 10px;
-    width: 100;
+    width: 100%;
 }
 
 .cardGame div h3 {
@@ -40,4 +47,12 @@
     background-color: #ffd800;
     letter-spacing: 2px;
     margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1220px) {
+
+    .cardGame div {
+        width: 150px;
+        height: 390px;
+    }
 }
