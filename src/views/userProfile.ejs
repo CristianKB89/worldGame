@@ -2,6 +2,7 @@
 <html lang="en">
 
 <%- include('partials/head', { title: "nickName " }) %>
+<script src="/js/userProfile.js"></script>
 
     <body>
         <%- include('nav-bar') %>
@@ -70,22 +71,6 @@
                 </section>
             </main>
             <%- include('partials/footer') %>
-            <script>
-                const library = document.getElementById('library');
-                const editForm = document.getElementById('editForm');
-                const editButton = document.getElementById('editButton');
-                const editCancel = document.getElementById('editCancel');
-        
-                editButton.addEventListener('click', (e) => {
-                    e.preventDefault;
-                    library.style.display = "none"
-                    editForm.style.display = "block"
-                })
-                editCancel.addEventListener('click', () => {
-                    library.style.display = "block"
-                    editForm.style.display = "none"
-                })
-            </script>
     </body>
 
 </html>
