@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', { title: "Perfil de usuario" }) %>
+<%- include('partials/head', { title: "nickName " }) %>
 
     <body>
         <%- include('nav-bar') %>
-            <main>
-                <section>
-                    <img src="/images/userImg.jpg" alt="userNick">
-                    <h1>userNick</h1>
-                    <h4>username</h4>
-                    <p>email</p>
-                    <a href="#">Editar perfil</a>
-                    <a href="#">Cerrar sesion   </a>
+            <main class="profileContainer">
+                <section class="profileInfo" style="background-image: url(/images/bg-signup.jpeg);">
+                    <div class="blur">
+                        <img src="/images/userImg.jpg" alt="userNick">
+                        <div>
+                            <h1>userNick</h1>
+                            <h4>username</h4>
+                            <p>email@email.com</p>
+                            <a href="#">Editar perfil</a>
+                            <a href="#">Cerrar sesion </a>
+                        </div>
+                    </div>
                 </section>
-                <section>
+                <section class="profileLibrary">
                     <h2>Mi biblioteca</h2>
-                    <div>
+                    <div class="empty">
                         <h4>No hay nada, aun!</h4>
-                        <p>Conose tu sigiente juego favorito</p>
+                        <p>Conoce tu sigiente juego favorito</p>
                         <a href="/products">Ir ahora</a>
                     </div>
-                    <div>
+                    <div class="libraryList">
                         <a href="#">
                             <div>
-                              <img src="/images/haloimgmuestra2.jpg" alt="banner">
-                                  <h3>Halo infinite</h3>
-                                  <h4>Comprado: dd/mm/aaaa</h4>
+                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
+                                <h3>Halo infinite</h3>
+                                <h4>Comprado: dd/mm/aaaa</h4>
                             </div>
-                          </a>
+                        </a>
+                        <a href="#">
+                            <div>
+                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
+                                <h3>Halo infinite</h3>
+                                <h4>Comprado: dd/mm/aaaa</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
+                                <h3>Halo infinite</h3>
+                                <h4>Comprado: dd/mm/aaaa</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div>
+                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
+                                <h3>Halo infinite</h3>
+                                <h4>Comprado: dd/mm/aaaa</h4>
+                            </div>
+                        </a>
                     </div>
-                </section><section class="catalogPromo">
-                    <div class="catalogPromoTxt">
+                </section>
+                <section class="profilePromo">
+                    <div class="profilePromoTxt">
                         <h4>Amplia tu biblioteca de juegos</h4>
-                        <p>Juega lo mejor de lo mejor<br/>Mira los mejores calificados</p>
+                        <p>Juega lo mejor de lo mejor<br />Mira los mejores calificados</p>
                         <a href="#">Ir ahora</a>
                     </div>
-                    <div 
-                        class="catalogPromoImg"  
-                        style="background-image: url(/images/haloimgmuestra768.jpg);">
+                    <div class="profilePromoImg" style="background-image: url(/images/haloimgmuestra768.jpg);">
                     </div>
                 </section>
             </main>
