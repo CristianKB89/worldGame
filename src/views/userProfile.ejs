@@ -13,12 +13,12 @@
                             <h1>userNick</h1>
                             <h4>username</h4>
                             <p>email@email.com</p>
-                            <a href="#">Editar perfil</a>
-                            <a href="#">Cerrar sesion </a>
+                            <span id="editButton">Editar perfil</span>
+                            <a href="/">Cerrar sesion </a>
                         </div>
                     </div>
                 </section>
-                <section class="profileLibrary">
+                <section class="profileLibrary" id="library">
                     <h2>Mi biblioteca</h2>
                     <div class="empty">
                         <h4>No hay nada, aun!</h4>
@@ -33,28 +33,31 @@
                                 <h4>Comprado: dd/mm/aaaa</h4>
                             </div>
                         </a>
-                        <a href="#">
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
-                                <h3>Halo infinite</h3>
-                                <h4>Comprado: dd/mm/aaaa</h4>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
-                                <h3>Halo infinite</h3>
-                                <h4>Comprado: dd/mm/aaaa</h4>
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
-                                <h3>Halo infinite</h3>
-                                <h4>Comprado: dd/mm/aaaa</h4>
-                            </div>
-                        </a>
                     </div>
+                </section>
+                <section class="profileEdit" id="editForm">
+                    <h2>Editar Usuario</h2>
+                    <p>email@email.com</p>
+                    <form action="">
+                        <label for="userNick">
+                            NickName:
+                            <input type="text" id="userNick" name="userNick">
+                        </label>
+                        <label for="userName">
+                            Nombre:
+                            <input type="text" id="userName" name="userName">
+                        </label>
+                        <label for="userImg">
+                            Foto de perfil:
+                            <input type="file" id="userImg" name="UserImg">
+                        </label>
+                        <label for="password">
+                            Nueva contraseña:
+                            <input type="password">
+                        </label>
+                        <button type="submit">Guardar</button>
+                        <button type="reset" id="editCancel">Cancelar</button>
+                    </form>
                 </section>
                 <section class="profilePromo">
                     <div class="profilePromoTxt">
@@ -67,6 +70,22 @@
                 </section>
             </main>
             <%- include('partials/footer') %>
+            <script>
+                const library = document.getElementById('library');
+                const editForm = document.getElementById('editForm');
+                const editButton = document.getElementById('editButton');
+                const editCancel = document.getElementById('editCancel');
+        
+                editButton.addEventListener('click', (e) => {
+                    e.preventDefault;
+                    library.style.display = "none"
+                    editForm.style.display = "block"
+                })
+                editCancel.addEventListener('click', () => {
+                    library.style.display = "block"
+                    editForm.style.display = "none"
+                })
+            </script>
     </body>
 
 </html>

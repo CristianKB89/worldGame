@@ -46,13 +46,14 @@
     margin-bottom: 15px;
 }
 
-.profileContainer .profileInfo .blur div a {
+.profileContainer .profileInfo .blur div a, .profileContainer .profileInfo .blur div span {
     color: #fff;
+    cursor: pointer;
     margin: 0 5px;
     text-decoration: none;
 }
 
-.profileContainer .profileInfo .blur div a:hover {
+.profileContainer .profileInfo .blur div a:hover , .profileContainer .profileInfo .blur div span:hover{
     text-decoration: underline;
 }
 
@@ -85,13 +86,13 @@
 }
 
 .profileContainer .profileLibrary .empty a {
-    color: #363636;
+    color: #107c10;
     text-decoration: none;
     transition: all ease .3s;
 }
 
 .profileContainer .profileLibrary .empty a:hover {
-    color: #107c10;
+    color: #363636;
     text-decoration: underline;
 }
 
@@ -136,6 +137,59 @@
 .profileContainer .profileLibrary .libraryList a div h4 {
     font-size: 16px;
     font-weight: 400;
+}
+
+.profileContainer .profileEdit {
+    display: none;
+    padding: 30px 3% 50px;
+    width: 100%;
+}
+
+.profileContainer .profileEdit h2 {
+    color: #363636;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.profileContainer .profileEdit p {
+    color: #363636;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.profileContainer .profileEdit form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.profileContainer .profileEdit form label {
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.profileContainer .profileEdit form input {
+    border: 1px solid #2f2f2f;
+    padding: 10px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.profileContainer .profileEdit form button {
+    background-color: #107c10;
+    border: 1px solid #107c10;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.profileContainer .profileEdit form button:last-child{
+    color: #107c10;
+    background-color: #fff;
 }
 
 .profileContainer .profilePromo {
@@ -199,6 +253,11 @@
         font-size: 34px;
     }
 
+    .profileContainer .profileEdit form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     .profileContainer .profilePromo {
         flex-direction: row;
     }
@@ -234,6 +293,7 @@
 
     .profileContainer .profileInfo {
         width: 25%;
+        height: 95vh;
     }
 
     .profileContainer .profileInfo .blur {
@@ -250,9 +310,17 @@
         width: 60%;
     }
 
+    .profileContainer .profileInfo .blur div a {
+        display: block;
+    }
+
     .profileContainer .profileLibrary {
         height: 95vh;
         overflow-y: scroll;
+        padding: 30px 2% 50px;
+        width: 75%;
+    }
+    .profileContainer .profileEdit {
         padding: 30px 2% 50px;
         width: 75%;
     }
@@ -285,6 +353,10 @@
         margin: 0 auto;
     }
 
+    .profileContainer .profileInfo .blur div a {
+        display: inline;
+    }
+
     .profileContainer .profileLibrary .libraryList a div {
         width: 150px;
         height: 330px;
@@ -292,6 +364,11 @@
 
     .profileContainer .profilePromo {
         margin: 35px 0;
+    }
+
+    .profileContainer .profileEdit form {
+        width: 55%;
+        padding-top: 120px;
     }
 
     .profileContainer .profilePromo .profilePromoTxt {
