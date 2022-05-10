@@ -1,54 +1,78 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Movie'; // esto debería estar en singular
+    let alias = 'Game';
     let cols = {
         id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+            type: dataTypes.INTEGER,
             primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
         title: {
-            type: dataTypes.STRING(500),
+            type: dataTypes.STRING,
             allowNull: false
         },
-        rating: {
-            type: dataTypes.DECIMAL(3, 1).UNSIGNED,
+        price: {
+            type: dataTypes.FLOAT,
             allowNull: false
         },
-        awards: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        discount: {
+            type: dataTypes.INTEGER,
             allowNull: false
         },
-        release_date: {
-            type: dataTypes.DATEONLY,
+        description: {
+            type: dataTypes.TEXT,
             allowNull: false
         },
-        length: dataTypes.BIGINT(10),
-        genre_id: dataTypes.BIGINT(10)
+        img_card: {
+            type: dataTypes.STRING,
+            allowNull: true
+        },
+        img_detail: {
+            type: dataTypes.STRING,
+            allowNull: true
+        },
+        rating_age: {
+            type: dataTypes.INTEGER,
+            allowNull: true
+        },
+        genre_id: {
+            type: dataTypes.STRING,
+            allowNull: false
+        }
     };
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
-    }
-    const Movie = sequelize.define(alias, cols, config);
+        tableName: 'Games',
+        timestamps: false
+    };
+    const Game = sequelize.define(alias, cols, config);
 
-    Movie.associate = (models) => {
-        Movie.belongsTo(models.Genre, {
+    Game.associate = (models) => {
+        Game.belongsToMany(models.User, {
+            as: 'shopingcarts',
+            through: 'shoppingcart',
+            foreignKey: 'game_id',
+            otherKey: 'user_id',
+            timestamps: false
+        }),
+        Game.belongsToMany(models.User, {
+            as: 'librarys',
+            through: 'library',
+            foreignKey: 'game_id',
+            otherKey: 'user_id',
+            timestamps: false
+        }),
+        Game.belongsToMany(models.Platform, {
+            as: 'platforms',
+            through: 'platforms_games',
+            foreignKey: 'game_id',
+            otherKey: 'platform_id',
+            timestamps: false
+        }),
+        Game.belongsTo(models.Genre,{
             as: 'genre',
             foreignKey: 'genre_id'
-        }),
-        Movie.belongsToMany(models.Actor, {
-            as: 'actors',
-            through: 'actor_movie',
-            foreignKey: 'movie_id',
-            otherKey: 'actor_id',
-            timestamps: false
         })
     }
 
-    return Movie
+    return Game
 };
