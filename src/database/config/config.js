@@ -1,22 +1,22 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": "asdf1234",
-    "database": "wolrdGame",
+    "password": "",
+    "database": "worldgame_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "worldgame_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "worldgame_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
