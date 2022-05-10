@@ -5,13 +5,27 @@
 </head>
 <body class="bg-form">
     <%- include('nav-bar') %>
-    <form class="signup-form" action="">
+
+    <% function showError (param){ %>
+        <p class="">
+            <% if (typeof errors !="undefined" ) { %>
+                <% errors.forEach(specificError=> { %>
+                    <% if (specificError.param===param ) { %>
+                        <%= specificError.msg %>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </p>
+    <% } %>
+    <form class="signup-form" action="/users/login" method="POST">
         <h2>Login</h2>
         <label for="email">
             <input type="email" name="email" id="email" placeholder="Email">
+            <% showError('email') %>
         </label>
-        <label for="Contraseña">
-            <input type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña">
+        <label for="password">
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <% showError('password') %>
         </label>
         <button type="submit">Ingresar</button>
         <p>¿No tienes cuenta? <a href="/users/signup">Registrarse</a></p>
