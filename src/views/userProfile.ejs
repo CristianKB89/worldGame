@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', { title: "nickName " }) %>
+<%- include('partials/head', { title: "nickName - perfil " }) %>
 <script src="/js/userProfile.js"></script>
+<script src="/js/postUser.js"></script>
 
     <body>
         <%- include('nav-bar') %>
@@ -21,6 +22,8 @@
                 </section>
                 <section class="profileLibrary" id="library">
                     <h2>Mi biblioteca</h2>
+                    <div class="space"></div>
+                    <h2 class="unFocus" id="postButton">Mis publicaciones</h2>
                     <div class="empty">
                         <h4>No hay nada, aun!</h4>
                         <p>Conoce tu sigiente juego favorito</p>
@@ -35,6 +38,13 @@
                             </div>
                         </a>
                     </div>
+                </section>
+                <section class="profilePosts" id="posts">
+                    <h2 class="unFocus" id="libraryButton">Mi biblioteca</h2>
+                    <div class="space"></div>
+                    <h2>Mis publicaciones</h2>
+                    <%- include('partials/userPost') %> 
+                    <%- include('partials/userPost') %> 
                 </section>
                 <section class="profileEdit" id="editForm">
                     <h2>Editar Usuario</h2>
