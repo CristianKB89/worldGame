@@ -32,7 +32,21 @@ module.exports = (sequelize, dataTypes) => {
         User.hasMany(models.Publication, {
             as: 'publications',
             foreignKey: 'user_id'
-        });
+        }),
+        User.belongsToMany(models.Game, {
+            as: 'shopingcarts',
+            through: 'shoppingcart',
+            foreignKey: 'user_id',
+            otherKey: 'game_id',
+            timestamps: false
+        }),
+        User.belongsToMany(models.User, {
+            as: 'librarys',
+            through: 'library',
+            foreignKey: 'user_id',
+            otherKey: 'game_id',
+            timestamps: false
+        })
     }
     return User;
 }

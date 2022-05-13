@@ -1,7 +1,14 @@
 const {validationResult} = require('express-validator');
+const db = require('../database/models');
+const Games = db.Game;
+
 const productsController ={
     getProducts: (req, res) => {
-        res.render("catalog")
+        Games.findAll()
+        .then(games => {
+            res.render('catalog', {games})
+        })
+       // res.render('catalog')
     },
     productDetail: (req, res) => {
         res.render("product-detail");
