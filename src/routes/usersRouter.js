@@ -26,7 +26,7 @@ router.get('/', usersController.getUsers);
 router.get('/signup', usersController.signup);
 router.post('/signup', singupValidations, usersController.register);
 router.get('/login', usersController.login);
-router.get('/profile', usersController.userProfile);
+router.get('/profile/:id', usersController.userProfile);
 router.post('/login', loginValidations, usersController.loginProcess);
 
 module.exports = router;

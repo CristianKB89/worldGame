@@ -1,93 +1,185 @@
-.body-comunidad{
-    background-color: white;
-}
-.img-bg-comunidad{
-    background-image: url('/images/gamers.jpeg');
-    background-size: cover;
+.communityContainer {
+    background-color: #111111;
     width: 100%;
-    height: 300px;
+    padding: 0 0 40px;
+    position: relative;
 }
-.img-bg-comunidad h1{
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
+
+.communityContainer .comunnityBanner {
+    background-image: url("/images/banner-comunidad.jpg");
+    background-position: bottom;
+    background-size: cover;
+    color: #fff;
+    padding: 250px 0 50px;
+    position: relative;
     text-align: center;
-    margin: 0;
-    padding-top: 200px;
+    width: 100%;
 }
-.comunidad-container{
+
+.communityContainer .comunnityBanner h1 {
+    font-size: 38px;
+    margin: 0 0 20px;
+}
+
+.communityContainer .comunnityBanner p {
+    margin: 0 0 30px;
+}
+
+.communityContainer .comunnityBanner a {
+    border: 1px solid #9bf00b;
+    color: #9bf00b;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.communityContainer .communityCreate {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin: 0 auto 30px;
     padding: 10px;
-    margin: 10px 0px;
-    background-color: #F2F2F2;
-    color: black;
-}
-.comunidad-container h3{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 20px;
-}
-.comunidad-container p{
-    font-size: 12px;
-    margin: 10px 20px;
-}
-.name-comunidad{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #117B0F;
-}
-.name-comunidad h2{
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #117B0F;
-}
-.name-comunidad p{
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    font-weight: bold;
-}
-.comunidad-profile{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid;
-    margin: 10px 20px;
-
-}
-.comunidad-game{
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 0 30px;   
-    padding: 5px;
-}
-.like-comment{
-    display: flex;
-    padding: 10px 0px;
-    justify-content: space-between;
-}
-.like-comment i{
-    font-size: 20px;
-    margin: 0 10px;
+    width: 90%;
 }
 
-.comunidad-description p{
-    margin: 10px 0;
+.communityContainer .communityCreate form textarea {
+    background-color: #fff;
+    border: 1px solid #117B0F;
+    font-size: 14px;
+    height: 70px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    width: 100%;
 }
-@media screen and (min-width: 768px){
-    .comunidad-container{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-    .comunidad-game{
-        width: 200px;
-        height: 200px;
-        margin: 0 10px;
-    }
-}
+
+.communityContainer .communityCreate form div  {
+    display: flex;
+    justify-content: space-around;
     
+}
+
+.communityContainer .communityCreate form div i {
+    color: #707070;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.communityContainer .communityCreate form div input[type="file"] {
+    display: none;
+}
+
+.communityContainer .communityCreate form select {
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+} 
+
+.communityContainer .communityCreate form button {
+    border: none;
+    background-color: none;
+    color: #117B0F;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.communityContainer .communityCreate form button:hover {
+    text-decoration: underline;
+}
+
+.communityContainer .communityPromo {
+    border: 2px solid #9bf00b;
+    color: #fff;
+    margin: 20px auto 0;
+    padding: 40px 20px;
+    text-align: center;
+    width: 90%;
+}
+
+.communityContainer .communityPromo p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.communityContainer .communityPromo a {
+    color: #9bf00b;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .communityContainer .comunnityBanner {
+        padding: 350px 0 50px;
+    }
+    
+    .communityContainer .comunnityBanner h1 {
+        font-size: 55px;
+    }
+
+    .communityContainer .comunnityBanner p {
+        font-size: 20px;
+    }
+
+    .communityContainer .communityCreate {
+        margin: 20px auto 40px;
+        padding: 20px;
+        width: 75%;
+    }
+
+    .communityContainer .communityPromo {
+        width: 75%;
+    }
+
+    .communityContainer .communityPromo p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1084px) {
+
+    .communityContainer .comunnityBanner {
+        padding: 400px 0 50px;
+    }
+
+    .communityContainer .communityCreate {
+        width: 65%;
+    }
+
+    .communityContainer .communityCreate form div  {
+        justify-content: space-evenly;
+        
+    }
+
+    .communityContainer .communityPromo {
+        width: 65%;
+    }
+
+}
+
+@media screen and (min-width: 1220px) {
+    
+    .communityContainer .comunnityBanner {
+        padding: 400px 0 250px;
+    }
+    .communityContainer .comunnityBanner h1 {
+        font-size: 85px;
+    }
+
+    .communityContainer .comunnityBanner p {
+        font-size: 26px;
+    }
+
+    .communityContainer .communityCreate {
+        width: 50%;
+    }
+
+    .communityContainer .communityPromo {
+        margin-top: 80px;
+        width: 50%;
+    }
+}

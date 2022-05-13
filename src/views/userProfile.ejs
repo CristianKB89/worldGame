@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', { title: "Perfil de usuario" }) %>
+<%- include('partials/head', { title: "nickName - perfil " }) %>
+<script src="/js/userProfile.js"></script>
+<script src="/js/postUser.js"></script>
 
     <body>
         <%- include('nav-bar') %>
-            <main>
-                <section>
-                    <img src="/img/userImg.jpg" alt="userNick">
-                    <h1>userNick</h1>
-                    <h4>username</h4>
-                    <p>email</p>
-                    <a href="#">Editar perfil</a>
-                    <a href="#">Cerrar sesion   </a>
+            <main class="profileContainer">
+                <section class="profileInfo" style="background-image: url(/images/bg-signup.jpeg);">
+                    <div class="blur">
+                        <img src="/images/userImg.jpg" alt="userNick">
+                        <div>
+                            <h1><%= user.nickName %>  </h1>
+                            <h4>username</h4>
+                            <p>email@email.com</p>
+                            <span id="editButton">Editar perfil</span>
+                            <a href="/">Cerrar sesion </a>
+                        </div>
+                    </div>
                 </section>
-                <section>
+                <section class="profileLibrary" id="library">
                     <h2>Mi biblioteca</h2>
-                    <div>
+                    <div class="space"></div>
+                    <h2 class="unFocus" id="postButton">Mis publicaciones</h2>
+                    <div class="empty">
                         <h4>No hay nada, aun!</h4>
-                        <p>Conose tu sigiente juego favorito</p>
+                        <p>Conoce tu sigiente juego favorito</p>
                         <a href="/products">Ir ahora</a>
                     </div>
-                    <div>
+                    <div class="libraryList">
                         <a href="#">
                             <div>
-                              <img src="/img/haloimgmuestra2.jpg" alt="banner">
-                                  <h3>Halo infinite</h3>
-                                  <h4>Comprado: dd/mm/aaaa</h4>
+                                <img src="/images/haloimgmuestra2.jpg" alt="banner">
+                                <h3>Halo infinite</h3>
+                                <h4>Comprado: dd/mm/aaaa</h4>
                             </div>
-                          </a>
+                        </a>
                     </div>
-                </section><section class="catalogPromo">
-                    <div class="catalogPromoTxt">
+                </section>
+                <section class="profilePosts" id="posts">
+                    <h2 class="unFocus" id="libraryButton">Mi biblioteca</h2>
+                    <div class="space"></div>
+                    <h2>Mis publicaciones</h2>
+                    <%- include('partials/userPost') %> 
+                    <%- include('partials/userPost') %> 
+                </section>
+                <section class="profileEdit" id="editForm">
+                    <h2>Editar Usuario</h2>
+                    <p>email@email.com</p>
+                    <form action="">
+                        <label for="userNick">
+                            NickName:
+                            <input type="text" id="userNick" name="userNick">
+                        </label>
+                        <label for="userName">
+                            Nombre:
+                            <input type="text" id="userName" name="userName">
+                        </label>
+                        <label for="userImg">
+                            Foto de perfil:
+                            <input type="file" id="userImg" name="UserImg">
+                        </label>
+                        <label for="password">
+                            Nueva contraseña:
+                            <input type="password">
+                        </label>
+                        <button type="submit">Guardar</button>
+                        <button type="reset" id="editCancel">Cancelar</button>
+                    </form>
+                </section>
+                <section class="profilePromo">
+                    <div class="profilePromoTxt">
                         <h4>Amplia tu biblioteca de juegos</h4>
-                        <p>Juega lo mejor de lo mejor<br/>Mira los mejores calificados</p>
+                        <p>Juega lo mejor de lo mejor<br />Mira los mejores calificados</p>
                         <a href="#">Ir ahora</a>
                     </div>
-                    <div 
-                        class="catalogPromoImg"  
-                        style="background-image: url(/img/haloimgmuestra768.jpg);">
+                    <div class="profilePromoImg" style="background-image: url(/images/haloimgmuestra768.jpg);">
                     </div>
                 </section>
             </main>

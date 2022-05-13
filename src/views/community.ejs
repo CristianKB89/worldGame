@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head', { title: "Comunidad" }) %>
-<body class="body-comunidad">
-    <%- include('nav-bar') %>
-    <section class="img-bg-comunidad">
-        <h1>Comunidad</h1>
-    </section>
-    <section>
-        <div class="comunidad-container">
-            <div class="name-comunidad">
-                <img class="comunidad-profile" src="/images/nino.webp" alt="">
-                <div>
-                    <h2>Pepito Perez</h2>
-                    <p>hace 2 horas</p>
-                </div>
-            </div>
-            <h3>Fornite</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi molestias aperiam rerum nisi?</p>
-            <img class="comunidad-game" src="/images/bg-signup.jpeg" alt="">
-            <div class="comunidad-description">
-            <div class="like-comment">
-                <i class="far fa-heart"></i>
-                <h4>Comentar</h4>
-                <div>
-                    <a href="">Editar</a>
-                    <a href="">Eliminar</a>
-                </div>
-            </div> 
-        </div>
-    </section>
-    <%- include('partials/footer') %>
-</body>
+<%- include('partials/head', { title: "Comunidad" }) %>
+<script src="/js/postUser.js"></script>
+
+    <body>
+        <%- include('nav-bar') %>
+            <main class="communityContainer">
+                <section class="comunnityBanner">
+                    <h1>Comunidad</h1>
+                    <p>Comparte, Conecta y Disfruta.</p>
+                    <div>
+                        <a href="">Unete ahora <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </section>
+                <section class="communityCreate">
+                    <form action="">
+                        <textarea name="description" placeholder="Comparte con nosotros."></textarea>
+                        <div>
+                            <label for="imagePost">
+                                <i class="fa-regular fa-image"></i>
+                                <input type="file" id="imagePost">
+                            </label>
+                            <select name="game">
+                                <option value="game">Game</option>
+                                <option value="game">Game</option>
+                                <option value="game">Gamegame</option>
+                            </select>
+                            <button type="submit">Publicar</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="communityPostList">
+                    <%- include('partials/userPost') %>
+                    <%- include('partials/userPost') %>
+                </section>
+                <section class="communityPromo">
+                    <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>
+                    <a href="">Encuentra lo mejor <i class="fa-solid fa-chevron-right"></i></a>
+                </section>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
 </html>
