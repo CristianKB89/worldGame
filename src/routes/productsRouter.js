@@ -25,6 +25,6 @@ router.get("/productdetail", productsController.productDetail);
 router.get("/shoppingCart", productsController.shoppingCart);
 //creación de producto
 router.get ("/create", productsController.createProduct);
-router.post("/create", upload.single("imgDetail"), upload.single("imgCard"), productValidation, productsController.createProductPost);
+router.post("/create", upload.single("imgCard"), productValidation, productsController.createProductPost);
 
 module.exports = router;
