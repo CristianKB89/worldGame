@@ -5,6 +5,7 @@ const multer = require ('multer');
 const path = require('path');
 const usersController = require('../controllers/usersController');
 const singupValidations = require('../middlewares/signupValidationsMiddleware');
+const loginValidations = require('../middlewares/loginValidation');
 // const registerValidations = require('../middlewares/registerValidationsMiddleware');
 
 //---------------------------------------------- Multer Configurations -----------------------------------------------------------------------
@@ -26,5 +27,6 @@ router.get('/signup', usersController.signup);
 router.post('/signup', singupValidations, usersController.register);
 router.get('/login', usersController.login);
 router.get('/profile', usersController.userProfile);
+router.post('/login', loginValidations, usersController.loginProcess);
 
 module.exports = router;
