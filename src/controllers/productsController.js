@@ -26,7 +26,16 @@ const productsController ={
             res.render("product-create",{errors: result.mapped(), oldData: req.body});
         }
         else{
-            res.send("Product created");
+            Game.create({
+                title: req.body.title,
+                rating: req.body.rating,
+                awards: req.body.awards,
+                release_date: req.body.release_date,
+                length: req.body.length,
+                genre_id: req.body.genre_id
+             })
+             .then(() => res.redirect('/movies'))
+             .catch(error => console.log(error))
         }
     }
 }
