@@ -24,7 +24,14 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'Users',
-        timestamps: false
+         //PARAOIND = PARAOINDICAR QUE SE CREE LA TABLA CON LOS TIMESTAMPS
+         timestamps : true,
+         createdAt: "created_at",
+         updatedAt: "updated_at",
+         deletedAt: false,
+         //PARAOIND
+         deletedAt: "deleted_at",
+         paranoid: true,
     };
     const User = sequelize.define(alias, cols, config);
 

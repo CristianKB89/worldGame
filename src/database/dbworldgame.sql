@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
--- Host: localhost    Database: wolrdgame
+-- Host: localhost    Database: worldgame
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.24-MariaDB
 
@@ -19,23 +19,25 @@
 -- Table structure for table `games`
 --
 
-DROP TABLE IF EXISTS `games`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `games` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) NOT NULL,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `price` float NOT NULL,
   `discount` int(11) DEFAULT NULL,
-  `description` text NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
   `genre_id` int(11) NOT NULL,
-  `img_card` varchar(100) DEFAULT NULL,
-  `img_detail` varchar(100) DEFAULT NULL,
+  `img_card` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `img_detail` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `rating_age` int(11) DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genre_id` (`genre_id`),
   CONSTRAINT `games_ibfk_1` FOREIGN KEY (`genre_id`) REFERENCES `genres` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,14 +53,13 @@ UNLOCK TABLES;
 -- Table structure for table `genres`
 --
 
-DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `genres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) NOT NULL,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +75,6 @@ UNLOCK TABLES;
 -- Table structure for table `library`
 --
 
-DROP TABLE IF EXISTS `library`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `library` (
@@ -86,7 +86,7 @@ CREATE TABLE `library` (
   KEY `game_id` (`game_id`),
   CONSTRAINT `library_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   CONSTRAINT `library_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,14 +102,13 @@ UNLOCK TABLES;
 -- Table structure for table `platforms`
 --
 
-DROP TABLE IF EXISTS `platforms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `platforms` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +124,6 @@ UNLOCK TABLES;
 -- Table structure for table `platforms_games`
 --
 
-DROP TABLE IF EXISTS `platforms_games`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `platforms_games` (
@@ -137,7 +135,7 @@ CREATE TABLE `platforms_games` (
   KEY `game_id` (`game_id`),
   CONSTRAINT `platforms_games_ibfk_1` FOREIGN KEY (`platform_id`) REFERENCES `platforms` (`id`),
   CONSTRAINT `platforms_games_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,20 +151,21 @@ UNLOCK TABLES;
 -- Table structure for table `publications`
 --
 
-DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `publications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `img` varchar(100) DEFAULT NULL,
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `img` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `publications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,19 +181,21 @@ UNLOCK TABLES;
 -- Table structure for table `shoppingcart`
 --
 
-DROP TABLE IF EXISTS `shoppingcart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `shoppingcart` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `game_id` int(11) DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `game_id` (`game_id`),
   CONSTRAINT `shoppingcart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   CONSTRAINT `shoppingcart_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `games` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -210,18 +211,20 @@ UNLOCK TABLES;
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(100) NOT NULL,
-  `nickName` varchar(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `img_user` varchar(100) DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `nickName` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `img_user` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,12 +233,12 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'pedro@gmail.com','xXpedroXx','pedro','password123',NULL),(2,'roberto@gmail.com','elVerto','Roberto','password123',NULL);
+INSERT INTO `users` VALUES (1,'blaser89@gmail.com','CristianK','Cristian Castro','123456',NULL,NULL,NULL,NULL),(3,'cualquiera@gmail.com','Kalex','Kevin Camacho','123456','default.jpg','2022-05-13 02:54:09','2022-05-13 02:54:09',NULL),(4,'cualquiera2@gmail.com','Kalex 2','Kevin Camacho 2','123456','default.jpg','2022-05-13 02:56:20','2022-05-13 02:56:20',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'wolrdgame'
+-- Dumping routines for database 'worldgame'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -247,4 +250,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-06 17:26:52
+-- Dump completed on 2022-05-12 22:00:08
