@@ -21,7 +21,7 @@ let productValidation = require('../middlewares/createProductValidator');
 //rutas
 
 router.get("/", productsController.getProducts);
-router.get("/productdetail", productsController.productDetail);
+router.get("/productdetail/:id", productsController.productDetail);
 router.get("/shoppingCart", productsController.shoppingCart);
 //creación de producto
 router.get ("/create", productsController.createProduct);

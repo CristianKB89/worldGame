@@ -221,9 +221,20 @@ body{
     font-weight: unset;
     margin-bottom: 0.5rem;
     margin: 0%;
+    color: #5dc21e;
 }
 
 .det-cat-content span{
     color: ffffffa6;
 }
 
+.det-descrip-cont{
+    margin-bottom: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+    font-family: "Segoe UI";
+}
+
+.det-descrip-cont  h1{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
