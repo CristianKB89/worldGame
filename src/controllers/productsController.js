@@ -35,7 +35,9 @@ const productsController ={
                 imgCard: (req.file)?req.file.filename:"default.jpg",
                 rating_age: req.body.ratingAge,
                 genre_id: req.body.genre,
-                //platform_id: checkboxes?????????????
+                platform_xbox: (req.body.xbox)?1:0,
+                platform_play: (req.body.play)?1:0,
+                platform_pc: (req.body.pc)?1:0
              })
              .then(() => res.redirect('/products'))
              .catch(error => console.log(error))

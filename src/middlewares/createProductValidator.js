@@ -20,7 +20,6 @@ const productValidation = [
             throw new Error('Inserte una imagen para el detalle');
         }
     }) */
-
 ]
 
 module.exports = productValidation;
