@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
+const bcrypt = require('bcryptjs')
 
 // MODELOS
 
@@ -28,7 +29,7 @@ const usersController = {
             email: req.body.userEmail,
             nickName: req.body.userNickname,
             name: req.body.userName,
-            password: req.body.userPassword,
+            password: bcrypt.hashSync(req.body.userPassword, 10),
             img_user: "default.jpg"
         })
         .then(() =>{
@@ -46,7 +47,21 @@ const usersController = {
     if (errorsValidation.errors.length > 0) {
       return res.render("login", { errors: errorsValidation.errors, oldData });
     } else {
-      res.send("hola");
+      let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})
+      console.log(User)
+      res.send('ingresaste correctamente');
+      /*if (userToLog){
+        let passwordIsValid = bcrypt.compareSync(req.body.userPassword, userToLog.password);
+        if (passwordIsValid) {
+          req.session.user = userToLog;
+
+          if (req.body.remember) {
+            res.cookie("user", req.body.userEmail, {maxAge: 1000 * 120});
+          }
+          res.redirect('/')
+
+        }
+      }*/
     }
   },
   userProfile: (req, res) => {
@@ -59,6 +74,9 @@ const usersController = {
       });
     // res.render('userProfile');
   },
+  updateUserProfile: (req, res) => {
+    res.send("updatedUserProfile");
+  }
 };
 
 module.exports = usersController;
