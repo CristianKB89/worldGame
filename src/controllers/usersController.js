@@ -47,9 +47,8 @@ const usersController = {
     if (errorsValidation.errors.length > 0) {
       return res.render("login", { errors: errorsValidation.errors, oldData });
     } else {
-      let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})
-      console.log(User)
-      res.send('ingresaste correctamente');
+     /*let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})*/
+      User.findOne({where:{email: req.body.email}}).then((user) => {res.redirect("/")}).catch((err) => {console.log(err)})
       /*if (userToLog){
         let passwordIsValid = bcrypt.compareSync(req.body.userPassword, userToLog.password);
         if (passwordIsValid) {

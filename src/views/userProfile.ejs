@@ -12,9 +12,9 @@
                     <div class="blur">
                         <img src="/images/userImg.jpg" alt="userNick">
                         <div>
-                            <h1><%= user.nickName %>  </h1>
-                            <h4>username</h4>
-                            <p>email@email.com</p>
+                            <h1><%= user.name %>  </h1>
+                            <h4><%= user.nickName%></h4>
+                            <p><%= user.email%></p>
                             <span id="editButton">Editar perfil</span>
                             <a href="/">Cerrar sesion </a>
                         </div>
@@ -52,11 +52,11 @@
                     <form action="/users/profile/" method="">
                         <label for="userNick">
                             NickName:
-                            <input type="text" id="userNick" name="userNick">
+                            <input type="text" id="userNick" name="userNick" value="<%= user.nickName%>">
                         </label>
                         <label for="userName">
                             Nombre:
-                            <input type="text" id="userName" name="userName">
+                            <input type="text" id="userName" name="userName" value="<%= user.name %>">
                         </label>
                         <label for="userImg">
                             Foto de perfil:
@@ -64,7 +64,7 @@
                         </label>
                         <label for="password">
                             Nueva contraseña:
-                            <input type="password">
+                            <input name="password"type="password">
                         </label>
                         <button type="submit">Guardar</button>
                         <button type="reset" id="editCancel">Cancelar</button>
