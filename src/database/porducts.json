@@ -420,83 +420,83 @@
     "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
+    "title": "Sekiro™: Shadows Die Twice",
+    "price": 249.900,
+    "discount": 0,
+    "description": "En Sekiro™: Shadows Die Twice encarnas al 'lobo manco', un guerrero desfigurado y caído en desgracia que ha sido rescatado al borde de la muerte. Tras jurar proteger a un joven señor descendiente de un antiguo linaje, te conviertes en el objetivo de despiadados enemigos, entre ellos el peligroso clan Ashina. Cuando el joven señor sea capturado, nada te detendrá en tu peligrosa aventura por restituir tu honor, ni siquiera la muerte.",
+    "genre": "Acción y aventura",
     "img_card": "sekiro.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Mortal Kombat 11",
+    "price": 249.900,
+    "discount": 75,
+    "description": "Toma el control de los protectores de Earthrealm en dos campañas de historias aclamadas y que marcan el paso del tiempo mientras se apresuran para evitar que Kronika vuelva atrás el tiempo y reinicie la historia. Presenta la lista completa de 37 luchadores, incluidos Rain, Mileena y Rambo.",
+    "genre": "Lucha",
+    "img_card": "mk11.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Sniper Elite 4",
+    "price": 229.900,
+    "discount": 0,
+    "description": "Ponte en la piel de un francotirador en el shooter de la Segunda Guerra Mundial más realista que jamás se haya creado. Experimenta una gran libertad, combates tácticos en tercera persona y realiza épicos disparos a larga distancia en niveles gigantescos, en los que tendrás que librar del yugo del fascismo a una Italia en guerra.",
+    "genre": "Shooter",
+    "img_card": "sniperElite4.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Pack triple Assassin's Creed: Black Flag, Unity, Syndicate",
+    "price": 249.900,
+    "discount": 0,
+    "description": "Assassin's Creed 4 Black Flag:\nEl Caribe, 1715. Legendarios piratas son amos del mar y la tierra, saqueando fortunas y poniendo de rodillas a los imperios. Entre estos forajidos se encuentra Edward Kenway, un temerario y joven capitán que se gana el respeto de los piratas, pero cuyo apetito de oro y gloria pueden destruir todo cuanto han construido.\n\nAssassin's Creed Unity:\nParís, 1789. Durante siglos, Francia ha sido gobernada por una élite privilegiada. Ya no más. Este día, el pueblo de París se ha levantado en armas contra la tiranía. Ahora, en medio de una de las revoluciones más caóticas y brutales, el destino de una nación pende del borde de la espada de un asesino.\n\n Assassin's Creed Syndicate:\nLondres, 1868. La Revolución Industrial llena los bolsillos de la élite mientras las clases obreras luchan por sobrevivir, hasta que un par de asesinos emergen del bajo mundo en su ayuda.",
+    "genre": "Acción y aventura",
+    "img_card": "acTriplePack.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "The Elder Scrolls Online",
+    "price": 49.900,
+    "discount": 0,
+    "description": "Bienvenido a High Isle, una parte de Tamriel nunca antes vista en los juegos de Elder Scrolls. Explora el idílico enclave oceánico de los bretones y la sede de una cultura caballeresca mientras te enfrentas a las fuerzas ruinosas del Señor Ascendente, que conspiran para sumir a Tamriel en un conflicto interminable.",
+    "genre": "Juegos de rol",
+    "img_card": "tesOnline.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Just Cause 4",
+    "price": 179.900,
+    "discount": 0,
+    "description": "El agente rebelde Rico Rodriguez viaja a Solís, un enorme mundo sudamericano de conflictos, opresión y condiciones climáticas extremas. Ponte tu traje, equipa tu rezón personalizable y prepárate para estruendos.",
+    "genre": "Acción y aventura",
+    "img_card": "justCause4.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 17
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Farming Simulator 22",
+    "price": 182.900,
+    "discount": 0,
+    "description": "¡Ponte en la piel de un granjero de hoy en día! La agricultura, la silvicultura y la ganadería te ofrecerán una gran variedad de actividades mientras te enfrentas al desafío de las cuatro estaciones, especialmente el invierno. Construye una granja a tu gusto y amplía las operaciones agrícolas con cadenas de producción. ¡Levanta tu propio imperio agrícola! Dirige tu granja incluso con tus amigos y disfrutad juntos del modo multijugador multiplataforma.",
+    "genre": "Deportes",
+    "img_card": "farmingSimulator.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 0
   },
   {
-    "title": "",
-    "price": ,
-    "discount": ,
-    "description": "",
-    "genre": "",
-    "img_card": "",
+    "title": "Hades",
+    "price": 90.000,
+    "discount": 0,
+    "description": "Como el príncipe inmortal del Inframundo, tendrás a tu disposición los poderes y las armas míticas del Olimpo para liberarte de las garras del mismísimo dios de los muertos, al tiempo que te vas haciendo más fuerte y descubres más piezas de la historia con cada intento de fuga.",
+    "genre": "Acción y aventura",
+    "img_card": "hades.jpg",
     "img_detail": "default.jpg",
-    "rating_age": 
+    "rating_age": 10
   }
 ]
