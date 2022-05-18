@@ -1,7 +1,9 @@
 const {validationResult} = require('express-validator');
 const db = require('../database/models');
+const Platforms = db.Platform;
 const Games = db.Game;
 const Genres = db.Genre;
+const platforms_games = db.platforms_games;
 
 const productsController ={
     getProducts: (req, res) => {
@@ -32,15 +34,35 @@ const productsController ={
                 description: req.body.description,
                 price: req.body.price,
                 discount: req.body.discount,
-                imgCard: (req.file)?req.file.filename:"default.jpg",
+                img_card: (req.file)?req.file.filename:"default.jpg",
                 rating_age: req.body.ratingAge,
-                genre_id: req.body.genre,
-                platform_xbox: (req.body.xbox)?1:0,
-                platform_play: (req.body.play)?1:0,
-                platform_pc: (req.body.pc)?1:0
+                genre_id: req.body.genre
              })
-             .then(() => res.redirect('/products'))
-             .catch(error => console.log(error))
+            .then((result) => {
+                if(typeof req.body.platform === 'string'){
+                    platforms_games.create({
+                        platform_id: req.body.platform,
+                        game_id: result.dataValues.id
+                    })
+                    .then(result =>{
+                        console.log(result);
+                    })
+                    .catch(error => console.log(error))
+                }else{
+                    req.body.platform.forEach(element => {
+                        platforms_games.create({
+                            platform_id: element,
+                            game_id: result.dataValues.id
+                        })
+                        .then(result =>{
+                            console.log(result);
+                        })
+                        .catch(error => console.log(error))
+                    });
+                }
+                res.redirect('/products')
+            })
+            .catch(error => console.log(error))
         }
     },
     edit: function(req,res) {

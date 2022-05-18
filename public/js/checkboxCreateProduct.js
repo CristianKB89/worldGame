@@ -6,12 +6,10 @@ window.addEventListener('load', () =>{
         e.preventDefault();
         let checkboxes = document.getElementsByName('platform');
         for(let i = 0; i < checkboxes; i++){
-            if(checkboxes[i].value){
-                checkboxValues.push(checkboxes[i].value)
+            if(checkboxes[i].checked){
+                checkboxValues.push(checkboxes[i].checked)
             }
-            console.log(checkboxes[i].value);
         }
-        console.log(checkboxValues);
 
     })
 })
