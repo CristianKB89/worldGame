@@ -4,7 +4,7 @@
     "price": 249.999,
     "discount": 60,
     "description": "Con la tecnología de Football™, EA SPORTS™ FIFA 22 acerca el juego aún más a la realidad con avances fundamentales en el juego y una nueva temporada de innovaciones en todos los modos.",
-    "genre": "Deportes",
+    "genre": "5",
     "img_card": "fifa22.jpg",
     "img_detail": "default.jpg",
     "rating_age": 0
@@ -14,7 +14,7 @@
     "price": 159.990,
     "discount": 50,
     "description": "Cuando un joven estafador, un ladrón de bancos jubilado y un terrorífico psicópata se entremeten con los elementos más temerosos y dementes del submundo criminal, el gobierno de EE. UU. y la industria de entretenimiento, deben llevar a cabo una serie de atracos peligrosos para sobrevivir en una ciudad despiadada en la que no pueden confiar en nadie, y mucho menos unos en los otros.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "gtaV.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -24,7 +24,7 @@
     "price": 214.900,
     "discount": 75,
     "description": "Batman: Arkham Collection te trae las versiones definitivas de la trilogía de juegos Arkham de Rocksteady, incluyendo todo el contenido poslanzamiento, en una colección completa.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "batman.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -34,7 +34,7 @@
     "price": 59.400,
     "discount": 0,
     "description": "¡Sumérgete en Little Nightmares, una historia oscura y extravagante que te obligará a enfrentarte a tus miedos infantiles! Ayuda a Six a escapar de Las Fauces, un enorme y misterioso navío habitado por almas corruptas en busca de su siguiente comida. A medida que avanzas en tu aventura, explorarás una casita de muñecas espeluznante que actúa como prisión de la que tendrás que escapar y un patio de juegos repleto de secretos por descubrir. ¡Reconecta con tu niño interior para dar rienda suelta a la imaginación y encontrar la salida!",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "littleNightmares.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -44,7 +44,7 @@
     "price": 71.149,
     "discount": 40,
     "description": "Incluye Grand Theft Auto Online. Consigue una rebaja del 50% en GTA Online para Xbox Series X|S hasta el 14 de junio de 2022. El modo Historia de Grand Theft Auto V se puede comprar por separado.\nContinúa tu aventura en Xbox Series X|S y transfiere tus progresos del modo Historia de GTA V y tus personajes y progresos de GTA Online mediante una migración única.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "gtaOnline.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -54,7 +54,7 @@
     "price": 92.621,
     "discount": 70,
     "description": "Metro Exodus es un juego de disparos en primera persona centrado en la narrativa y desarrollado por 4A Games que combina el combate letal y el sigilo con la exploración, el terror y la supervivencia en uno de los mundos más inmersivos de la historia de los juegos.\nHuye de las ruinas devastadas del metro de Moscú y embárcate en un viaje épico por todo el continente en la Rusia postapocalíptica. Es la mayor aventura de Metro hasta ahora.\nExplora las estepas rusas en niveles no lineales enormes y sigue una narrativa apasionante inspirada en las novelas de Dmitry Glukhovsky que abarca un año entero desde primavera, verano y otoño hasta el pleno invierno nuclear.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "metroExodus.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -64,7 +64,7 @@
     "price": 207.000,
     "discount": 0,
     "description": "EL NUEVO RPG DE ACCIÓN DE FANTASÍA.\nLevántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.",
-    "genre": "Juegos de rol",
+    "genre": "2",
     "img_card": "eldenRing.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -74,7 +74,7 @@
     "price": 72.470,
     "discount": 0,
     "description": "Cuphead es un juego clásico de acción de disparos muy enfocado en batallas de jefes. Inspirado en las caricaturas de 1930, las imágenes y el audio se crearon de forma minuciosa con las mismas técnicas de la era, esto es, animación tradicional a mano, fondos de marca de agua y grabaciones originales de jazz.",
-    "genre": "Plataformas",
+    "genre": "7",
     "img_card": ".jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -83,8 +83,8 @@
     "title": "Cyberpunk 2077",
     "price": 219.900,
     "discount": 50,
-    "description": "Cyberpunk 2077 es un RPG de acción y aventura de mundo abierto ambientado en la megalópolis de Night City, donde juegas como un mercenario ciberpunk envuelto en una lucha por la supervivencia. ¡Explora un futuro oscuro, ahora actualizado con la próxima generación en mente y con contenido adicional gratuito!",
-    "genre": "Juegos de rol",
+    "description": "Cyberpunk 2077 es un RPG de 1 de mundo abierto ambientado en la megalópolis de Night City, donde juegas como un mercenario ciberpunk envuelto en una 3 por la supervivencia. ¡Explora un futuro oscuro, ahora actualizado con la próxima generación en mente y con contenido adicional gratuito!",
+    "genre": "2",
     "img_card": "ciberPunk2077.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17 
@@ -94,7 +94,7 @@
     "price": 156.900,
     "discount": 0,
     "description": "Publicado originalmente en 1998, Resident Evil 2, uno de los juegos más icónicos de todos los tiempos, regresa completamente reinventado para las consolas de nueva generación.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "residentEvil2.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -104,7 +104,7 @@
     "price": 84.900,
     "discount": 20,
     "description": "¡Uno de los títulos más vendidos de 2015 se hace XL! Kompleta la experiencia Mortal Kombat X con contenidos nuevos y material ya existente. Incluye el juego principal y nuevos personajes para llevar, como Alien, Leatherface, Triborg y Bo' Rai Cho. Entre los personajes que ya se habían lanzado con anterioridad tenemos a Predator, Jason Voorhees, Tremor, Tanya y Goro. Incluye también el nuevo pack de aspectos, llamado Apocalipsis.",
-    "genre": "Lucha",
+    "genre": "3",
     "img_card": "mortalKombat11.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -114,7 +114,7 @@
     "price": 259.300,
     "discount": 0,
     "description": "etomando donde acabó Resident Evil 7 biohazard, Resident Evil Village es la octava entrega clave de la serie insignia Resident Evil. El juego muestra a Ethan y Mia Winters viviendo felices y juntos después de haber dejado atrás sus pesadillas compartidas en la plantación de Baker... hasta que su vida da un vuelco y Ethan se convierte en el centro de una nueva pesadilla.",
-    "genre": "Survival Horror",
+    "genre": "6",
     "img_card": "village.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -124,7 +124,7 @@
     "price": 259.900,
     "discount": 0,
     "description": "Cuando se pierde toda esperanza y el destino de la humanidad pende de un hilo, el Jefe Maestro está listo para enfrentarse al enemigo más despiadado que jamás haya enfrentado. Ponte la armadura del mayor héroe de la humanidad para disfrutar de una aventura épica y explorar la escala masiva del anillo Halo.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "haloInfiniteC.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -134,7 +134,7 @@
     "price": 0,
     "discount": 0,
     "description": "Halo Infinite ofrece una experiencia increíble en Xbox One y la nueva familia de consolas, además de en PC, con impresionantes gráficos 4K y juego multiplataforma de primera calidad. Además, en Xbox Series X y PC compatibles, disfrutarás de características mejoradas, como una resolución de hasta 120 FPS y tiempos de carga muy reducidos para una jugabilidad fluida que marcará el comienzo de la próxima generación de juegos.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "haloInfiniteMulti.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -144,7 +144,7 @@
     "price": 299.900,
     "discount": 0,
     "description": "La edición originales incluye:\n• TEKKEN 7 (juego completo)\n• DLC13: datos de marco (nueva función)\n• 12 paquetes de personajes adicionales\n- DLC adicional: Eliza\n- DLC4: Anna Williams\n- DLC5: Lei Wulong\n- DLC6: Craig Marduk\n- DLC7: Armor King\n- DLC8: Julia Chang\n- DLC10: Zafina\n- DLC11: Ganryu\n- DLC12: Leroy Smith\n- DLC14: Fahkumram\n- DLC16: Kunimitsu\n- DLC18: Lidia Sobieska\nLAS MEJORES PELEAS SON PERSONALES",
-    "genre": "Lucha",
+    "genre": "3",
     "img_card": "tekken7.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -154,7 +154,7 @@
     "price": 120.900,
     "discount": 0,
     "description": "¡Adéntrate en el masivo campo de juegos multijugador de Riders Republic™! Toma tu moto, tus esquíes, tu tabla de snowboard o tu wingsuit y explora un paraíso deportivo de mundo abierto donde tú haces -o rompes- las reglas.",
-    "genre": "Deportes",
+    "genre": "5",
     "img_card": "riderRepublic.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -164,7 +164,7 @@
     "price": 269.999,
     "discount": 0,
     "description": "¡Juega en los escenarios de las nueve películas de la saga de Star Wars™ en este nuevo videojuego de LEGO® único en su especie! Atraviesa la galaxia para descubrir los lugares más legendarios de la saga con todos tus personajes favoritos. ¡Una galaxia muy, muy lejana nunca había sido así de entretenida!",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "starWarsLego.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -174,7 +174,7 @@
     "price": 199.900,
     "discount": 0,
     "description": "Te damos la bienvenida a Yara, un paraíso tropical congelado en el tiempo. Far Cry® 6 arroja a los jugadores al mundo rebosante de adrenalina de una revolución guerrillera actual. Como dictador de Yara, Antón Castillo está decidido a recuperar la antigua gloria de su nación por todos los medios junto a su hijo, Diego, quien siempre está obedientemente a su lado. Únete a la guerrilla y quema su régimen hasta los cimientos.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "farCry6.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -184,7 +184,7 @@
     "price": 249.900,
     "discount": 0,
     "description": "La edición Game of the Year (GOTY) Estándar de Microsoft Flight Simulator hace honor a todos los comentarios positivos, las críticas y los premios obtenidos, pero también es un Gracias a nuestros seguidores (tanto a los más recientes como a los más veteranos) que han hecho que este título se convierta en un fenómeno. La edición Game of the Year Estándar de Microsoft Flight Simulator incluye 25 aeronaves de gran detalle con modelos de vuelo exclusivos y 38 aeropuertos creados a mano.",
-    "genre": "Deportes",
+    "genre": "5",
     "img_card": "flightSimulator.jpg",
     "img_detail": "default.jpg",
     "rating_age": 0
@@ -194,7 +194,7 @@
     "price": 234.900,
     "discount": 0,
     "description": "Battlefield™ 2042 es un juego de disparos en primera persona que marca el regreso de la icónica guerra total de la franquicia. Adáptate en un mundo del futuro cercano transformado por el desorden y vence en campos de batalla cambiantes con la ayuda de tu escuadrón y un arsenal innovador.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "bf2042.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -204,7 +204,7 @@
     "price": 188.900,
     "discount": 0,
     "description": "Tras ganar más de 200 premios Game of the Year, The Elder Scrolls V: Skyrim celebra 10 años de aventuras con detalles impresionantes. La Anniversary Edition incluye una década de contenido: el aclamado juego principal y los complementos de la Skyrim Special Edition, además de contenido preexistente y nuevo de Creation Club que incluye misiones, mazmorras, jefes, armas, hechizos y mucho más.",
-    "genre": "Juegos de rol",
+    "genre": "2",
     "img_card": "skyrim.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -213,8 +213,8 @@
     "title": "Kimetsu No Yaiba",
     "price": 117.900,
     "discount": 0,
-    "description": "En el modo historia, recorre el camino de Tanjirō Kamado, cuya familia fue asesinada y su hermana transformada en un demonio. ¡Vive la historia representada en el anime Guardianes de la Noche: Kimetsu no Yaiba mientras Tanjirō lucha para restaurar la humanidad de Nezuko y se enfrenta a la amenaza demoníaca!",
-    "genre": "Acción y aventura",
+    "description": "En el modo historia, recorre el camino de Tanjirō Kamado, cuya familia fue asesinada y su hermana transformada en un demonio. ¡Vive la historia representada en el anime Guardianes de la Noche: Kimetsu no Yaiba mientras Tanjirō 3 para restaurar la humanidad de Nezuko y se enfrenta a la amenaza demoníaca!",
+    "genre": "1",
     "img_card": "kimetsu.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -224,7 +224,7 @@
     "price": 249.900,
     "discount": 0,
     "description": "¡La aventura definitiva de Horizon te está esperando! Explora los paisajes vivos y dinámicos del mundo abierto de México divirtiéndote sin límites y conduciendo cientos de los mejores autos del mundo. La edición Premium incluye dos expansiones, la membresía VIP, el pase de autos y el paquete de bienvenida.",
-    "genre": "Deportes",
+    "genre": "5",
     "img_card": "forza5.jpg",
     "img_detail": "default.jpg",
     "rating_age": 0
@@ -234,7 +234,7 @@
     "price": 484.900,
     "discount": 0,
     "description": "¡Incluye el juego base, el pase de temporada, el paquete Ultimate Cosmetics y la expansión El inicio del Ragnarök!\nEn Assassin's Creed® Valhalla encarnas a Eivor, un feroz guerrero vikingo criado con las anécdotas de batalla y gloria. Explora un misterioso y hermoso mundo abierto establecido en la brutalidad de la edad oscura en Inglaterra.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "ACvalhalla.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -244,7 +244,7 @@
     "price": 0,
     "discount": 0,
     "description": "La Isla del Capítulo 2 se ha puesto del revés... literalmente. ¡Adéntrate en la nueva isla y explora todos los rincones de un mundo desconocido en el Capítulo 3 - Temporada 1 de Fortnite: De vuelta!",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "fornite.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -253,8 +253,8 @@
     "title": "Apex Legends",
     "price": 0,
     "discount": 0,
-    "description": "Apex Legends es un juego de disparos de héroes gratuito en el que competidores legendarios luchan por la gloria, la fama y la fortuna en los límites de la Frontera. ¡Juega en partidas clásicas de Battle Royale de 60 personas, batallas de Arenas 3v3 y modos de tiempo limitado y adquisiciones!",
-    "genre": "Shooter",
+    "description": "Apex Legends es un juego de disparos de héroes gratuito en el que competidores legendarios 3n por la gloria, la fama y la fortuna en los límites de la Frontera. ¡Juega en partidas clásicas de Battle Royale de 60 personas, batallas de Arenas 3v3 y modos de tiempo limitado y adquisiciones!",
+    "genre": "4",
     "img_card": "apex.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -264,7 +264,7 @@
     "price": 259.900,
     "discount": 0,
     "description": "La famosa campaña de Gears 5 y el modo multijugador renovado de una de las sagas más aclamadas de los videojuegos, llegan completamente Optimizados para Xbox Series X y Series S.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "gears5.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -274,7 +274,7 @@
     "price": 243.900,
     "discount": 0,
     "description": "Hermana de las Formas, Rompedora de Espadas, Savathûn. La Reina Bruja aguarda a quienes buscan comprender su inexplicable control de la Luz. Sus soldados marchan con un nuevo propósito, envalentonados por un poder que nunca antes tuvieron. Ven, Guardián. Entra en su Mundo trono, experimenta la mejor campaña hasta la fecha y sobrevive a la verdad.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "destiny2.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -283,8 +283,8 @@
     "title": "Minecraft",
     "price": 60.900,
     "discount": 0,
-    "description": "Minecraft es un juego en el que se colocan bloques y se ofrecen aventuras continuas. Construye lo que se te ocurra con recursos ilimitados en modo Creativo o disfruta de grandes expediciones en modo Supervivencia, viajando por tierras misteriosas y en las profundidades de tus propios mundos infinitos. ¿Te esconderás de los monstruos o crearás herramientas, armadura y armas para luchar contra ellos? ¡No hace falta que lo hagas solo! Comparte la aventura con amigos en modo multijugador de pantalla dividida en línea.",
-    "genre": "Acción y aventura",
+    "description": "Minecraft es un juego en el que se colocan bloques y se ofrecen aventuras continuas. Construye lo que se te ocurra con recursos ilimitados en modo Creativo o disfruta de grandes expediciones en modo Supervivencia, viajando por tierras misteriosas y en las profundidades de tus propios mundos infinitos. ¿Te esconderás de los monstruos o crearás herramientas, armadura y armas para 3r contra ellos? ¡No hace falta que lo hagas solo! Comparte la aventura con amigos en modo multijugador de pantalla dividida en línea.",
+    "genre": "1",
     "img_card": "minecraft.jpg",
     "img_detail": "default.jpg",
     "rating_age": 0
@@ -293,8 +293,8 @@
     "title": "DRAGON BALL FighterZ",
     "price": 174.900,
     "discount": 5,
-    "description": "DRAGON BALL FighterZ trae un sinfín de espectaculares peleas con sus luchadores todopoderosos. Al asociarse con Arc System Works, DRAGON BALL FighterZ maximiza los gráficos de anime de alta gama y brinda un juego de lucha fácil de aprender pero difícil de dominar.",
-    "genre": "Lucha",
+    "description": "DRAGON BALL FighterZ trae un sinfín de espectaculares peleas con sus 3dores todopoderosos. Al asociarse con Arc System Works, DRAGON BALL FighterZ maximiza los gráficos de anime de alta gama y brinda un juego de 3 fácil de aprender pero difícil de dominar.",
+    "genre": "3",
     "img_card": "dbzfighterZ.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -304,7 +304,7 @@
     "price": 179.900,
     "discount": 0,
     "description": "Una aventura que abarca toda la galaxia te espera en Star Wars Jedi: Fallen Order™, un nuevo título de acción-aventura en tercera persona de Respawn Entertainment. Este juego narrativo para un solo jugador te pone en el papel de un Jedi Padawan que se escapó de la purga de la Orden 66 tras los sucesos de Star Wars™: Episodio III - Revenge of the Sith™. En una búsqueda para reconstruir la Orden de Jedi, debes recoger las piezas de tu pasado destrozado para completar tu entrenamiento, desarrollar nuevas y poderosas habilidades de la Fuerza y dominar el arte del icónico sable láser, todo ello mientras te mantienes un paso por delante del Imperio y de sus mortíferos Inquisidores.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "starWarsJedi.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -313,8 +313,8 @@
     "title": "Red Dead Redemption 2",
     "price": 239.900,
     "discount": 0,
-    "description": "Estados Unidos, 1899. Después de que un atraco en el pueblo de Blackwater sale muy mal, Arthur Morgan y la banda Van der Linde se ven obligados a huirse. Con los agentes federales y los cazarrecompensas pisándoles los talones, la banda debe atracar, robar y luchar para sobrevivir.",
-    "genre": "Acción y aventura",
+    "description": "Estados Unidos, 1899. Después de que un atraco en el pueblo de Blackwater sale muy mal, Arthur Morgan y la banda Van der Linde se ven obligados a huirse. Con los agentes federales y los cazarrecompensas pisándoles los talones, la banda debe atracar, robar y 3r para sobrevivir.",
+    "genre": "1",
     "img_card": "redDead2.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -324,7 +324,7 @@
     "price": 146.900,
     "discount": 0,
     "description": "¡Vuelve Crash Bandicoot™, tu marsupial favorito! Mejorado, más alocado y listo para bailar con la colección de juegos La trilogía. Ahora puedes disfrutar de Crash Bandicoot como nunca antes. Gira, salta, rompe, enfréntate a los épicos desafíos y vive las aventuras de los tres juegos con los que empezó todo: Crash Bandicoot™, Crash Bandicoot™ 2: Cortex Strikes Back y Crash Bandicoot™ 3: Warped. ¡Vuelve a vivir tus momentos favoritos de Crash con gráficos remasterizados y prepárate para jugar con mucha más energía!",
-    "genre": "Plataformas",
+    "genre": "7",
     "img_card": "crash.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -333,8 +333,8 @@
     "title": "BioShock: The Collection",
     "price": 200.000,
     "discount": 75,
-    "description": "Disfruta de los increíbles mundos e historias de la saga de BioShock con BioShock: The Collection. Recorre las ciudades de Rapture y Columbia con BioShock Remastered, BioShock 2 Remastered y BioShock Infinite: The Complete Edition, que incluyen todo el contenido adicional para un jugador. Lucha por tu vida y derrota a tus enemigos, ya sea en el fondo del mar o más allá de las nubes.",
-    "genre": "Shooter",
+    "description": "Disfruta de los increíbles mundos e historias de la saga de BioShock con BioShock: The Collection. Recorre las ciudades de Rapture y Columbia con BioShock Remastered, BioShock 2 Remastered y BioShock Infinite: The Complete Edition, que incluyen todo el contenido adicional para un jugador. 3 por tu vida y derrota a tus enemigos, ya sea en el fondo del mar o más allá de las nubes.",
+    "genre": "4",
     "img_card": "bioshock.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -343,8 +343,8 @@
     "title": "Dying Light 2 Stay Human",
     "price": 182.900,
     "discount": 0,
-    "description": "Hace más de veinte años, nos enfrentamos al virus en Harran... Y perdimos. Y ahora se avecina una nueva derrota. La Ciudad, uno de los últimos grandes asentamientos de la humanidad, está siendo destruida por las luchas internas. La civilización ha vuelto a la Edad Oscura. Pero queda esperanza.",
-    "genre": "Juegos de rol",
+    "description": "Hace más de veinte años, nos enfrentamos al virus en Harran... Y perdimos. Y ahora se avecina una nueva derrota. La Ciudad, uno de los últimos grandes asentamientos de la humanidad, está siendo destruida por las 3s internas. La civilización ha vuelto a la Edad Oscura. Pero queda esperanza.",
+    "genre": "2",
     "img_card": "dyingLight2.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -354,7 +354,7 @@
     "price": 214.900,
     "discount": 0,
     "description": "NieR Replicant ver.1.22474487139... es una versión actualizada de NieR Replicant, lanzado originalmente en Japón en abril de 2010.\nDescubre una precuela única para el aplaudido NieR:Automata. ¡Con esta modernización disfrutarás de unos gráficos renovados, una historia fascinante y muchas cosas más!",
-    "genre": "Juegos de rol",
+    "genre": "2",
     "img_card": "nier.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -364,7 +364,7 @@
     "price": 129.899,
     "discount": 0,
     "description": "El icónico viaje del Jefe Maestro incluye seis juegos recopilados en una única experiencia integrada que está optimizada tanto para PC como para Xbox Series X|S. No importa que seas un fan desde los inicios de la saga o que conozcas al Spartan 117 por primera vez: The Master Chief Collection es la experiencia de juego de Halo definitiva.",
-    "genre": "Shooter",
+    "genre": "4",
     "img_card": "haloTMC.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -374,7 +374,7 @@
     "price": 239.900,
     "discount": 50,
     "description": "Mafia: Definitive Edition. Lost Haven, Illinois. Años 30.\nProspera como gánster durante la Ley Seca en esta reinvención del clásico. Tras un inesperado encontronazo con la mafia, el taxista Tommy Angelo entra a regañadientes en el mundo del crimen organizado. A pesar de su reticencia inicial, las ventajas de unirse a la familia Salieri son demasiadas como para dejarlas pasar.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "mafia.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -384,7 +384,7 @@
     "price": 95.000,
     "discount": 0,
     "description": "Regresa a un cautivante mundo de terror en Little Nightmares II, un juego de aventura y suspenso en donde te pondrás en los zapatos de Mono, un niño atrapado en un mundo distorsionado por la ruidosa señal de una lejana torre de transmisión.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "littleNightmares2.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
@@ -393,8 +393,8 @@
     "title": "Control Ultimate Edition",
     "price": 129.900,
     "discount": 20,
-    "description": "Una presencia corrupta ha invadido la Agencia Federal de Control... Solo tú puedes detenerla. El mundo es tu arma en esta lucha épica para aniquilar a un enemigo amenazante en entornos profundos e impredecibles. La contención ha fallado, la humanidad está en juego. ¿Retomarás el control?",
-    "genre": "Acción y aventura",
+    "description": "Una presencia corrupta ha invadido la Agencia Federal de Control... Solo tú puedes detenerla. El mundo es tu arma en esta 3 épica para aniquilar a un enemigo amenazante en entornos profundos e impredecibles. La contención ha fallado, la humanidad está en juego. ¿Retomarás el control?",
+    "genre": "1",
     "img_card": "control.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -404,7 +404,7 @@
     "price": 171.200,
     "discount": 50,
     "description": "¡¡DEVIL MAY CRY HA VUELTO, COLEGA!! Este legendario juego de acción espectacular regresa mejor que nunca en la versión definitiva de este galardonado superéxito.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "dmc5.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -414,7 +414,7 @@
     "price": 274.000,
     "discount": 0,
     "description": "EL NUEVO RPG DE ACCIÓN DE FANTASÍA.\nLevántate, Tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.",
-    "genre": "Juegos de rol",
+    "genre": "2",
     "img_card": "eldenRingDelux.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -424,7 +424,7 @@
     "price": 249.900,
     "discount": 0,
     "description": "En Sekiro™: Shadows Die Twice encarnas al 'lobo manco', un guerrero desfigurado y caído en desgracia que ha sido rescatado al borde de la muerte. Tras jurar proteger a un joven señor descendiente de un antiguo linaje, te conviertes en el objetivo de despiadados enemigos, entre ellos el peligroso clan Ashina. Cuando el joven señor sea capturado, nada te detendrá en tu peligrosa aventura por restituir tu honor, ni siquiera la muerte.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "sekiro.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -433,8 +433,8 @@
     "title": "Mortal Kombat 11",
     "price": 249.900,
     "discount": 75,
-    "description": "Toma el control de los protectores de Earthrealm en dos campañas de historias aclamadas y que marcan el paso del tiempo mientras se apresuran para evitar que Kronika vuelva atrás el tiempo y reinicie la historia. Presenta la lista completa de 37 luchadores, incluidos Rain, Mileena y Rambo.",
-    "genre": "Lucha",
+    "description": "Toma el control de los protectores de Earthrealm en dos campañas de historias aclamadas y que marcan el paso del tiempo mientras se apresuran para evitar que Kronika vuelva atrás el tiempo y reinicie la historia. Presenta la lista completa de 37 3dores, incluidos Rain, Mileena y Rambo.",
+    "genre": "3",
     "img_card": "mk11.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -443,8 +443,8 @@
     "title": "Sniper Elite 4",
     "price": 229.900,
     "discount": 0,
-    "description": "Ponte en la piel de un francotirador en el shooter de la Segunda Guerra Mundial más realista que jamás se haya creado. Experimenta una gran libertad, combates tácticos en tercera persona y realiza épicos disparos a larga distancia en niveles gigantescos, en los que tendrás que librar del yugo del fascismo a una Italia en guerra.",
-    "genre": "Shooter",
+    "description": "Ponte en la piel de un francotirador en el 4 de la Segunda Guerra Mundial más realista que jamás se haya creado. Experimenta una gran libertad, combates tácticos en tercera persona y realiza épicos disparos a larga distancia en niveles gigantescos, en los que tendrás que librar del yugo del fascismo a una Italia en guerra.",
+    "genre": "4",
     "img_card": "sniperElite4.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -453,8 +453,8 @@
     "title": "Pack triple Assassin's Creed: Black Flag, Unity, Syndicate",
     "price": 249.900,
     "discount": 0,
-    "description": "Assassin's Creed 4 Black Flag:\nEl Caribe, 1715. Legendarios piratas son amos del mar y la tierra, saqueando fortunas y poniendo de rodillas a los imperios. Entre estos forajidos se encuentra Edward Kenway, un temerario y joven capitán que se gana el respeto de los piratas, pero cuyo apetito de oro y gloria pueden destruir todo cuanto han construido.\n\nAssassin's Creed Unity:\nParís, 1789. Durante siglos, Francia ha sido gobernada por una élite privilegiada. Ya no más. Este día, el pueblo de París se ha levantado en armas contra la tiranía. Ahora, en medio de una de las revoluciones más caóticas y brutales, el destino de una nación pende del borde de la espada de un asesino.\n\n Assassin's Creed Syndicate:\nLondres, 1868. La Revolución Industrial llena los bolsillos de la élite mientras las clases obreras luchan por sobrevivir, hasta que un par de asesinos emergen del bajo mundo en su ayuda.",
-    "genre": "Acción y aventura",
+    "description": "Assassin's Creed 4 Black Flag:\nEl Caribe, 1715. Legendarios piratas son amos del mar y la tierra, saqueando fortunas y poniendo de rodillas a los imperios. Entre estos forajidos se encuentra Edward Kenway, un temerario y joven capitán que se gana el respeto de los piratas, pero cuyo apetito de oro y gloria pueden destruir todo cuanto han construido.\n\nAssassin's Creed Unity:\nParís, 1789. Durante siglos, Francia ha sido gobernada por una élite privilegiada. Ya no más. Este día, el pueblo de París se ha levantado en armas contra la tiranía. Ahora, en medio de una de las revoluciones más caóticas y brutales, el destino de una nación pende del borde de la espada de un asesino.\n\n Assassin's Creed Syndicate:\nLondres, 1868. La Revolución Industrial llena los bolsillos de la élite mientras las clases obreras 3n por sobrevivir, hasta que un par de asesinos emergen del bajo mundo en su ayuda.",
+    "genre": "1",
     "img_card": "acTriplePack.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -464,7 +464,7 @@
     "price": 49.900,
     "discount": 0,
     "description": "Bienvenido a High Isle, una parte de Tamriel nunca antes vista en los juegos de Elder Scrolls. Explora el idílico enclave oceánico de los bretones y la sede de una cultura caballeresca mientras te enfrentas a las fuerzas ruinosas del Señor Ascendente, que conspiran para sumir a Tamriel en un conflicto interminable.",
-    "genre": "Juegos de rol",
+    "genre": "2",
     "img_card": "tesOnline.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -474,7 +474,7 @@
     "price": 179.900,
     "discount": 0,
     "description": "El agente rebelde Rico Rodriguez viaja a Solís, un enorme mundo sudamericano de conflictos, opresión y condiciones climáticas extremas. Ponte tu traje, equipa tu rezón personalizable y prepárate para estruendos.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "justCause4.jpg",
     "img_detail": "default.jpg",
     "rating_age": 17
@@ -484,7 +484,7 @@
     "price": 182.900,
     "discount": 0,
     "description": "¡Ponte en la piel de un granjero de hoy en día! La agricultura, la silvicultura y la ganadería te ofrecerán una gran variedad de actividades mientras te enfrentas al desafío de las cuatro estaciones, especialmente el invierno. Construye una granja a tu gusto y amplía las operaciones agrícolas con cadenas de producción. ¡Levanta tu propio imperio agrícola! Dirige tu granja incluso con tus amigos y disfrutad juntos del modo multijugador multiplataforma.",
-    "genre": "Deportes",
+    "genre": "5",
     "img_card": "farmingSimulator.jpg",
     "img_detail": "default.jpg",
     "rating_age": 0
@@ -494,7 +494,7 @@
     "price": 90.000,
     "discount": 0,
     "description": "Como el príncipe inmortal del Inframundo, tendrás a tu disposición los poderes y las armas míticas del Olimpo para liberarte de las garras del mismísimo dios de los muertos, al tiempo que te vas haciendo más fuerte y descubres más piezas de la historia con cada intento de fuga.",
-    "genre": "Acción y aventura",
+    "genre": "1",
     "img_card": "hades.jpg",
     "img_detail": "default.jpg",
     "rating_age": 10
