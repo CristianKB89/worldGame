@@ -105,7 +105,7 @@
 }
 
 .homeContainer .homeAds .Ad .AdImg {
-    background-position: center;
+    background-position: top;
     background-size: cover;
     height: 50vh;
     width: 100%;
@@ -253,12 +253,12 @@
     }
 
     .homeContainer .homeAds .Ad .AdTxt {
-        background-color: #ffffff00;
+        background-color: #2f302fb6;
         padding: 40px 0 65px 25px;
     }
 
     .homeContainer .homeAds .AdTwo .Ad:nth-child(1) .AdTxt {
-        background-color: #107c10;
+        background-color: #107c10cb;
     }
 
     .homeContainer .homeAds .Ad .AdTxt h3 {
