@@ -35,6 +35,18 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: false,
     },
+    xbox: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+    pc: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+    playstation: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
   };
   let config = {
     tableName: "Games",
@@ -62,13 +74,6 @@ module.exports = (sequelize, dataTypes) => {
         through: "library",
         foreignKey: "game_id",
         otherKey: "user_id",
-        timestamps: false,
-      }),
-      Game.belongsToMany(models.Platform, {
-        as: "platforms",
-        through: "platforms_games",
-        foreignKey: "game_id",
-        otherKey: "platform_id",
         timestamps: false,
       }),
       Game.belongsTo(models.Genre, {
