@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <%- include('partials/head', { title: "World Game Catalogo" }) %>
@@ -20,28 +19,75 @@
                         </div>
                     </form>
                 </section>
-                <section class="catalogList">
-                    <div class="catalogListTxt">
-                        <div>
-                            <h2>Todos los juegos</h2>
-                            <p>Mostrando 1-50 de 2396 resultados</p>
-                            <ul>
-                                <% for( let i = 0; i < games.length; i++ ) { %>
-                                    <li>
-                                        <a href="/movies/detail/<%= games[i].id %>"><%= games[i].title %></a>
-                                    </li>
-                                <% } %>
-                            </ul>
+                <section class="calogListContainer">
+                    <section class="catalogFilters">
+                        <h2>Filtros</h2>
+                        <form>
+                            <button type="reset">Borrar Filtros</button>
+                            <h5 id="h5platform"><i class="fa-solid fa-angle-right"></i> Jugar en</h5>
+                            <div id="platform">
+                                <label for="xbox">
+                                    <input type="radio" name="playOn" id="xbox" />
+                                    Xbox
+                                </label>
+                                <label for="play">
+                                    <input type="radio" name="playOn" id="play" />
+                                    Play Station
+                                </label>
+                                <label for="pc">
+                                    <input type="radio" name="playOn" id="pc" />
+                                    Pc
+                                </label>
+                            </div>
+
+                            <h5 id="h5genre"><i class="fa-solid fa-angle-right"></i> Genero</h5>
+                            <div id="genre">
+                                <label for="action">
+                                    <input type="radio" name="genre" id="action" />
+                                    Accion
+                                </label>
+                                <label for="indie">
+                                    <input type="radio" name="genre" id="indie" />
+                                    Indie
+                                </label>
+                                <label for="shooter">
+                                    <input type="radio" name="genre" id="shooter" />
+                                    Shooter
+                                </label>
+                            </div>
+
+
+                            <h5 id="h5sale"><i class="fa-solid fa-angle-right"></i> Ofertas</h5>
+                            <div id="sale">
+                                <label for="none">
+                                    <input type="radio" name="sale" id="none" />
+                                    Ninguno
+                                </label>
+                                <label for="less">
+                                    <input type="radio" name="sale" id="less" />
+                                    Menos 50%
+                                </label>
+                                <label for="more">
+                                    <input type="radio" name="sale" id="more" />
+                                    Mas 50%
+                                </label>
+                            </div>
+
+                            <button type="submit" class="filterSubmit">Aplicar</button>
+                        </form>
+                    </section>
+                    <section class="catalogList">
+                        <div class="catalogListTxt">
+                            <div>
+                                <h2>Todos los juegos</h2>
+                                <p>Mostrando <%= games.length %>  resultados</p>
+                            </div>
                         </div>
-                        <div class="list">
-                            <%- include('partials/cardGame', { discount: 50 }) %>
-                                <%- include('partials/cardGame', { discount: 0 }) %>
-                                    <%- include('partials/cardGame', { discount: 15 }) %>
-                                        <%- include('partials/cardGame', { discount: 0 }) %>
-                                            <%- include('partials/cardGame', { discount: 50 }) %>
-                                                <%- include('partials/cardGame', { discount: 0 }) %>
-                                                    <%- include('partials/cardGame', { discount: 15 }) %>
-                                                        <%- include('partials/cardGame', { discount: 0 }) %>
+                        <div class="list">                            
+                            <% games.forEach(game => {  %> 
+                                 <%- include('partials/cardGame', { ...game.dataValues }) %>
+                             <% }) %> 
+                        
                         </div>
                     </section>
                 </section>
@@ -60,6 +106,3 @@
                 </section>
             </main>
             <%- include('partials/footer') %>
-    </body>
-
-</html>
