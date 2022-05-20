@@ -19,8 +19,8 @@
                     <%}%>
             </label>
             <label for="description">
-                <textarea value="<%= game.description %>" name="description" id="description" cols="38"
-                    rows="5"></textarea>
+                <textarea name="description" id="description" cols="38"
+                    rows="5"><%= game.description %></textarea>
                 <% if (locals.errors && errors.description){%>
                     <span class="error">
                         <%= errors.description.msg %>
@@ -28,7 +28,7 @@
                     <%}%>
             </label>
             <label for="price">
-                <input type="number" name="price" id="price" value="<%= game.price %>">
+                <input type="number" name="price" id="price" value="<%= game.price.toFixed(3) %>">
                 <% if (locals.errors && errors.price){%>
                     <span class="error">
                         <%= errors.price.msg %>
@@ -66,11 +66,9 @@
                     <% platforms.forEach((platform, index)=> { %>
                         <label for="platform_<%= platform.dataValues.name %>">
                                 <input 
-                                    checked="<% specificPlatform_Game.forEach(i => {%>
-                                        <% if(i.dataValues.platform_id == platform.dataValues.id){%>
-                                           <% return true %> 
-                                        <%} %>
-                                    <%} ) %>" 
+                                    <% if (arr.includes(element.dataValues.id)) { %>
+                                        checked="true"
+                                    <% } %>
                                     class="checkbox-product"
                                     type="checkbox" 
                                     name="platform" 
