@@ -29,5 +29,6 @@ router.post("/create", upload.single("imgCard"), productValidation, productsCont
 //edición de producto
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', upload.single('imgCard'), productsController.update);
+router.delete('/edit/:id', productsController.delete);
 
 module.exports = router;

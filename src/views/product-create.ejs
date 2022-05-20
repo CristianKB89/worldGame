@@ -52,9 +52,15 @@
             <span class="error"><%= errors.genre.msg %></span>
         <%}%>
         <p>Plataforma</p>
-        <label for="platform_xbox"><input class="checkbox-product" type="checkbox" name="platform" id="xbox" value="1"> Xbox </label>
-        <label for="platform_play"><input class="checkbox-product" type="checkbox" name="platform" id="play" value="2"> PlayStation </label>
-        <label for="platform_pc"><input class="checkbox-product" type="checkbox" name="platform" id="pc" value="3"> PC </label>
+        <p>Xbox:</p>
+        <label for="xbox"><input type="radio" name="xbox" value="1">Si</label>
+        <label for="xbox"><input type="radio" name="xbox" value="0" checked>No</label>
+        <p>Pc:</p>
+        <label for="pc"><input type="radio" name="pc" value="1">Si</label>
+        <label for="pc"><input type="radio" name="pc" value="0" checked>No</label>
+        <p>Play Station:</p>
+        <label for="play"><input type="radio" name="play" value="1">Si</label>
+        <label for="play"><input type="radio" name="play" value="0" checked>No</label>
         <% if (locals.errors && errors.platform){%>
             <span class="error"><%= errors.platform.msg %></span>
         <%}%>

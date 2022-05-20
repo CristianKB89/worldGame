@@ -19,8 +19,7 @@
                     <%}%>
             </label>
             <label for="description">
-                <textarea name="description" id="description" cols="38"
-                    rows="5"><%= game.description %></textarea>
+                <textarea name="description" id="description" cols="38" rows="5"><%= game.description %></textarea>
                 <% if (locals.errors && errors.description){%>
                     <span class="error">
                         <%= errors.description.msg %>
@@ -61,28 +60,96 @@
                 <span class="error">
                     <%= errors.genre.msg %>
                 </span>
-            <%}%>
+                <%}%>
                     <p>Plataforma</p>
-                    <% platforms.forEach((element, index)=> { %>
-                        <label for="platform_<%= element.dataValues.name %>">
-                                <input 
-                                    <% if (arr.includes(element.dataValues.id)) { %>
-                                        checked="true"
-                                    <% } %>
-                                    class="checkbox-product"
-                                    type="checkbox" 
-                                    name="platform" 
-                                    id="platform_<%= element.dataValues.name %>"
-                                    value="<%= element.dataValues.id %>"> 
-                                <%= element.dataValues.name %> 
-                        </label>
-                    <% }) %>
-                            <% if (locals.errors && errors.platform){%>
-                                <span class="error">
-                                    <%= errors.platform.msg %>
-                                </span>
-                            <%}%>
-                                    <button type="submit">Agregar</button>
+                    <p>Xbox:</p>
+                    <label for="XboxSi">
+                        <input
+                            <% if (game.xbox == '1') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="xbox" 
+                            value="1"
+                            id="XboxSi"
+                            class="checkbox-product" >
+                        Si
+                    </label>
+                    <label for="XboxNo">
+                        <input 
+                            <% if (game.xbox == '0') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="xbox" 
+                            value="0"
+                            id="XboxNo"
+                            class="checkbox-product" >
+                        No
+                    </label>
+                    <p>Pc:</p>
+                    <label for="PcSi">
+                        <input
+                            <% if (game.pc == '1') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="pc" 
+                            value="1"
+                            id="PcSi"
+                            class="checkbox-product" >
+                        Si
+                    </label>
+                    <label for="PcNo">
+                        <input 
+                            <% if (game.pc == '0') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="pc" 
+                            value="0"
+                            id="PcNo"
+                            class="checkbox-product" >
+                        No
+                    </label>
+                    <p>Play Station:</p>
+                    <label for="playSi">
+                        <input
+                            <% if (game.playstation == '1') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="play" 
+                            value="1"
+                            id="playSi"
+                            class="checkbox-product" >
+                        Si
+                    </label>
+                    <label for="playNo">
+                        <input 
+                            <% if (game.playstation == '0') { %>
+                                checked
+                            <% } %>
+                            type="radio" 
+                            name="play" 
+                            value="0"
+                            id="playNo"
+                            class="checkbox-product" >
+                        No
+                    </label>
+                    <% if (locals.errors && errors.platform){%>
+                        <span class="error">
+                            <%= errors.platform.msg %>
+                        </span>
+                        <%}%>
+                            <button type="submit">Editar</button>
+        </form>
+        <form 
+            class="signup-form" 
+            action="/products/edit/<%= game.id %>?_method=DELETE" 
+            method="POST"
+            >
+            <button type="submit" style="background-color: red;">Eliminar</button>
         </form>
 </body>
 
