@@ -63,8 +63,8 @@
                 </span>
             <%}%>
                     <p>Plataforma</p>
-                    <% platforms.forEach((platform, index)=> { %>
-                        <label for="platform_<%= platform.dataValues.name %>">
+                    <% platforms.forEach((element, index)=> { %>
+                        <label for="platform_<%= element.dataValues.name %>">
                                 <input 
                                     <% if (arr.includes(element.dataValues.id)) { %>
                                         checked="true"
@@ -72,9 +72,9 @@
                                     class="checkbox-product"
                                     type="checkbox" 
                                     name="platform" 
-                                    id="platform_<%= platform.dataValues.name %>"
-                                    value="<%= platform.dataValues.id %>"> 
-                                <%= platform.dataValues.name %> 
+                                    id="platform_<%= element.dataValues.name %>"
+                                    value="<%= element.dataValues.id %>"> 
+                                <%= element.dataValues.name %> 
                         </label>
                     <% }) %>
                             <% if (locals.errors && errors.platform){%>
