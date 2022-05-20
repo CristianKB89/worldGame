@@ -34,9 +34,6 @@
         </label>
         <label for="imgCard">
             <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
-            <% if (locals.errors && errors.imgCard){%>
-                <span class="error"><%= errors.imgCard.msg %></span>
-            <%}%>
         </label>
         <label for="ratingAge">
             <input type="number" min="0" max="21" name="ratingAge" id="ratingAge" placeholder="Clasificación de edad">

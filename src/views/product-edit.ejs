@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head', { title: "Edit game" }) %>
+</head>
+
+<body class="bg-form">
+    <%- include('nav-bar') %>
+        <form class="signup-form" action="/products/edit/<%= game.id %>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
+            <h2 class="form-create-product">Editar Juego</h2>
+            <label for="title">
+                <input type="text" name="title" id="title" value="<%= game.title %>">
+                <% if (locals.errors && errors.title){%>
+                    <span class="error">
+                        <%= errors.title.msg %>
+                    </span>
+                    <%}%>
+            </label>
+            <label for="description">
+                <textarea value="<%= game.description %>" name="description" id="description" cols="38"
+                    rows="5"></textarea>
+                <% if (locals.errors && errors.description){%>
+                    <span class="error">
+                        <%= errors.description.msg %>
+                    </span>
+                    <%}%>
+            </label>
+            <label for="price">
+                <input type="number" name="price" id="price" value="<%= game.price %>">
+                <% if (locals.errors && errors.price){%>
+                    <span class="error">
+                        <%= errors.price.msg %>
+                    </span>
+                    <%}%>
+            </label>
+            <label for="discount">
+                <input type="number" name="discount" id="discount" value="<%= game.discount %>">
+                <% if (locals.errors && errors.discount){%>
+                    <span class="error">
+                        <%= errors.discount.msg %>
+                    </span>
+                    <%}%>
+            </label>
+            <label for="imgCard">
+                <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
+            </label>
+            <label for="ratingAge">
+                <input type="number" min="0" max="21" name="ratingAge" id="ratingAge" value="<%= game.rating_age %>">
+            </label>
+
+            <select name="genre" id="">
+                <option value="">Generos</option>
+                <% genres.forEach((genre)=> { %>
+                    <option value="<%= genre.id %>" <%=(game.genre.id==genre.id)?'selected':null %>><%= genre.title %>
+                    </option>
+                    <% }) %>
+            </select>
+            <% if (locals.errors && errors.genre){%>
+                <span class="error">
+                    <%= errors.genre.msg %>
+                </span>
+                <%}%>
+                    <p>Plataforma</p>
+                    <% platforms.forEach((element, index)=> { %>
+                        <label for="platform_<%= element.dataValues.name %>">
+                                <input 
+                                    checked="<% specificPlatform.forEach(i => {%>
+                                        <% if(i.dataValues.platform_id == element.dataValues.id){%>
+                                           <% return true %> 
+                                        <%} %>
+                                    <%} ) %>" 
+                                    class="checkbox-product"
+                                    type="checkbox" 
+                                    name="platform" 
+                                    id="platform_<%= element.dataValues.name %>"
+                                    value="<%= element.dataValues.id %>"> 
+                                <%= element.dataValues.name %> 
+                        </label>
+                        <% }) %>
+                            <% if (locals.errors && errors.platform){%>
+                                <span class="error">
+                                    <%= errors.platform.msg %>
+                                </span>
+                                <%}%>
+                                    <button type="submit">Agregar</button>
+        </form>
+</body>
+
+</html>

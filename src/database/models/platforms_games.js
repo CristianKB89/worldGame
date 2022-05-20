@@ -25,8 +25,8 @@ module.exports = (sequelize, dataTypes) => {
 
     platforms_games.associate = (models) => {
         platforms_games.belongsTo(models.Game, {
-        as: "platforms_games",
-        foreignKey: "game_id",
+            as: "platforms_games",
+            foreignKey: "game_id",
         }),
         platforms_games.belongsTo(models.Platform, {
             as: "games_platforms",

@@ -66,20 +66,27 @@ const productsController ={
         }
     },
     edit: function(req,res) {
+
         let gamesRequest = Games.findByPk(req.params.id,{
             include: [
                 {
                     association: 'genre'
-                }/*,
-                    assciation:'platforms'*/
+                }
             ]
         });
         
         let genresRequest = Genres.findAll();
+        let plaftormsRequest = Platforms.findAll();
+        let platforms_gamesRequest = platforms_games.findAll();
 
-        Promise.all([gamesRequest, genresRequest])
-        .then(([game, genres]) => {
-            res.render('???', {game, genres})
+        Promise.all([gamesRequest, genresRequest, plaftormsRequest, platforms_gamesRequest])
+        
+        .then(([game, genres, platforms, platforms_games]) => {
+            
+            let specificPlatform = platforms_games.filter(i => i.dataValues.game_id == game.id) 
+            console.log(specificPlatform)
+
+            res.render('product-edit', {game, genres, platforms, specificPlatform})
         })
         .catch((error) => console.log(error))
     },
