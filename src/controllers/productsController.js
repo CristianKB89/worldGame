@@ -91,12 +91,19 @@ const productsController ={
         .catch((error) => console.log(error))
     },
     update: function (req,res) {
-        Movies.update({
+        let gameRequest = Games.findByPk(req.params.id,{
+            include: [
+                {
+                    association: 'genre'
+                }
+            ]
+        });
+        Games.update({
             title: req.body.title,
             description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
-            imgCard: (req.file)?req.file.filename:"default.jpg",
+            imgCard: (req.file)?req.file.filename:gameRequest.dataValues.img_card,
             rating_age: req.body.ratingAge,
             genre_id: req.body.genre,
             //platform_id: checkboxes?????????????
