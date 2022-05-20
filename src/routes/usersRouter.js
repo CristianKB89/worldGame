@@ -27,6 +27,7 @@ router.get('/signup', usersController.signup);
 router.post('/signup', singupValidations, usersController.register);
 router.get('/login', usersController.login);
 router.get('/profile/:id', usersController.userProfile);
+router.put('/profile/:id', upload.single('userProfileImage'), usersController.updateUserProfile);
 router.post('/login', loginValidations, usersController.loginProcess);
 
 module.exports = router;

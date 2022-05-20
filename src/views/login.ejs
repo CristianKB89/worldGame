@@ -27,6 +27,10 @@
             <input type="password" name="password" id="password" placeholder="Contraseña">
             <% showError('password') %>
         </label>
+        <label class="remember"for="remember">
+            <span>Recordar usuario</span>
+            <input type="checkbox" name="remember" id="remember" value="true">
+        </label>
         <button type="submit">Ingresar</button>
         <p>¿No tienes cuenta? <a href="/users/signup">Registrarse</a></p>
     </form>

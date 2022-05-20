@@ -17,7 +17,7 @@
 }
 .signup-form label{
     margin-bottom: 15px;
-    display: block;
+    
 }
 .signup-form input{
     width: 100%;
@@ -71,6 +71,18 @@
 }
 .form-create-product{
     padding:20px;
+}
+.remember{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.remember input{
+    width: 15px;
+    margin: 0 15px;
+}
+.remember span{
+    font-size: 12px;
 }
 @media screen and (min-width: 450px){
     .signup-form{
