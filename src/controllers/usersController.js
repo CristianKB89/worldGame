@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
-const bcrypt = require('bcryptjs')
+const bcrypt = require("bcryptjs");
 
 // MODELOS
 
@@ -22,20 +22,22 @@ const usersController = {
   register: (req, res) => {
     let errorsValidation = validationResult(req);
     let oldData = req.body;
-    if(errorsValidation.errors.length > 0){
-        return res.render('signup',{errors: errorsValidation.errors, oldData})
-    }else{
-        User.create({
-            email: req.body.userEmail,
-            nickName: req.body.userNickname,
-            name: req.body.userName,
-            password: bcrypt.hashSync(req.body.userPassword, 10),
-            img_user: "default.jpg"
+    if (errorsValidation.errors.length > 0) {
+      return res.render("signup", { errors: errorsValidation.errors, oldData });
+    } else {
+      User.create({
+        email: req.body.userEmail,
+        nickName: req.body.userNickname,
+        name: req.body.userName,
+        password: bcrypt.hashSync(req.body.userPassword, 10),
+        img_user: req.file ? req.file.filename : "default.jpg",
+      })
+        .then((result) => {
+          res.redirect("/users/profile/" + result.dataValues.id);
         })
-        .then(() =>{
-            return res.send('Usuario creado correctamente');
-        })
-        .catch(err =>{res.send(err)})
+        .catch((err) => {
+          res.send(err);
+        });
     }
   },
   login: (req, res) => {
@@ -47,8 +49,14 @@ const usersController = {
     if (errorsValidation.errors.length > 0) {
       return res.render("login", { errors: errorsValidation.errors, oldData });
     } else {
-     /*let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})*/
-      User.findOne({where:{email: req.body.email}}).then((user) => {res.redirect("/")}).catch((err) => {console.log(err)})
+      /*let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})*/
+      User.findOne({ where: { email: req.body.email } })
+        .then((user) => {
+          res.redirect("/");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
       /*if (userToLog){
         let passwordIsValid = bcrypt.compareSync(req.body.userPassword, userToLog.password);
         if (passwordIsValid) {
@@ -74,8 +82,26 @@ const usersController = {
     // res.render('userProfile');
   },
   updateUserProfile: (req, res) => {
-    res.send("updatedUserProfile");
-  }
+    User.findByPk(req.params.id)
+      .then((user) => {
+        User.update({
+          email: req.body.userEmail,
+          nickName: req.body.userNickname,
+          name: req.body.userName,
+          //password: req.body.userPassword === "" ? user.dataValues.password : bcrypt.hashSync(req.body.userPassword, 10),
+          img_user: req.file ? req.file.filename : user.dataValues.img_user,
+        })
+          .then((result) => {
+            res.redirect("/users/profile/" + result.dataValues.id);
+          })
+          .catch((err) => {
+            res.send(err);
+          });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
 };
 
 module.exports = usersController;

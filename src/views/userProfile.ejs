@@ -10,7 +10,7 @@
             <main class="profileContainer">
                 <section class="profileInfo" style="background-image: url(/images/bg-signup.jpeg);">
                     <div class="blur">
-                        <img src="/images/userImg.jpg" alt="userNick">
+                        <img src="/images/usersProfileImages/<%=user.img_user%> " alt="userNick">
                         <div>
                             <h1><%= user.name %>  </h1>
                             <h4><%= user.nickName%></h4>
@@ -49,7 +49,7 @@
                 <section class="profileEdit" id="editForm">
                     <h2>Editar Usuario</h2>
                     <p>email@email.com</p>
-                    <form action="/users/profile/" method="">
+                    <form action="/users/profile/<%=user.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                         <label for="userNick">
                             NickName:
                             <input type="text" id="userNick" name="userNick" value="<%= user.nickName%>">
@@ -64,7 +64,7 @@
                         </label>
                         <label for="password">
                             Nueva contraseña:
-                            <input name="password"type="password">
+                            <input name="password"type="password" value="">
                         </label>
                         <button type="submit">Guardar</button>
                         <button type="reset" id="editCancel">Cancelar</button>

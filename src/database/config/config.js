@@ -1,7 +1,7 @@
 module.exports={
   "development": {
     "username": "root",
-    "password": "asdf1234",
+    "password": "",
     "database": "dbworldgame",
     "host": "127.0.0.1",
     "dialect": "mysql"

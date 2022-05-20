@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head', { title: "Comunidad" }) %>
-<script src="/js/postUser.js"></script>
+    <script src="/js/postUser.js"></script>
 
     <body>
         <%- include('nav-bar') %>
@@ -14,25 +14,26 @@
                     </div>
                 </section>
                 <section class="communityCreate">
-                    <form action="">
+                    <form action="/comunidad/create/10" method="post" enctype="multipart/form-data">
                         <textarea name="description" placeholder="Comparte con nosotros."></textarea>
                         <div>
                             <label for="imagePost">
                                 <i class="fa-regular fa-image"></i>
-                                <input type="file" id="imagePost">
+                                <input type="file" id="imagePost" name="imagePost">
                             </label>
                             <select name="game">
-                                <option value="game">Game</option>
-                                <option value="game">Game</option>
-                                <option value="game">Gamegame</option>
+                                <option value="1">Game</option>
+                                <option value="2">Game</option>
+                                <option value="3">Gamegame</option>
                             </select>
                             <button type="submit">Publicar</button>
                         </div>
                     </form>
                 </section>
                 <section class="communityPostList">
-                    <%- include('partials/userPost') %>
-                    <%- include('partials/userPost') %>
+                    <% publicaciones.map(post=> { %>
+                        <%- include('partials/userPost', {...post.dataValues}) %>
+                            <% }) %>
                 </section>
                 <section class="communityPromo">
                     <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>
