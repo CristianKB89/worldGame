@@ -27,10 +27,6 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: true,
     },
-    img_detail: {
-      type: dataTypes.STRING,
-      allowNull: true,
-    },
     rating_age: {
       type: dataTypes.INTEGER,
       allowNull: true,

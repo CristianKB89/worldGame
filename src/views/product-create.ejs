@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <%- include('./partials/head', { title: "Login" }) %>
+    <!-- <script src="/js/checkboxCreateProduct.js"></script> -->
 </head>
 <body class="bg-form">
     <%- include('nav-bar') %>
-    <form class="signup-form" action="/products/create" method="POST">
+    <form class="signup-form" action="/products/create" method="POST" enctype="multipart/form-data">
         <h2 class="form-create-product">Agregar Juego</h2>
         <label for="title">
             <input type="text" name="title" id="title" placeholder="Título del juego">
@@ -33,33 +34,27 @@
         </label>
         <label for="imgCard">
             <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
-            <% if (locals.errors && errors.imgCard){%>
-                <span class="error"><%= errors.imgCard.msg %></span>
-            <%}%>
-        </label>
-        <label for="imgDetail">
-            <input type="file" name="imgDetail" id="imgDetail" placeholder="Imagen para el detalle">
-            <% if (locals.errors && errors.imgDetail){%>
-                <span class="error"><%= errors.imgDetail.msg %></span>
-            <%}%>
         </label>
         <label for="ratingAge">
-            <input type="number" min="0" max="21" name="ratingAge" id="ratingAge"placeholder="Clasificación de edad">
-            <% if (locals.errors && errors.imgDetail){%>
-                <span class="error"><%= errors.imgDetail.msg %></span>
-            <%}%>
+            <input type="number" min="0" max="21" name="ratingAge" id="ratingAge" placeholder="Clasificación de edad">
         </label>
     
         <select name="genre" id="">
             <option value="">Generos</option>
+                <% let genres=['Acción y aventura', 'Juegos de rol', 'Lucha', 'Shooter', 'Deportes', 'Survival Horror'] %>
+                <% genres.forEach((specificGenre, index)=> { %>
+                    <option value="<%= index + 1 %>" <%=(locals.oldData &&
+                        (specificGenre === oldData.genre))?'selected':null %>><%= specificGenre %>
+                    </option>
+                <% }) %>
         </select>
         <% if (locals.errors && errors.genre){%>
             <span class="error"><%= errors.genre.msg %></span>
         <%}%>
         <p>Plataforma</p>
-        <label for="xbox"><input class="checkbox-product"class="checkbox-product" type="checkbox" name="platform" id="xbox"> X-box </label>
-        <label for="play"><input class="checkbox-product" type="checkbox" name="platform" id="play"> PlayStation </label>
-        <label for="pc"><input class="checkbox-product" type="checkbox" name="platform" id="pc"> PC </label>
+        <label for="platform_xbox"><input class="checkbox-product" type="checkbox" name="platform" id="xbox" value="1"> Xbox </label>
+        <label for="platform_play"><input class="checkbox-product" type="checkbox" name="platform" id="play" value="2"> PlayStation </label>
+        <label for="platform_pc"><input class="checkbox-product" type="checkbox" name="platform" id="pc" value="3"> PC </label>
         <% if (locals.errors && errors.platform){%>
             <span class="error"><%= errors.platform.msg %></span>
         <%}%>
