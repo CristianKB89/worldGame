@@ -83,10 +83,10 @@ const productsController ={
         
         .then(([game, genres, platforms, platforms_games]) => {
             
+            let arr = []
             let specificPlatform = platforms_games.filter(i => i.dataValues.game_id == game.id) 
-            console.log(specificPlatform)
-
-            res.render('product-edit', {game, genres, platforms, specificPlatform})
+            specificPlatform.map(platform => arr.push(platform.dataValues.platform_id))
+            res.render('product-edit', {game, genres, platforms, arr})
         })
         .catch((error) => console.log(error))
     },
