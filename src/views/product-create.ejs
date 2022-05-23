@@ -6,7 +6,7 @@
 </head>
 <body class="bg-form">
     <%- include('nav-bar') %>
-    <form class="signup-form" action="/products/create" method="POST">
+    <form class="signup-form" action="/products/create" method="POST" enctype="multipart/form-data">
         <h2 class="form-create-product">Agregar Juego</h2>
         <label for="title">
             <input type="text" name="title" id="title" placeholder="Título del juego">
@@ -34,9 +34,6 @@
         </label>
         <label for="imgCard">
             <input type="file" name="imgCard" id="imgCard" placeholder="Imagen para inicio">
-            <% if (locals.errors && errors.imgCard){%>
-                <span class="error"><%= errors.imgCard.msg %></span>
-            <%}%>
         </label>
         <label for="ratingAge">
             <input type="number" min="0" max="21" name="ratingAge" id="ratingAge" placeholder="Clasificación de edad">
@@ -44,10 +41,10 @@
     
         <select name="genre" id="">
             <option value="">Generos</option>
-                <% let genres=['Action', 'Adventure' , 'Platforms', 'Horror'] %>
-                <% genres.forEach(specificGenre=> { %>
-                    <option value="<%= specificGenre %>" <%=(locals.oldData &&
-                        (specificGenre===oldData.genre))?'selected':null %>><%= specificGenre %>
+                <% let genres=['Acción y aventura', 'Juegos de rol', 'Lucha', 'Shooter', 'Deportes', 'Survival Horror'] %>
+                <% genres.forEach((specificGenre, index)=> { %>
+                    <option value="<%= index + 1 %>" <%=(locals.oldData &&
+                        (specificGenre === oldData.genre))?'selected':null %>><%= specificGenre %>
                     </option>
                 <% }) %>
         </select>
@@ -55,9 +52,15 @@
             <span class="error"><%= errors.genre.msg %></span>
         <%}%>
         <p>Plataforma</p>
-        <label for="platform_xbox"><input class="checkbox-product" type="checkbox" name="platform_xbox" id="xbox"> Xbox </label>
-        <label for="platform_play"><input class="checkbox-product" type="checkbox" name="platform_play" id="play"> PlayStation </label>
-        <label for="platform_pc"><input class="checkbox-product" type="checkbox" name="platform_pc" id="pc"> PC </label>
+        <p>Xbox:</p>
+        <label for="xbox"><input type="radio" name="xbox" value="1">Si</label>
+        <label for="xbox"><input type="radio" name="xbox" value="0" checked>No</label>
+        <p>Pc:</p>
+        <label for="pc"><input type="radio" name="pc" value="1">Si</label>
+        <label for="pc"><input type="radio" name="pc" value="0" checked>No</label>
+        <p>Play Station:</p>
+        <label for="play"><input type="radio" name="play" value="1">Si</label>
+        <label for="play"><input type="radio" name="play" value="0" checked>No</label>
         <% if (locals.errors && errors.platform){%>
             <span class="error"><%= errors.platform.msg %></span>
         <%}%>

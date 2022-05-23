@@ -5,6 +5,4 @@ const indexController = require('../controllers/indexController');
 /* GET home page. */
 router.get('/', indexController.index);
 /* router.get('/search', usersController.search); */
-
-router.get('/comunidad', indexController.comunidad);
 module.exports = router;

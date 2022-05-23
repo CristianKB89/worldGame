@@ -1,18 +1,18 @@
-<a href="#" class="cardGame">
+<a href="/products/productdetail/<%=id%>" class="cardGame">
   <div>
-    <img src="/images/haloimgmuestra2.jpg" alt="banner">
+    <img src="/images/products/<%=img_card%> " alt="<%= title %> ">
     <% if (discount> 0) { %>
       <P>ON SALE</P>
       <% } %>
-        <h3>Halo infinite</h3>
+        <h3><%= title %></h3>
         <% if (discount==100) { %>
-          <h4>Free this week!</h4>
+          <h4>Gratis esta semana!</h4>
         <% } else if (discount > 0) { %>
-          <h4>$<%= discount %></h4>
-          <h4>$99999</h4>
+          <h4>$ <%= (price - (price * (discount / 100))).toFixed(3)  %></h4>
+          <h4 style="text-decoration: line-through;">$ <%= price.toFixed(3) %></h4>
           
         <% } else { %>
-          <h4>$99999</h4>
+          <h4><%= price === 0 ? "Juega gratis" : "$ " + price.toFixed(3) %></h4>
         <% } %>
   </div>
 </a>

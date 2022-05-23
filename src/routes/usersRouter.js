@@ -26,7 +26,7 @@ let upload = multer({storage});
 
 router.get('/', userNotLogged, usersController.getUsers);
 router.get('/signup', userLogged ,usersController.signup);
-router.post('/signup', singupValidations, usersController.register);
+router.post('/signup',upload.single('userProfileImage'), singupValidations, usersController.register);
 router.get('/login', userLogged, usersController.login);
 router.get('/profile/:id',userNotLogged, usersController.userProfile);
 router.put('/profile/edit/:id', upload.single('userProfileImage'), usersController.updateUserProfile);

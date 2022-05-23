@@ -7,27 +7,32 @@
         </div>
     </div>
     <a href="#">Fornite</a>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi molestias aperiam
-        rerum nisi?</p>
-    <img class="comunidad-game" src="/images/bg-signup.jpeg" alt="">
+    <p><%=description%></p>
+    <% if (img !== "none") { %>
+        <img class="comunidad-game" src="/images/usersPostImages/<%= img %>" alt="">
+    <% } %>
     <div class="postButtons">
         <i class="far fa-heart"></i>
         <i class="fa-regular fa-comment"></i>
         <i class="fa-regular fa-pen-to-square editButton"></i>
-        <i class="fa-regular fa-trash-can"></i>
+        <form action="/community/delete/<%=id%>?_method=DELETE" method="post">
+            <button type="submit" style="border: none;">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </form>
     </div>
     <section class="postEdit">
-        <form action="">
-            <textarea name="description" placeholder="edicion."></textarea>
+        <form action="/community/edit/<%=id%>?_method=PUT" method="post" enctype="multipart/form-data">
+            <textarea name="description"><%=description%></textarea>
             <div>
-                <label for="imagePost">
+                <label for="<%=id%>_img">
                     <i class="fa-regular fa-image"></i>
-                    <input type="file" id="imagePost">
+                    <input type="file" id="<%=id%>_img" name="imgEdit">
                 </label>
                 <select name="game">
                     <option value="game">Game</option>
                     <option value="game">Game</option>
-                    <option value="game">Gamegame</option>
+                    <option value="game">Game</option>
                 </select>
                 <button type="submit">Publicar</button>
             </div>

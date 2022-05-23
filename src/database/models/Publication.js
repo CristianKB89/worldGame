@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     let config = {
-        tableName: 'Publication',
+        tableName: 'publications',
          //PARAOIND = PARAOINDICAR QUE SE CREE LA TABLA CON LOS TIMESTAMPS
          timestamps : true,
          createdAt: "created_at",

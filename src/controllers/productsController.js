@@ -1,98 +1,126 @@
-const {validationResult} = require('express-validator');
-const db = require('../database/models');
+const { validationResult } = require("express-validator");
+const db = require("../database/models");
 const Games = db.Game;
 const Genres = db.Genre;
 
-const productsController ={
-    getProducts: (req, res) => {
-        Games.findAll()
-        .then(games => {
-            res.render('catalog', {games})
-        })
-       // res.render('catalog')
-    },
-    productDetail: (req, res) => {
-        res.render("product-detail");
-    },
-    shoppingCart: (req, res) => {
-        res.render("shoppingCart")
-    },
-    createProduct: (req, res) => {
-        res.render("product-create");
-    },
-    createProductPost: (req, res) => {
-        const result = validationResult(req);
-        
-        if(result.errors.length > 0){
-            res.render("product-create",{errors: result.mapped(), oldData: req.body});
-        }
-        else{
-            Games.create({
-                title: req.body.title,
-                description: req.body.description,
-                price: req.body.price,
-                discount: req.body.discount,
-                imgCard: (req.file)?req.file.filename:"default.jpg",
-                rating_age: req.body.ratingAge,
-                genre_id: req.body.genre,
-                platform_xbox: (req.body.xbox)?1:0,
-                platform_play: (req.body.play)?1:0,
-                platform_pc: (req.body.pc)?1:0
-             })
-             .then(() => res.redirect('/products'))
-             .catch(error => console.log(error))
-        }
-    },
-    edit: function(req,res) {
-        let gamesRequest = Games.findByPk(req.params.id,{
-            include: [
-                {
-                    association: 'genre'
-                }/*,
-                    assciation:'platforms'*/
-            ]
-        });
-        
-        let genresRequest = Genres.findAll();
+const productsController = {
+  getProducts: (req, res) => {
+    Games.findAll().then((games) => {
+      res.render("catalog", { games });
+    });
+  },
+  productDetail: (req, res) => {
+    let gamesRequest = Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    });
 
-        Promise.all([gamesRequest, genresRequest])
-        .then(([game, genres]) => {
-            res.render('???', {game, genres})
+    let genresRequest = Genres.findAll();
+
+    Promise.all([gamesRequest, genresRequest])
+
+    .then(([game, genres]) => {
+      res.render("product-detail", { game, genres });
+    })
+    .catch((error) => console.log(error));
+  },
+  shoppingCart: (req, res) => {
+    res.render("shoppingCart");
+  },
+  createProduct: (req, res) => {
+    res.render("product-create");
+  },
+  createProductPost: (req, res) => {
+    const result = validationResult(req);
+
+    if (result.errors.length > 0) {
+      res.render("product-create", {
+        errors: result.mapped(),
+        oldData: req.body,
+      });
+    } else {
+      Games.create({
+        title: req.body.title,
+        description: req.body.description,
+        price: req.body.price,
+        discount: req.body.discount,
+        img_card: req.file ? req.file.filename : "default.jpg",
+        rating_age: req.body.ratingAge,
+        genre_id: req.body.genre,
+        xbox: req.body.xbox,
+        pc: req.body.pc,
+        playstation: req.body.play,
+      })
+        .then((result) => {
+          res.redirect('/products')
         })
-        .catch((error) => console.log(error))
-    },
-    update: function (req,res) {
-        Movies.update({
-            title: req.body.title,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-            imgCard: (req.file)?req.file.filename:"default.jpg",
-            rating_age: req.body.ratingAge,
-            genre_id: req.body.genre,
-            //platform_id: checkboxes?????????????
-         },{
-             where: {
-                 id: req.params.id
-             }
-         })
-         .then(() => res.redirect('/products'))
-         .catch(error => console.log(error))
-    },
-    delete: function (req,res) {
-        Games.findByPk(req.params.id)
-        .then((game) => res.render('???', {game}))
-        .catch((error) => console.log(error))
-    },
-    destroy: function (req,res) {
-        Games.destroy({
-            where:{
-                id: req.params.id
-            }
-        })
-        .then(() => res.redirect('/products'))
-        .catch((error) => console.log(error))
+        .catch((error) => console.log(error));
     }
-}
+  },
+  edit: function (req, res) {
+    let gamesRequest = Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    });
+
+    let genresRequest = Genres.findAll();
+
+    Promise.all([gamesRequest, genresRequest])
+
+      .then(([game, genres]) => {
+        res.render("product-edit", { game, genres });
+      })
+      .catch((error) => console.log(error));
+  },
+  update: function (req, res) {
+    Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    }).then((result) => {
+      Games.update(
+        {
+          title: req.body.title,
+          description: req.body.description,
+          price: req.body.price,
+          discount: req.body.discount,
+          img_card: req.file ? req.file.filename : result.dataValues.img_card,
+          rating_age: req.body.ratingAge,
+          genre_id: req.body.genre,
+          xbox: req.body.xbox,
+          pc: req.body.pc,
+          playstation: req.body.play,
+        },
+        {
+          where: {
+            id: result.dataValues.id,
+          },
+        }
+      )
+      .then((result) => {
+        console.log(result);
+        res.redirect('/products')
+      })
+      .catch((error) => console.log(error));
+    });
+  },
+  delete: function (req, res) {
+    Games.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then(() => res.redirect("/products"))
+      .catch((error) => console.log(error));
+  },
+};
 
 module.exports = productsController;

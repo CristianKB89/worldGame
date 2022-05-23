@@ -13,14 +13,14 @@
           </picture>
           <div class="homeBannerTxt">
             <h2>Halo Infinite</h2>
-            <p>Play now!Play now!Play now!Play now!Play now!</p>
+            <p>Play now!</p>
             <a href="#">Free ></a>
           </div>
         </section>
         <section class="homeIcons">
           <ul>
             <li>
-              <a href="#">
+              <a href="/products">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 All games
               </a>
@@ -47,53 +47,53 @@
         </section>
         <section class="homeAds">
           <section class="Ad">
-            <div class="AdImg" style="background-image: url(/images/haloimgmuestra768.jpg);">
+            <div class="AdImg" style="background-image: url(/images/products/<%=game1.img_card%>);">
             </div>
             <div class="AdTxt">
-              <h3>Halo infinite</h3>
-              <p>Become spartan!</p>
+              <h3><%= game1.title %></h3>
+              <p>Tu sigueinte favorito!</p>
               <a href="#">Get it now ></a>
             </div>
           </section>
           <div class="AdTwo">
             <section class="Ad">
-              <div class="AdImg" style="background-image: url(/images/haloimgmuestra768.jpg);">
+              <div class="AdImg" style="background-image: url(/images/products/<%=game2.img_card%>);">
               </div>
               <div class="AdTxt">
-                <h3>Halo infinite</h3>
-                <p>Become spartan!</p>
+                <h3><%= game2.title %></h3>
+                <p>No lo puedes dejar pasar</p>
                 <a href="#">Get it now ></a>
               </div>
             </section>
             <section class="Ad">
-              <div class="AdImg" style="background-image: url(/images/haloimgmuestra768.jpg);">
+              <div class="AdImg" style="background-image: url(/images/products/<%=game3.img_card%>);">
               </div>
               <div class="AdTxt">
-                <h3>Halo infinite</h3>
-                <p>Become spartan!</p>
+                <h3><%= game3.title %></h3>
+                <p>Te encantara!</p>
                 <a href="#">Get it now ></a>
               </div>
             </section>
           </div>
         </section>
-        <section class="homeFreeGames" style="background-image: url(/images/haloimgmuestra768.jpg);">
+        <section class="homeFreeGames" style="background-image: url(/images/freeGameBG.jpg);">
           <h2>Free this week</h2>
           <section class="homeGame">
             <picture class="homeGameImg">
-              <img src="/images/haloimgmuestra2.jpg" alt="muestra">
+              <img src="/images/products/<%=freeGame1.img_card%>" alt="muestra">
             </picture>
             <div class="homeGameTxt">
-              <h3>Halo infinite</h3>
+              <h3><%= freeGame1.title %></h3>
               <h4>Free this week!</h4>
               <a href="#">Get it now ></a>
             </div>
           </section>
           <section class="homeGame">
             <picture class="homeGameImg">
-              <img src="/images/haloimgmuestra2.jpg" alt="muestra">
+              <img src="/images/products/<%=freeGame2.img_card%>" alt="muestra">
             </picture>
             <div class="homeGameTxt">
-              <h3>Halo infinite</h3>
+              <h3><%= freeGame2.title %></h3>
               <h4>Free this week!</h4>
               <a href="#">Get it now ></a>
             </div>
@@ -101,10 +101,10 @@
         </section>
         <section class="homeRecomended">
           <h2>Recomended for you</h2>
-          <%- include('partials/cardGame', { discount: 50 }) %>
-            <%- include('partials/cardGame', { discount: 0 }) %>
-              <%- include('partials/cardGame', { discount: 15 }) %>
-                <%- include('partials/cardGame', { discount: 0 }) %>
+          <%- include('partials/cardGame', { ...game4 }) %>
+          <%- include('partials/cardGame', { ...game6 }) %>
+          <%- include('partials/cardGame', { ...game7 }) %>
+          <%- include('partials/cardGame', { ...game8 }) %>
         </section>
       </main>
       <%- include('partials/footer') %>

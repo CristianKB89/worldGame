@@ -10,7 +10,7 @@
             <main class="profileContainer">
                 <section class="profileInfo" style="background-image: url(/images/bg-signup.jpeg);">
                     <div class="blur">
-                        <img src="/images/userImg.jpg" alt="userNick">
+                        <img src="/images/usersProfileImages/<%=user.img_user%> " alt="userNick">
                         <div>
                             <h1><%= user.name %>  </h1>
                             <h4><%= user.nickName%></h4>
@@ -61,6 +61,10 @@
                         <label for="userImg">
                             Foto de perfil:
                             <input type="file" id="userImg" name="UserImg">
+                        </label>
+                        <label for="password">
+                            Nueva contraseña:
+                            <input name="password"type="password" value="">
                         </label>
                         <button type="submit">Guardar</button>
                         <button type="reset" id="editCancel">Cancelar</button>
