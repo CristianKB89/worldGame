@@ -21,11 +21,14 @@ const indexController = {
         })
     },
     /* search: (req, res) =>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let searchedProduct = req.query.keywords.toLowerCase();
-        let obtainedProduct = products.filter((specificProduct) => specificProduct.productName.toLowerCase().includes(searchedProduct));
-        res.render('./users/results', {products, searchedProduct, obtainedProduct});
-    } */
+        Games.findAll()
+        .then(games =>{
+            let searchedProduct = req.query.keywords.toLowerCase();
+            let obtainedProduct = games.filter((specificProduct) => specificProduct.productName.toLowerCase().includes(searchedProduct));
+            res.render('results', {obtainedProduct});
+        })
+        .catch(error => console.log(error));
+    }, */
     comunidad: (req, res) =>{
         res.render('community')
     }
