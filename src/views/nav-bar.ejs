@@ -22,8 +22,13 @@
     <i class="fa-regular fa-user login-toggle-nav"></i>
     <div id="login-nav" class="login-toggle">
         <ul>
-            <li><a href="/users/signup">signup</a></li>
-            <li><a href="/users/login">login</a></li>
+            <% if(locals.isLogged){ %>
+                <li><a href="/users/profile/<%= locals.user.id %>">Perfil</a></li>
+                <li><a href="/users/logout">Cerrar sesión</a></li>
+            <% } else { %>
+            <li><a href="/users/signup">Registarse</a></li>
+            <li><a href="/users/login">Ingresar</a></li>
+            <% } %>
         </ul>
     </div>
 </nav>

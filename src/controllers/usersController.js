@@ -33,7 +33,7 @@ const usersController = {
             img_user: "default.jpg"
         })
         .then(() =>{
-            return res.send('Usuario creado correctamente');
+            res.redirect('/');
         })
         .catch(err =>{res.send(err)})
     }
@@ -44,11 +44,38 @@ const usersController = {
   loginProcess: (req, res) => {
     let errorsValidation = validationResult(req);
     let oldData = req.body;
-    if (errorsValidation.errors.length > 0) {
-      return res.render("login", { errors: errorsValidation.errors, oldData });
-    } else {
+    if(errorsValidation.errors.length > 0){
+        return res.render('login',{errors: errorsValidation.mapped(), oldData})
+    }else{
+      User.findAll()
+      .then(users => {
+        let user = users.find((user) => user.email == req.body.email);
+        if (user) {
+          let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
+          if (passwordIsValid) {
+            delete user.userPassword
+            req.session.user = user;
+            if(req.body.remember){
+                res.cookie('userEmail', req.body.email, {maxAge: 1000 * 60 * 60 * 24 * 7})
+            }
+            res.redirect("/");
+          }else{
+            return res.render("login", 
+            {
+              errors: 
+                {password:
+                  { msg: "Contraseña incorrecta" }
+                },
+              oldData
+            });
+            
+          }
+        }else{
+          res.render('login', { errors: { password: {msg: 'Usuario o contraseña incorrectos' }}, oldData });
+          console.log(errors)
+        }
+      })
      /*let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})*/
-      User.findOne({where:{email: req.body.email}}).then((user) => {res.redirect("/")}).catch((err) => {console.log(err)})
       /*if (userToLog){
         let passwordIsValid = bcrypt.compareSync(req.body.userPassword, userToLog.password);
         if (passwordIsValid) {
@@ -59,9 +86,12 @@ const usersController = {
           }
           res.redirect('/')
 
+        }else{
+          res.render('login', { errors: [{ msg: 'Usuario o contraseña incorrectos' }], oldData });
         }
       }*/
     }
+    
   },
   userProfile: (req, res) => {
     User.findByPk(req.params.id)
@@ -74,7 +104,28 @@ const usersController = {
     // res.render('userProfile');
   },
   updateUserProfile: (req, res) => {
-    res.send("updatedUserProfile");
+    User.update({
+      nickName: req.body.userNick,
+      name: req.body.userName,
+      img_user: "default.jpg"
+  },{
+    where: {id: req.params.id}
+  }).then(() =>{
+    res.redirect('/users/profile/' + req.params.id);
+  })
+  .catch(err =>{res.send(err)})
+  },
+  logout(req, res) {
+    req.session.destroy();
+    res.clearCookie("userEmail")
+    res.redirect("/");
+  },
+  deleteUser: (req, res) => {
+    User.destroy({
+      where: {id: req.params.id}
+  }).then(()=>{
+    return res.send('Usuario eliminado correctamente');
+  }).catch(err =>{res.send(err)})
   }
 };
 

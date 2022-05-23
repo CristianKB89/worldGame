@@ -16,7 +16,7 @@
                             <h4><%= user.nickName%></h4>
                             <p><%= user.email%></p>
                             <span id="editButton">Editar perfil</span>
-                            <a href="/">Cerrar sesion </a>
+                            <a href="/users/logout">Cerrar sesion </a>
                         </div>
                     </div>
                 </section>
@@ -49,7 +49,7 @@
                 <section class="profileEdit" id="editForm">
                     <h2>Editar Usuario</h2>
                     <p>email@email.com</p>
-                    <form action="/users/profile/" method="">
+                    <form action="/users/profile/edit/<%= user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <label for="userNick">
                             NickName:
                             <input type="text" id="userNick" name="userNick" value="<%= user.nickName%>">
@@ -62,12 +62,11 @@
                             Foto de perfil:
                             <input type="file" id="userImg" name="UserImg">
                         </label>
-                        <label for="password">
-                            Nueva contraseña:
-                            <input name="password"type="password">
-                        </label>
                         <button type="submit">Guardar</button>
                         <button type="reset" id="editCancel">Cancelar</button>
+                    </form>
+                    <form action="/users/profile/delete/<%= user.id%>?_method=DELETE" method="POST">
+                        <button type="submit">Borrar usuario</button>
                     </form>
                 </section>
                 <section class="profilePromo">
