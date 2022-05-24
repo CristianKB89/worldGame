@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head', { title: "Comunidad" }) %>
-    <script src="/js/postUser.js"></script>
 
     <body>
         <%- include('nav-bar') %>
@@ -13,11 +12,12 @@
                         <div>
                             <a href="/users/login">Unete ahora <i class="fa-solid fa-chevron-right"></i></a>
                         </div>
-                    <% } %>
+                        <% } %>
                 </section>
                 <% if (localUser) { %>
                     <section class="communityCreate">
-                        <form action="/community/create/<%= localUser.id %> " method="post" enctype="multipart/form-data">
+                        <form action="/community/create/<%= localUser.id %> " method="post"
+                            enctype="multipart/form-data">
                             <textarea name="description" placeholder="Comparte con nosotros."></textarea>
                             <div>
                                 <label for="imagePost">
@@ -25,24 +25,26 @@
                                     <input type="file" id="imagePost" name="imagePost">
                                 </label>
                                 <select name="game">
-                                    <option value="1">Game</option>
-                                    <option value="2">Game</option>
-                                    <option value="3">Gamegame</option>
+                                    <% games.forEach(game=> { %>
+                                        <option value="<%= game.id %>">
+                                            <%= game.title %>
+                                        </option>
+                                        <% }) %>
                                 </select>
                                 <button type="submit">Publicar</button>
                             </div>
                         </form>
                     </section>
-                <% } %>
-                <section class="communityPostList">
-                    <% publicaciones.map(post=> { %>
-                        <%- include('partials/userPost', {...post.dataValues, localUser}) %>
-                    <% }) %>
-                </section>
-                <section class="communityPromo">
-                    <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>
-                    <a href="">Encuentra lo mejor <i class="fa-solid fa-chevron-right"></i></a>
-                </section>
+                    <% } %>
+                        <section class="communityPostList">
+                            <% reversePost.map(post=> { %>
+                                <%- include('partials/userPost', {...post.dataValues, localUser, games}) %>
+                                    <% }) %>
+                        </section>
+                        <section class="communityPromo">
+                            <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>
+                            <a href="">Encuentra lo mejor <i class="fa-solid fa-chevron-right"></i></a>
+                        </section>
             </main>
             <%- include('partials/footer') %>
     </body>

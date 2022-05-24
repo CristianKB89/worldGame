@@ -1,13 +1,50 @@
 const db = require("../database/models");
 const Publication = db.Publication;
+const User = db.User;
+const Games = db.Game;
 
 const comunityController = {
   getAllPost: (req, res) => {
-    Publication.findAll().then((publicaciones) => {
-      let localUser = res.locals.user
-      console.log(localUser);
-      res.render("community", { publicaciones, localUser });
-    });
+    const publicationTime = (day) => {
+      let toDay = new Date().getTime();
+      let dia = day.getDate();
+      let mes = day.getMonth() + 1;
+      let anio = day.getFullYear();
+      let hora = day.getHours();
+      let publicationDay = new Date(`${anio}-${mes}-${dia}`).getTime();
+      let diff = toDay - publicationDay;
+      let total = Math.floor(diff / (1000 * 60 * 60 * 24));
+      let totalHours = Math.floor(diff / (1000 * 60 * 60) - hora);
+      if (total === 0) {
+        if (totalHours === 1) {
+          return `Hace ${totalHours} hora`;
+        } else {
+          return `Hace ${totalHours} horas`;
+        }
+      } else {
+        if (total === 1) {
+          return `Hace ${total} dia`;
+        } else {
+          return `Hace ${total} dias`;
+        }
+      }
+    };
+    const usersRequest = User.findAll();
+    const publicationsRequest = Publication.findAll();
+    const gamesRequest = Games.findAll();
+    Promise.all([usersRequest, publicationsRequest, gamesRequest]).then(
+      ([users, publicaciones, games]) => {
+        let localUser = res.locals.user;
+        let reversePost = publicaciones.reverse();
+        res.render("community", {
+          users,
+          reversePost,
+          localUser,
+          publicationTime,
+          games
+        });
+      }
+    );
   },
   createPost: (req, res) => {
     Publication.create({
@@ -20,7 +57,7 @@ const comunityController = {
       .catch((err) => res.send(err));
   },
   updatePost: (req, res) => {
-    console.log('req.file'+req.file);
+    console.log("req.file" + req.file);
     Publication.findByPk(req.params.id, {
       include: [
         {
@@ -29,7 +66,8 @@ const comunityController = {
       ],
     })
       .then((post) => {
-        let imgvar = req.file != undefined ? req.file.filename : post.dataValues.img
+        let imgvar =
+          req.file != undefined ? req.file.filename : post.dataValues.img;
         Publication.update(
           {
             title: req.body.game,
@@ -54,8 +92,8 @@ const comunityController = {
         id: req.params.id,
       },
     })
-    .then(() => res.redirect("/community"))
-    .catch((error) => console.log(error));
+      .then(() => res.redirect("/community"))
+      .catch((error) => console.log(error));
   },
 };
 module.exports = comunityController;

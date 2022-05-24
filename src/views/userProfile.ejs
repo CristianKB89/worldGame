@@ -44,7 +44,7 @@
                     <div class="space"></div>
                     <h2>Mis publicaciones</h2>
                     <% posts.map(post=> { %>
-                        <%- include('partials/userPost', {...post.dataValues, localUser}) %>
+                        <%- include('partials/userPost', {...post.dataValues, localUser, users, games}) %>
                     <% }) %>
 
                 </section>
@@ -71,7 +71,7 @@
                         <button type="submit">Guardar</button>
                         <button type="reset" id="editCancel">Cancelar</button>
                     </form>
-                    <form action="/users/profile/delete/<%= user.id%>?_method=DELETE" method="POST">
+                    <form style="padding-top: 15px;" action="/users/profile/delete/<%= user.id%>?_method=DELETE" method="POST">
                         <button type="submit">Borrar usuario</button>
                     </form>
                 </section>

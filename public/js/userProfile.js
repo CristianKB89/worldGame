@@ -10,6 +10,7 @@ addEventListener("load", () => {
   editButton.addEventListener("click", (e) => {
     e.preventDefault;
     library.style.display = "none";
+    posts.style.display = "none";
     editForm.style.display = "block";
   });
   editCancel.addEventListener("click", () => {

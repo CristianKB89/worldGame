@@ -10,6 +10,7 @@ const bcrypt = require("bcryptjs");
 
 const User = db.User;
 const Publication = db.Publication;
+const Games = db.Game;
 
 const usersController = {
   getUsers: (req, res) => {
@@ -85,9 +86,35 @@ const usersController = {
     let localUser = res.locals.user
     let userRequest =  User.findByPk(req.params.id)
     let publicationsRequest = Publication.findAll({where: {user_id: req.params.id}})
-    Promise.all([userRequest, publicationsRequest])
-      .then(([user, posts]) => {
-        res.render("userProfile", { user, posts, localUser });
+    let usersRequest = User.findAll();
+    let gamesRequest = Games.findAll();
+    const publicationTime = (day) => {
+      let toDay = new Date().getTime();
+      let dia = day.getDate();
+      let mes = day.getMonth() + 1;
+      let anio = day.getFullYear();
+      let hora = day.getHours()
+      let publicationDay = new Date(`${anio}-${mes}-${dia}`).getTime();
+      let diff = toDay - publicationDay;
+      let total = Math.floor(diff / (1000 * 60 * 60 * 24));
+      let totalHours = Math.floor((diff / (1000 * 60 * 60)) - hora);
+      if (total === 0) {
+        if (totalHours === 1) {
+          return `Hace ${totalHours} hora`;
+        } else {
+          return `Hace ${totalHours} horas`;
+        }
+      } else {
+        if (total === 1) {
+          return `Hace ${total} dia`;
+        } else {
+          return `Hace ${total} dias`;
+        }
+      }
+    };
+    Promise.all([userRequest, publicationsRequest, usersRequest, gamesRequest])
+      .then(([user, posts, users, games]) => {
+        res.render("userProfile", { user, posts, localUser, users, publicationTime, games });
       })
       .catch((err) => {
         console.log(err);
