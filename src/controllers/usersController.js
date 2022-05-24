@@ -9,6 +9,7 @@ const bcrypt = require("bcryptjs");
 // MODELOS
 
 const User = db.User;
+const Publication = db.Publication;
 
 const usersController = {
   getUsers: (req, res) => {
@@ -81,9 +82,12 @@ const usersController = {
     
   },
   userProfile: (req, res) => {
-    User.findByPk(req.params.id)
-      .then((user) => {
-        res.render("userProfile", { user });
+    let localUser = res.locals.user
+    let userRequest =  User.findByPk(req.params.id)
+    let publicationsRequest = Publication.findAll({where: {user_id: req.params.id}})
+    Promise.all([userRequest, publicationsRequest])
+      .then(([user, posts]) => {
+        res.render("userProfile", { user, posts, localUser });
       })
       .catch((err) => {
         console.log(err);
