@@ -44,7 +44,7 @@
                     <div class="space"></div>
                     <h2>Mis publicaciones</h2>
                     <% posts.map(post=> { %>
-                        <%- include('partials/userPost', {...post.dataValues, localUser}) %>
+                        <%- include('partials/userPost', {...post.dataValues, localUser, users}) %>
                     <% }) %>
 
                 </section>
