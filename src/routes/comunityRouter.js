@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 const multer = require ('multer');
-const comunityController = require('../controllers/comunityController')
+const comunityController = require('../controllers/comunityController');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb){

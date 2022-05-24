@@ -9,30 +9,34 @@
                 <section class="comunnityBanner">
                     <h1>Comunidad</h1>
                     <p>Comparte, Conecta y Disfruta.</p>
-                    <div>
-                        <a href="">Unete ahora <i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </section>
-                <section class="communityCreate">
-                    <form action="/community/create/10" method="post" enctype="multipart/form-data">
-                        <textarea name="description" placeholder="Comparte con nosotros."></textarea>
+                    <% if (!localUser) { %>
                         <div>
-                            <label for="imagePost">
-                                <i class="fa-regular fa-image"></i>
-                                <input type="file" id="imagePost" name="imagePost">
-                            </label>
-                            <select name="game">
-                                <option value="1">Game</option>
-                                <option value="2">Game</option>
-                                <option value="3">Gamegame</option>
-                            </select>
-                            <button type="submit">Publicar</button>
+                            <a href="/users/login">Unete ahora <i class="fa-solid fa-chevron-right"></i></a>
                         </div>
-                    </form>
+                    <% } %>
                 </section>
+                <% if (localUser) { %>
+                    <section class="communityCreate">
+                        <form action="/community/create/<%= localUser.id %> " method="post" enctype="multipart/form-data">
+                            <textarea name="description" placeholder="Comparte con nosotros."></textarea>
+                            <div>
+                                <label for="imagePost">
+                                    <i class="fa-regular fa-image"></i>
+                                    <input type="file" id="imagePost" name="imagePost">
+                                </label>
+                                <select name="game">
+                                    <option value="1">Game</option>
+                                    <option value="2">Game</option>
+                                    <option value="3">Gamegame</option>
+                                </select>
+                                <button type="submit">Publicar</button>
+                            </div>
+                        </form>
+                    </section>
+                <% } %>
                 <section class="communityPostList">
                     <% publicaciones.map(post=> { %>
-                        <%- include('partials/userPost', {...post.dataValues}) %>
+                        <%- include('partials/userPost', {...post.dataValues, localUser}) %>
                     <% }) %>
                 </section>
                 <section class="communityPromo">
