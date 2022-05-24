@@ -24,7 +24,7 @@
 
 .profileContainer .profileInfo .blur img {
     align-self: center;
-    border-radius: 100%;
+    border-radius: 15px;
     border: 5px solid #107c10;
     width: 60%;
 }

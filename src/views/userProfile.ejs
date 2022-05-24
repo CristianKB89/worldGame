@@ -10,11 +10,12 @@
             <main class="profileContainer">
                 <section class="profileInfo" style="background-image: url(/images/bg-signup.jpeg);">
                     <div class="blur">
-                        <img src="/images/usersProfileImages/<%=user.img_user%> " alt="userNick">
+                        <!-- <div class="profileImg" style="background-image: url(/images/usersProfileImages/<%=user.img_user%>) ;"></div> -->
+                        <img src="/images/usersProfileImages/<%=user.img_user%> " alt="<%=user.nickName%>" draggable="false">
                         <div>
-                            <h1><%= user.name %>  </h1>
-                            <h4><%= user.nickName%></h4>
-                            <p><%= user.email%></p>
+                            <h1><%=user.name %>  </h1>
+                            <h4><%=user.nickName%></h4>
+                            <p><%=user.email%></p>
                             <span id="editButton">Editar perfil</span>
                             <a href="/users/logout">Cerrar sesion </a>
                         </div>
@@ -43,7 +44,9 @@
                     <h2 class="unFocus" id="libraryButton">Mi biblioteca</h2>
                     <div class="space"></div>
                     <h2>Mis publicaciones</h2>
-                    <%- include('partials/userPost') %> 
+                    <% posts.map(post=> { %>
+                        <%- include('partials/userPost', {...post.dataValues, localUser}) %>
+                    <% }) %>
 
                 </section>
                 <section class="profileEdit" id="editForm">
