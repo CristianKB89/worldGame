@@ -6,26 +6,21 @@
 <body class="bg-form">
     <%- include('nav-bar') %>
 
-    <% function showError (param){ %>
-        <p class="">
-            <% if (typeof errors !="undefined" ) { %>
-                <% errors.forEach(specificError=> { %>
-                    <% if (specificError.param===param ) { %>
-                        <%= specificError.msg %>
-                    <% } %>
-                <% }) %>
-            <% } %>
-        </p>
-    <% } %>
     <form class="signup-form" action="/users/login" method="POST">
         <h2>Login</h2>
         <label for="email">
             <input type="email" name="email" id="email" placeholder="Email">
-            <% showError('email') %>
+            <% if(locals.errors && errors.email) {%>
+                <p><%=errors.email.msg%></p>
+            <%}%>
+            
         </label>
         <label for="password">
             <input type="password" name="password" id="password" placeholder="Contraseña">
-            <% showError('password') %>
+            <% if(locals.errors && errors.password) {%>
+                <p><%=errors.password.msg%></p>
+            <%}%>
+            
         </label>
         <label class="remember"for="remember">
             <span>Recordar usuario</span>

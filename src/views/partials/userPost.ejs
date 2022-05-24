@@ -7,27 +7,27 @@
         </div>
     </div>
     <a href="#">Fornite</a>
-    <p><%=description%></p>
-    <% if (img !== "none") { %>
-        <img class="comunidad-game" src="/images/usersPostImages/<%= img %>" alt="">
+    <p><%=user.description%></p>
+    <% if (user.img !== "none") { %>
+        <img class="comunidad-game" src="/images/usersPostImages/<%= user.img %>" alt="">
     <% } %>
     <div class="postButtons">
         <!-- <i class="far fa-heart"></i>
         <i class="fa-regular fa-comment"></i> -->
         <i class="fa-regular fa-pen-to-square editButton"></i>
-        <form action="/community/delete/<%=id%>?_method=DELETE" method="post">
+        <form action="/community/delete/<%=user.id%>?_method=DELETE" method="post">
             <button type="submit" style="border: none;">
                 <i class="fa-regular fa-trash-can"></i>
             </button>
         </form>
     </div>
     <section class="postEdit">
-        <form action="/community/edit/<%=id%>?_method=PUT" method="post" enctype="multipart/form-data">
-            <textarea name="description"><%=description%></textarea>
+        <form action="/community/edit/<%=user.id%>?_method=PUT" method="post" enctype="multipart/form-data">
+            <textarea name="description"><%=user.description%></textarea>
             <div>
-                <label for="<%=id%>_img">
+                <label for="<%=user.id%>_img">
                     <i class="fa-regular fa-image"></i>
-                    <input type="file" id="<%=id%>_img" name="imgEdit">
+                    <input type="file" id="<%=user.id%>_img" name="imgEdit">
                 </label>
                 <select name="game">
                     <option value="game">Game</option>
