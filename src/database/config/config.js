@@ -23,9 +23,5 @@ module.exports = {
     "port": process.env.DB_PORT,
     "dialect": "mysql"
   }
-<<<<<<< HEAD
 }
 
-=======
-}
->>>>>>> origin/dev-test
