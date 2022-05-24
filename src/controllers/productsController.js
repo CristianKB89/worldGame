@@ -8,10 +8,24 @@ const productsController = {
     Games.findAll().then((games) => {
       res.render("catalog", { games });
     });
-    // res.render('catalog')
   },
   productDetail: (req, res) => {
-    res.render("product-detail");
+    let gamesRequest = Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    });
+
+    let genresRequest = Genres.findAll();
+
+    Promise.all([gamesRequest, genresRequest])
+
+    .then(([game, genres]) => {
+      res.render("product-detail", { game, genres });
+    })
+    .catch((error) => console.log(error));
   },
   shoppingCart: (req, res) => {
     res.render("shoppingCart");
@@ -41,7 +55,7 @@ const productsController = {
         playstation: req.body.play,
       })
         .then((result) => {
-          res.send(result);
+          res.redirect('/products')
         })
         .catch((error) => console.log(error));
     }
@@ -78,7 +92,7 @@ const productsController = {
           description: req.body.description,
           price: req.body.price,
           discount: req.body.discount,
-          imgCard: req.file ? req.file.filename : result.dataValues.img_card,
+          img_card: req.file ? req.file.filename : result.dataValues.img_card,
           rating_age: req.body.ratingAge,
           genre_id: req.body.genre,
           xbox: req.body.xbox,
@@ -91,11 +105,11 @@ const productsController = {
           },
         }
       )
-        .then((result) => {
-          console.log(result);
-          res.redirect('/products')
-        })
-        .catch((error) => console.log(error));
+      .then((result) => {
+        console.log(result);
+        res.redirect('/products')
+      })
+      .catch((error) => console.log(error));
     });
   },
   delete: function (req, res) {

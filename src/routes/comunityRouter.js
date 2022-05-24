@@ -18,6 +18,7 @@ let upload = multer({storage});
 /* GET home page. */
 router.get('/', comunityController.getAllPost);
 router.post('/create/:id', upload.single('imagePost') , comunityController.createPost);
-router.put('/edit/:id', upload.single('imagePost') , comunityController.updatePost);
+router.put('/edit/:id', upload.single('imgEdit') , comunityController.updatePost);
+router.delete('/delete/:id', comunityController.delete);
 
 module.exports = router;

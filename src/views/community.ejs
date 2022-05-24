@@ -14,7 +14,7 @@
                     </div>
                 </section>
                 <section class="communityCreate">
-                    <form action="/comunidad/create/10" method="post" enctype="multipart/form-data">
+                    <form action="/community/create/10" method="post" enctype="multipart/form-data">
                         <textarea name="description" placeholder="Comparte con nosotros."></textarea>
                         <div>
                             <label for="imagePost">
@@ -33,7 +33,7 @@
                 <section class="communityPostList">
                     <% publicaciones.map(post=> { %>
                         <%- include('partials/userPost', {...post.dataValues}) %>
-                            <% }) %>
+                    <% }) %>
                 </section>
                 <section class="communityPromo">
                     <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>

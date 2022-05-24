@@ -46,30 +46,39 @@ const usersController = {
   loginProcess: (req, res) => {
     let errorsValidation = validationResult(req);
     let oldData = req.body;
-    if (errorsValidation.errors.length > 0) {
-      return res.render("login", { errors: errorsValidation.errors, oldData });
-    } else {
-      /*let userToLog = User.findAll().then((user) => {user.find((e) => e.email === req.body.email)}).catch((err) => {console.log(err)})*/
-      User.findOne({ where: { email: req.body.email } })
-        .then((user) => {
-          res.redirect("/");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      /*if (userToLog){
-        let passwordIsValid = bcrypt.compareSync(req.body.userPassword, userToLog.password);
-        if (passwordIsValid) {
-          req.session.user = userToLog;
-
-          if (req.body.remember) {
-            res.cookie("user", req.body.userEmail, {maxAge: 1000 * 120});
+    if(errorsValidation.errors.length > 0){
+        return res.render('login',{errors: errorsValidation.mapped(), oldData})
+    }else{
+      User.findAll()
+      .then(users => {
+        let user = users.find((user) => user.email == req.body.email);
+        if (user) {
+          let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
+          if (passwordIsValid) {
+            delete user.userPassword
+            req.session.user = user;
+            if(req.body.remember){
+                res.cookie('userEmail', req.body.email, {maxAge: 1000 * 60 * 60 * 24 * 7})
+            }
+            res.redirect("/");
+          }else{
+            return res.render("login", 
+            {
+              errors: 
+                {password:
+                  { msg: "Contraseña incorrecta" }
+                },
+              oldData
+            });
+            
           }
-          res.redirect('/')
-
+        }else{
+          res.render('login', { errors: { password: {msg: 'Usuario o contraseña incorrectos' }}, oldData });
+          console.log(errors)
         }
-      }*/
+      })
     }
+    
   },
   userProfile: (req, res) => {
     User.findByPk(req.params.id)
@@ -90,6 +99,8 @@ const usersController = {
           name: req.body.userName,
           //password: req.body.userPassword === "" ? user.dataValues.password : bcrypt.hashSync(req.body.userPassword, 10),
           img_user: req.file ? req.file.filename : user.dataValues.img_user,
+        },{
+          where: {id: req.params.id}
         })
           .then((result) => {
             res.redirect("/users/profile/" + result.dataValues.id);
@@ -102,6 +113,19 @@ const usersController = {
         console.log(err);
       });
   },
+  logout(req, res) {
+    req.session.destroy();
+    res.clearCookie("userEmail")
+    res.redirect("/");
+  },
+  deleteUser: (req, res) => {
+    User.destroy({
+      where: {id: req.params.id}
+  }).then(()=>{
+    return res.send('Usuario eliminado correctamente');
+  }).catch(err =>{res.send(err)})
+  }
+    
 };
 
 module.exports = usersController;
