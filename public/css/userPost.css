@@ -56,7 +56,7 @@
 
 .postContainer .postButtons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -64,6 +64,7 @@
     font-size: 18px;
     color: #117B0F;
     cursor: pointer;
+    margin: 0 10px;
 }
 
 .postEdit {

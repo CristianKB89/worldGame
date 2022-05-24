@@ -4,7 +4,9 @@ const Publication = db.Publication;
 const comunityController = {
   getAllPost: (req, res) => {
     Publication.findAll().then((publicaciones) => {
-      res.render("community", { publicaciones });
+      let localUser = res.locals.user
+      console.log(localUser);
+      res.render("community", { publicaciones, localUser });
     });
   },
   createPost: (req, res) => {
