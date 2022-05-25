@@ -20,31 +20,35 @@
                 <section class="cartListContainer">
                     <h1>Carro de compras</h1>
                     <div class="cartList">
-                        <% games.forEach(game=> { %>
-                            <% if (cartID.includes(game.id)) { %>
+                        <% result.forEach(data=> { %>
                                 <article>
                                 <div>
-                                    <img src="/images/products/<%= game.img_card %> " alt="<%= game.title %>">
-                                    <h3><%= game.title %> </h3>
+                                    <img src="/images/products/<%= data.game.img_card %> " alt="<%= data.game.title %>">
+                                    <h3><%= data.game.title %> </h3>
                                 </div>
                                 <span>
-                                    <p>% <%= game.discount %></p>
-                                    <h4>$ <%= game.price.toFixed(3) %></h4>
+                                    <p>% <%= data.game.discount %></p>
+                                    <h4>$ <%= (data.game.price - (data.game.price * (data.game.discount / 100))).toFixed(3) %></h4>
                                 </span>
-                                <% let idToDelete =  cartID.filter%> 
-                                <form action="/shoppingCart/<%=game.id%>?_method=DELETE" method="post">
+                                <form action="/shoppingCart/<%=data.id%>?_method=DELETE" method="post">
                                     <button type="submit">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </form>
                                 </article>
-                            <% } %>
                         <% }) %>
                     </div>
                 </section>
                 <section class="cartPay">
                     <p>total:</p>
-                    <h3>$999999</h3>
+                    <% function total() {
+                        let num = 0
+                        result.forEach(data => {
+                            num += (data.game.price - (data.game.price * (data.game.discount / 100)))
+                        })
+                        return num
+                    } %> 
+                    <h3>$ <%= total() %> </h3>
                     <a href="">comprar</a>
                 </section>
             </main>
