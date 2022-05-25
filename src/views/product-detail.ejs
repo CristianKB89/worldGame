@@ -17,7 +17,7 @@
                             </div>
                             <div class="det-det-prd">
                                 <div class="det-det-prd-1">
-                                    <h1><%= %></h1>
+                                    <h1><%=game.title %></h1>
                                 </div>
                                 <div class="det-des">
                                     <span>
@@ -57,9 +57,11 @@
                                   </button>
                                 </div>
                                 <div class="det-but-grey">
-                                    <button class="det-but-1">
+                                   <form action="/shoppingCart/<%=game.id%>" method="post">
+                                    <button class="det-but-1" type="submit">
                                         COMPRAR
                                     </button>
+                                   </form>
                                     <button class="det-but-2">
                                         ● ● ●
                                     </button>

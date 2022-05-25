@@ -20,39 +20,26 @@
                 <section class="cartListContainer">
                     <h1>Carro de compras</h1>
                     <div class="cartList">
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
+                        <% games.forEach(game=> { %>
+                            <% if (cartID.includes(game.id)) { %>
+                                <article>
+                                <div>
+                                    <img src="/images/products/<%= game.img_card %> " alt="<%= game.title %>">
+                                    <h3><%= game.title %> </h3>
+                                </div>
+                                <span>
+                                    <p>% <%= game.discount %></p>
+                                    <h4>$ <%= game.price.toFixed(3) %></h4>
+                                </span>
+                                <% let idToDelete =  cartID.filter%> 
+                                <form action="/shoppingCart/<%=game.id%>?_method=DELETE" method="post">
+                                    <button type="submit">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </form>
+                                </article>
+                            <% } %>
+                        <% }) %>
                     </div>
                 </section>
                 <section class="cartPay">
