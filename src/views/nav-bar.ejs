@@ -17,7 +17,7 @@
     </div>
     <% if(locals.isLogged){ %>
     <a href="/products/create"><i class="fa-solid fa-plus"></i></a>
-    <a href=""><div class="cart-shopping">
+    <a href="/shoppingCart/<%= locals.user.id %>"><div class="cart-shopping">
         <i class="fa-solid fa-cart-shopping"></i>
     </div></a>
     <% } %>

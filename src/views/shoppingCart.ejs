@@ -4,8 +4,8 @@
 <%- include('partials/head', { title: "Carro de compra" }) %>
 <script src="/js/shoppingCart.js"></script>
 <script>
-    let resultArr = JSON.parse('<%=JSON.stringify(result)%>')
-    let user = '<%=localUserId%>'
+    let resultArr = JSON.parse(`<%-JSON.stringify(result)%>`);
+    let user = '<%=localUserId%>';
 </script>
     <body>
         <%- include('nav-bar') %>
