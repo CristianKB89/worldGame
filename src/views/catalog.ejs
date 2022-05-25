@@ -23,7 +23,7 @@
                     <section class="catalogFilters">
                         <h2>Filtros</h2>
                         <form action="/products" method="get">
-                            <a href="/products">Borrar Filtros</a>
+                            <a class="delete-filter" href="/products">Borrar Filtros</a>
                             <h5 id="h5platform"><i class="fa-solid fa-angle-right"></i> Jugar en</h5>
                             <div id="platform">
                                 <label for="xbox">
@@ -43,17 +43,34 @@
                             <h5 id="h5genre"><i class="fa-solid fa-angle-right"></i> Genero</h5>
                             <div id="genre">
                                 <label for="action">
-                                    <input type="radio" name="genre" id="action" />
-                                    Accion
+                                    <input type="radio" name="action" id="action" />
+                                    Accion y aventura
                                 </label>
-                                <label for="indie">
-                                    <input type="radio" name="genre" id="indie" />
-                                    Indie
+                                <label for="rol">
+                                    <input type="radio" name="rol" id="rol" />
+                                    Juegos de rol
+                                </label>
+                                <label for="fight">
+                                    <input type="radio" name="fight" id="fight" />
+                                    Lucha
                                 </label>
                                 <label for="shooter">
-                                    <input type="radio" name="genre" id="shooter" />
+                                    <input type="radio" name="shooter" id="shooter" />
                                     Shooter
                                 </label>
+                                <label for="sport">
+                                    <input type="radio" name="sport" id="sport" />
+                                    Deportes 
+                                </label>
+                                <label for="plataforma">
+                                    <input type="radio" name="platform" id="plataforma" />
+                                    Plataforma
+                                </label>
+                                <label for="survival">
+                                    <input type="radio" name="survival" id="survival" />
+                                    Survival horror
+                                </label>
+                                
                             </div>
 
 
