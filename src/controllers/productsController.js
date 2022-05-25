@@ -14,6 +14,42 @@ const productsController = {
             result.push(games[i]);
           }
         }
+      }else if(req.query.pc == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].pc == 1){
+            result.push(games[i]);
+          }
+        }
+      }else if(req.query.xbox == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].xbox == 1){
+            result.push(games[i]);
+          }
+        }
+      }else if(req.query.playstation == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].playstation == 1){
+            result.push(games[i]);
+          }
+        }
+      }else if(req.query.none == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].discount == 0){
+            result.push(games[i]);
+          }
+        }
+      }else if(req.query.less == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].discount < 50 && games[i].discount > 0){
+            result.push(games[i]);
+          }
+        }
+      }else if(req.query.none == 'on'){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].discount > 50){
+            result.push(games[i]);
+          }
+        }
       }else{
         result = games;
       }
