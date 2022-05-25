@@ -15,7 +15,7 @@ const shoppingCartController = {
           },
         ],
       })
-      .then(result => res.send(result))
+      .then(result => res.render('shoppingCart', {result}))
       .catch((err) => res.send(err));
   },
   addProduct: (req, res) => {
