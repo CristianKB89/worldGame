@@ -2,10 +2,13 @@
 <html lang="en">
 
 <%- include('partials/head', { title: "Carro de compra" }) %>
-
+<script src="/js/shoppingCart.js"></script>
+<script>
+    let resultArr = JSON.parse('<%=JSON.stringify(result)%>')
+    let user = '<%=localUserId%>'
+</script>
     <body>
         <%- include('nav-bar') %>
-
             <main class="cartContainer">
                 <% if (result.length != 0) { %>
                     <section class="cartListContainer">
@@ -37,10 +40,10 @@
                             result.forEach(data => {
                                 num += (data.game.price - (data.game.price * (data.game.discount / 100)))
                             })
-                            return num
+                            return num.toFixed(3)
                         } %> 
                         <h3>$ <%= total() %> </h3>
-                        <a href="">comprar</a>
+                        <a onclick="buyProducts(resultArr, user)">comprar</a>
                     </section>
                  
                 <% } else {%>

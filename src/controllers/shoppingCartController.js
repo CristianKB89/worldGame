@@ -4,18 +4,22 @@ const Games = db.Game;
 
 const shoppingCartController = {
   getProducts: (req, res) => {
+    let localUserId = res.locals.user.id;
     Shoppingcart.findAll({
-        where: {
-            user_id: req.params.id
+      where: {
+        user_id: req.params.id,
+      },
+      include: [
+        {
+          model: Games,
+          as: "game",
         },
-        include: [
-          {
-            model: Games,
-            as: "game",
-          },
-        ],
+      ],
+    })
+      .then((result) => {
+        console.log(result);
+        res.render("shoppingCart", { result, localUserId })
       })
-      .then(result => res.render('shoppingCart', {result}))
       .catch((err) => res.send(err));
   },
   addProduct: (req, res) => {
