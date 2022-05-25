@@ -7,50 +7,54 @@
         <%- include('nav-bar') %>
 
             <main class="cartContainer">
-                <section class="cartEmtpy">
-                    <div>
-                        <h3>
-                            Carro
-                        </h3>
-                        <a href="/products/">Continuar comprando</a>
-                    </div>
-                    <hr>
-                    <p>Tu carro está vacío.</p>
-                </section>
-                <section class="cartListContainer">
-                    <h1>Carro de compras</h1>
-                    <div class="cartList">
-                        <% result.forEach(data=> { %>
-                                <article>
-                                <div>
-                                    <img src="/images/products/<%= data.game.img_card %> " alt="<%= data.game.title %>">
-                                    <h3><%= data.game.title %> </h3>
-                                </div>
-                                <span>
-                                    <p>% <%= data.game.discount %></p>
-                                    <h4>$ <%= (data.game.price - (data.game.price * (data.game.discount / 100))).toFixed(3) %></h4>
-                                </span>
-                                <form action="/shoppingCart/<%=data.id%>?_method=DELETE" method="post">
-                                    <button type="submit">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                    </button>
-                                </form>
-                                </article>
-                        <% }) %>
-                    </div>
-                </section>
-                <section class="cartPay">
-                    <p>total:</p>
-                    <% function total() {
-                        let num = 0
-                        result.forEach(data => {
-                            num += (data.game.price - (data.game.price * (data.game.discount / 100)))
-                        })
-                        return num
-                    } %> 
-                    <h3>$ <%= total() %> </h3>
-                    <a href="">comprar</a>
-                </section>
+                <% if (result.length != 0) { %>
+                    <section class="cartListContainer">
+                        <h1>Carro de compras</h1>
+                        <div class="cartList">
+                            <% result.forEach(data=> { %>
+                                    <article>
+                                    <div>
+                                        <img src="/images/products/<%= data.game.img_card %> " alt="<%= data.game.title %>">
+                                        <h3><%= data.game.title %> </h3>
+                                    </div>
+                                    <span>
+                                        <p>% <%= data.game.discount %></p>
+                                        <h4>$ <%= (data.game.price - (data.game.price * (data.game.discount / 100))).toFixed(3) %></h4>
+                                    </span>
+                                    <form action="/shoppingCart/<%=data.id%>?_method=DELETE" method="post">
+                                        <button type="submit">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </form>
+                                    </article>
+                            <% }) %>
+                        </div>
+                    </section>
+                    <section class="cartPay">
+                        <p>total:</p>
+                        <% function total() {
+                            let num = 0
+                            result.forEach(data => {
+                                num += (data.game.price - (data.game.price * (data.game.discount / 100)))
+                            })
+                            return num
+                        } %> 
+                        <h3>$ <%= total() %> </h3>
+                        <a href="">comprar</a>
+                    </section>
+                 
+                <% } else {%>
+                    <section class="cartEmtpy">
+                        <div>
+                            <h3>
+                                Carro
+                            </h3>
+                            <a href="/products/">Continuar comprando</a>
+                        </div>
+                        <hr>
+                        <p>Tu carro está vacío.</p>
+                    </section>
+                <% }%>
             </main>
             <%- include('partials/footer') %>
     </body>
