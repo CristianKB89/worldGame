@@ -62,7 +62,7 @@ module.exports = (sequelize, dataTypes) => {
   const Game = sequelize.define(alias, cols, config);
 
   Game.associate = (models) => {
-    Game.belongsToMany(models.User, {
+    Game.belongsToMany(models.Shoppingcart, {
       as: "shopingcarts",
       through: "shoppingcart",
       foreignKey: "game_id",

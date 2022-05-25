@@ -74,9 +74,6 @@ const productsController = {
     })
     .catch((error) => console.log(error));
   },
-  shoppingCart: (req, res) => {
-    res.render("shoppingCart");
-  },
   createProduct: (req, res) => {
     res.render("product-create");
   },

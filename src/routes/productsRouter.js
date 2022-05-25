@@ -22,7 +22,6 @@ let productValidation = require('../middlewares/createProductValidator');
 
 router.get("/", productsController.getProducts);
 router.get("/productdetail/:id", productsController.productDetail);
-router.get("/shoppingCart", productsController.shoppingCart);
 //creación de producto
 router.get ("/create", productsController.createProduct);
 router.post("/create", upload.single("imgCard"), productValidation, productsController.createProductPost);
