@@ -2,6 +2,7 @@ const { validationResult } = require("express-validator");
 const db = require("../database/models");
 const Games = db.Game;
 const Genres = db.Genre;
+const Library = db.Library;
 
 const productsController = {
   getProducts: (req, res) => {
@@ -219,6 +220,16 @@ const productsController = {
       .then(() => res.redirect("/products"))
       .catch((error) => console.log(error));
   },
+  addToLibrary: (req, res) => {
+    Library.create(
+      {
+        user_id: req.body.user_id,
+        game_id: req.body.game_id
+      }
+    )
+    .then(() => res.redirect("/users/profile/" + res.locals.user.id))
+    .catch((error) => console.log(error));
+  }
 };
 
 module.exports = productsController;
