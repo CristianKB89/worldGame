@@ -5,8 +5,19 @@ const Genres = db.Genre;
 
 const productsController = {
   getProducts: (req, res) => {
+    
     Games.findAll().then((games) => {
-      res.render("catalog", { games });
+      let result = [];
+      if(req.query.searchCatalog){
+        for(let i = 0; i < games.length; i++){
+          if(games[i].title.toLowerCase().includes(req.query.searchCatalog.toLowerCase())){
+            result.push(games[i]);
+          }
+        }
+      }else{
+        result = games;
+      }
+      res.render("catalog", { games: result });
     });
   },
   productDetail: (req, res) => {

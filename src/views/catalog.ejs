@@ -8,7 +8,7 @@
             <main class="catalogContainer">
                 <section class="catalogTitle">
                     <h1>CATÁLOGO DE JUEGOS WORLD GAME</h1>
-                    <form action="" class="catalogSearch">
+                    <form action="/products" method="get" class="catalogSearch">
                         <label for="searchCatalog">Explora el catálogo completo.</label>
                         <div>
                             <input type="text" name="searchCatalog" id="searchCatalog"
@@ -22,7 +22,7 @@
                 <section class="calogListContainer">
                     <section class="catalogFilters">
                         <h2>Filtros</h2>
-                        <form>
+                        <form action="/products" method="get">
                             <button type="reset">Borrar Filtros</button>
                             <h5 id="h5platform"><i class="fa-solid fa-angle-right"></i> Jugar en</h5>
                             <div id="platform">
@@ -85,7 +85,7 @@
                         </div>
                         <div class="list">                            
                             <% games.forEach(game => {  %> 
-                                 <%- include('partials/cardGame', { ...game.dataValues }) %>
+                                 <%- include('partials/cardGame', { ...game.dataValues, games }) %>
                              <% }) %> 
                         
                         </div>
