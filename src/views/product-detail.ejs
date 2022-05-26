@@ -58,9 +58,13 @@
                                 </div>
                                 <div class="det-but-grey">
                                    <form action="/shoppingCart/<%=game.id%>" method="post">
-                                    <button class="det-but-1" type="submit">
-                                        COMPRAR
-                                    </button>
+                                    <% if (localUser) { %>
+                                        <button class="det-but-1" type="submit">
+                                            COMPRAR
+                                        </button>
+                                    <% } else { %>
+                                        <a href="/users/login">COMPRAR</a>
+                                    <% } %>
                                    </form>
                                     <button class="det-but-2">
                                         ● ● ●

@@ -121,11 +121,12 @@ const productsController = {
     });
 
     let genresRequest = Genres.findAll();
+    let localUser = res.locals.user
 
     Promise.all([gamesRequest, genresRequest])
 
     .then(([game, genres]) => {
-      res.render("product-detail", { game, genres });
+      res.render("product-detail", { game, genres, localUser });
     })
     .catch((error) => console.log(error));
   },

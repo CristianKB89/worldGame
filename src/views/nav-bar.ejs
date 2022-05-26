@@ -14,12 +14,16 @@
         </ul>
     </div>
     <% if(locals.isLogged){ %>
-    <a href="/products/create"><i class="fa-solid fa-plus"></i></a>
+    <!-- <a href="/products/create"><i class="fa-solid fa-plus"></i></a> -->
     <a href="/shoppingCart/<%= locals.user.id %>"><div class="cart-shopping">
         <i class="fa-solid fa-cart-shopping"></i>
     </div></a>
     <% } %>
-    <i class="fa-regular fa-user login-toggle-nav"></i>
+    <% if (locals.isLogged) { %>
+        <img src="/images/usersProfileImages/<%=locals.user.img_user%>" class="userImg login-toggle-nav" alt="<%=locals.user.name%>">
+    <% } else { %>
+        <i class="fa-regular fa-user login-toggle-nav"></i>
+    <% } %>
     <div id="login-nav" class="login-toggle">
         <ul>
             <% if(locals.isLogged){ %>
