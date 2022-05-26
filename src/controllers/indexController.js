@@ -16,7 +16,8 @@ const indexController = {
                 game7: games[numX()].dataValues,
                 game8: games[numX()].dataValues,
                 freeGame1: freeGames[0],
-                freeGame2: freeGames[1]
+                freeGame2: freeGames[1],
+                userLog: res.locals.user
             })
         })
     },

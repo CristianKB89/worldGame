@@ -26,9 +26,7 @@
                                 </label>
                                 <select name="game">
                                     <% games.forEach(game=> { %>
-                                        <option value="<%= game.id %>">
-                                            <%= game.title %>
-                                        </option>
+                                        <option value="<%= game.id %>"><%= game.title %></option>
                                         <% }) %>
                                 </select>
                                 <button type="submit">Publicar</button>
@@ -43,7 +41,7 @@
                         </section>
                         <section class="communityPromo">
                             <p>Encuantra aqui tu juego favorito, y comprate experiencias unicas.</p>
-                            <a href="">Encuentra lo mejor <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="/products">Encuentra lo mejor <i class="fa-solid fa-chevron-right"></i></a>
                         </section>
             </main>
             <%- include('partials/footer') %>
