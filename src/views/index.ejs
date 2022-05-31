@@ -22,25 +22,25 @@
             <li>
               <a href="/products">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                All games
+                Juegos
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/products?more=on">
                 <i class="fa-solid fa-percent"></i>
-                Save up
+                Ofertas
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#homeFreeGames">
                 <i class="fa-solid fa-gamepad"></i>
-                Free 2 play
+                Gratis
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="<%= userLog ? "/users/profile/" + userLog.id : "/users/signup" %>">
                 <i class="fa-solid fa-user"></i>
-                Login
+                <%= userLog ? "Perfil" : "Ingresar" %>
               </a>
             </li>
           </ul>
@@ -52,7 +52,7 @@
             <div class="AdTxt">
               <h3><%= game1.title %></h3>
               <p>Tu sigueinte favorito!</p>
-              <a href="#">Get it now ></a>
+              <a href="/products/productdetail/<%=game1.id%>">Get it now ></a>
             </div>
           </section>
           <div class="AdTwo">
@@ -62,7 +62,7 @@
               <div class="AdTxt">
                 <h3><%= game2.title %></h3>
                 <p>No lo puedes dejar pasar</p>
-                <a href="#">Get it now ></a>
+                <a href="/products/productdetail/<%=game2.id%>">Get it now ></a>
               </div>
             </section>
             <section class="Ad">
@@ -71,12 +71,12 @@
               <div class="AdTxt">
                 <h3><%= game3.title %></h3>
                 <p>Te encantara!</p>
-                <a href="#">Get it now ></a>
+                <a href="/products/productdetail/<%=game3.id%>">Get it now ></a>
               </div>
             </section>
           </div>
         </section>
-        <section class="homeFreeGames" style="background-image: url(/images/freeGameBG.jpg);">
+        <section class="homeFreeGames" id="homeFreeGames" style="background-image: url(/images/freeGameBG.jpg);">
           <h2>Free this week</h2>
           <section class="homeGame">
             <picture class="homeGameImg">
@@ -85,7 +85,7 @@
             <div class="homeGameTxt">
               <h3><%= freeGame1.title %></h3>
               <h4>Free this week!</h4>
-              <a href="#">Get it now ></a>
+              <a href="/products/productdetail/<%=freeGame1.id%>">Get it now ></a>
             </div>
           </section>
           <section class="homeGame">
@@ -95,7 +95,7 @@
             <div class="homeGameTxt">
               <h3><%= freeGame2.title %></h3>
               <h4>Free this week!</h4>
-              <a href="#">Get it now ></a>
+              <a href="/products/productdetail/<%=freeGame2.id%>">Get it now ></a>
             </div>
           </section>
         </section>

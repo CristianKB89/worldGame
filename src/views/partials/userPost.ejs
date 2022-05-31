@@ -2,6 +2,20 @@
     function showEdit(id) {
         document.getElementById(id).classList.toggle('editOn')
     }
+    window.onload = () => {
+        const e = document.querySelectorAll('option')
+        if (window.screen.width <= 768) {
+            e.forEach(x => {
+                if (x.textContent.length > 10)
+                    x.textContent = x.textContent.substring(0, 10) + '...';
+            })
+        } else {
+            e.forEach(x => {
+                if (x.textContent.length > 25)
+                    x.textContent = x.textContent.substring(0, 25) + '...';
+            })
+        }
+    }
 </script>
 <article class="postContainer">
     <div class="postUserInfo">
@@ -34,7 +48,7 @@
                         <% } %>
                             <div class="postButtons">
                                 <!-- <i class="far fa-heart"></i>
-        <i class="fa-regular fa-comment"></i> -->
+                                <i class="fa-regular fa-comment"></i> -->
                                 <% if (localUser && localUser.id==user_id) { %>
                                     <i class="fa-regular fa-pen-to-square editButton"
                                         onclick="showEdit('<%= id %>_edit')"></i>
@@ -56,9 +70,7 @@
                                         </label>
                                         <select name="game">
                                             <% games.forEach(game=> { %>
-                                                <option value="<%= game.id %>">
-                                                    <%= game.title %>
-                                                </option>
+                                                <option value="<%= game.id %>" <%=game.id==title ? 'selected' : null %>><%= game.title %></option>
                                                 <% }) %>
                                         </select>
                                         <button type="submit">Publicar</button>

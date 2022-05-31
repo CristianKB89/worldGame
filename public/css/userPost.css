@@ -109,7 +109,13 @@
     background-color: #f0f0f0;
     border: none;
     outline: none;
+    scrollbar-width: 0;
 } 
+
+.postEdit form select option {
+    font-size: 15px;
+    scrollbar-width: 0;
+}
 
 .postEdit form button {
     border: none;
