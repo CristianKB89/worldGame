@@ -33,16 +33,16 @@ const usersControllerApi = {
           publicationsRequest,
           libraryRequest,
         ])
-          .then(([user, posts, library]) => {
-            res.json({
-              user,
-              posts,
-              library,
-            });
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        .then(([user, posts, library]) => {
+        res.json({
+            user,
+            posts,
+            library,
+        });
+        })
+        .catch((err) => {
+        console.log(err);
+        });
       },
     updateUserProfile: (req, res) => {
     User.findByPk(req.params.id)
