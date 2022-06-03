@@ -15,8 +15,8 @@ const productsControllerApi = {
         },
       ],
     })
-        .then(games => res.send(games))
-        .catch(err => res.send(err));
+        .then(games => res.json(games))
+        .catch(err => res.json(err));
   },
   productDetail: (req, res) => {
     let gamesRequest = Games.findByPk(req.params.id, {
@@ -32,15 +32,15 @@ const productsControllerApi = {
     Promise.all([gamesRequest, genresRequest])
 
     .then(([game, genres]) => {
-      res.send({ game, genres });
+      res.json({ game, genres });
     })
-    .catch((error) => console.log(error));
+    .catch((error) => res.json(error));
   },
   createProductPost: (req, res) => {
     const result = validationResult(req);
 
     if (result.errors.length > 0) {
-      res.send({
+      res.json({
         errors: result.mapped(),
         oldData: req.body,
       });
@@ -58,10 +58,68 @@ const productsControllerApi = {
         playstation: req.body.play
       })
         .then((result) => {
-          res.send(result)
+          res.json(result)
         })
-        .catch((error) => console.log(error));
+        .catch((error) => res.json(error));
     }
+  },
+  edit: function (req, res) {
+    let gamesRequest = Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    });
+
+    let genresRequest = Genres.findAll();
+
+    Promise.all([gamesRequest, genresRequest])
+
+      .then(([game, genres]) => {
+        res.json({ game, genres });
+      })
+      .catch((error) => res.json(error));
+  },
+  update: function (req, res) {
+    Games.findByPk(req.params.id, {
+      include: [
+        {
+          association: "genre",
+        },
+      ],
+    }).then((result) => {
+      Games.update(
+        {
+          title: req.body.title,
+          description: req.body.description,
+          price: req.body.price,
+          discount: req.body.discount,
+          //img_card: req.file ? req.file.filename : result.dataValues.img_card,
+          rating_age: req.body.ratingAge,
+          genre_id: req.body.genre,
+          xbox: req.body.xbox,
+          pc: req.body.pc,
+          playstation: req.body.play,
+        },
+        {
+          where: {
+            id: result.dataValues.id,
+          },
+        }
+      )
+      .then((result) => res.json(result))
+      .catch((error) => res.json(error));
+    });
+  },
+  delete: function (req, res) {
+    Games.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+      .then((result) => res.json(result))
+      .catch((error) => res.json(error));
   }
 }
 

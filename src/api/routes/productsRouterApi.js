@@ -6,5 +6,8 @@ let productValidation = require('../../middlewares/createProductValidator');
 router.get('/', productsControllerApi.getProducts)
 router.get('/productdetail/:id', productsControllerApi.productDetail)
 router.post('/create', productValidation, productsControllerApi.createProductPost)
+router.get('/edit/:id', productsControllerApi.edit)
+router.put('/edit/:id', productsControllerApi.update)
+router.delete('/delete/:id', productsControllerApi.delete)
 
 module.exports = router;
