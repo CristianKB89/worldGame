@@ -11,6 +11,7 @@ var comunityRouter = require('./routes/comunityRouter');
 var shoppingCartRouter = require('./routes/shoppingCartRouter')
 var indexRouter = require('./routes/indexRouter');
 var productsRouterApi = require('./api/routes/productsRouterApi');
+var usersRouterApi = require('./api/routes/usersRouterApi');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/shoppingCart', shoppingCartRouter)
 
 //routes Api
 app.use('/api/products', productsRouterApi)
+app.use('/api/users', usersRouterApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
