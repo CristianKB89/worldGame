@@ -8,7 +8,10 @@ var session = require('express-session');
 var usersRouter = require('./routes/usersRouter');
 var productsRouter = require('./routes/productsRouter');
 var comunityRouter = require('./routes/comunityRouter');
+var shoppingCartRouter = require('./routes/shoppingCartRouter')
 var indexRouter = require('./routes/indexRouter');
+var productsRouterApi = require('./api/routes/productsRouterApi');
+var usersRouterApi = require('./api/routes/usersRouterApi');
 
 var app = express();
 
@@ -33,6 +36,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/community', comunityRouter);
+app.use('/shoppingCart', shoppingCartRouter)
+
+//routes Api
+app.use('/api/products', productsRouterApi)
+app.use('/api/users', usersRouterApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

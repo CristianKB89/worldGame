@@ -194,6 +194,16 @@
 #platform, #genre, #sale {
     display: none;
 }
+.delete-filter{
+    color: #107c10;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 15px 0 0 20px;
+    text-decoration: none;
+}
+.delete-filter:hover{
+    text-decoration: underline;
+}
 
 @media screen and (min-width: 768px) {
 

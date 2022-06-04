@@ -2,64 +2,62 @@
 <html lang="en">
 
 <%- include('partials/head', { title: "Carro de compra" }) %>
-
+<script src="/js/shoppingCart.js"></script>
+<script>
+    let resultArr = JSON.parse(`<%-JSON.stringify(result)%>`);
+    let user = '<%=localUserId%>';
+</script>
     <body>
         <%- include('nav-bar') %>
-
             <main class="cartContainer">
-                <section class="cartEmtpy">
-                    <div>
-                        <h3>
-                            Carro
-                        </h3>
-                        <a href="/products/">Continuar comprando</a>
-                    </div>
-                    <hr>
-                    <p>Tu carro está vacío.</p>
-                </section>
-                <section class="cartListContainer">
-                    <h1>Carro de compras</h1>
-                    <div class="cartList">
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
-                        <article>
-                            <div>
-                                <img src="/images/haloimgmuestra2.jpg" alt="">
-                                <h3>Halo infinite</h3>
-                            </div>
-                            <span>
-                                <p>0%</p>
-                                <h4>$900000</h4>
-                            </span>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </article>
-                    </div>
-                </section>
-                <section class="cartPay">
-                    <p>total:</p>
-                    <h3>$999999</h3>
-                    <a href="">comprar</a>
-                </section>
+                <% if (result.length != 0) { %>
+                    <section class="cartListContainer">
+                        <h1>Carro de compras</h1>
+                        <div class="cartList">
+                            <% result.forEach(data=> { %>
+                                    <article>
+                                    <div>
+                                        <img src="/images/products/<%= data.game.img_card %> " alt="<%= data.game.title %>">
+                                        <h3><%= data.game.title %> </h3>
+                                    </div>
+                                    <span>
+                                        <p>% <%= data.game.discount %></p>
+                                        <h4>$ <%= (data.game.price - (data.game.price * (data.game.discount / 100))).toFixed(3) %></h4>
+                                    </span>
+                                    <form action="/shoppingCart/<%=data.id%>?_method=DELETE" method="post">
+                                        <button type="submit">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </button>
+                                    </form>
+                                    </article>
+                            <% }) %>
+                        </div>
+                    </section>
+                    <section class="cartPay">
+                        <p>total:</p>
+                        <% function total() {
+                            let num = 0
+                            result.forEach(data => {
+                                num += (data.game.price - (data.game.price * (data.game.discount / 100)))
+                            })
+                            return num.toFixed(3)
+                        } %> 
+                        <h3>$ <%= total() %> </h3>
+                        <a onclick="buyProducts(resultArr, user)">comprar</a>
+                    </section>
+                 
+                <% } else {%>
+                    <section class="cartEmtpy">
+                        <div>
+                            <h3>
+                                Carro
+                            </h3>
+                            <a href="/products/">Continuar comprando</a>
+                        </div>
+                        <hr>
+                        <p>Tu carro está vacío.</p>
+                    </section>
+                <% }%>
             </main>
             <%- include('partials/footer') %>
     </body>

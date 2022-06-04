@@ -1,43 +1,80 @@
+<script>
+    function showEdit(id) {
+        document.getElementById(id).classList.toggle('editOn')
+    }
+    window.onload = () => {
+        const e = document.querySelectorAll('option')
+        if (window.screen.width <= 768) {
+            e.forEach(x => {
+                if (x.textContent.length > 10)
+                    x.textContent = x.textContent.substring(0, 10) + '...';
+            })
+        } else {
+            e.forEach(x => {
+                if (x.textContent.length > 25)
+                    x.textContent = x.textContent.substring(0, 25) + '...';
+            })
+        }
+    }
+</script>
 <article class="postContainer">
     <div class="postUserInfo">
-        <img src="/images/userImg.jpg" alt="">
-        <div>
-            <h2>Pepito Perez</h2>
-            <p>hace 2 horas</p>
-        </div>
+        <% users.map(user=> { %>
+            <% if (user.id===user_id) { %>
+                <img src="/images/usersProfileImages/<%= user.img_user %>" alt="">
+                <div>
+                    <h2>
+                        <%= user.nickName %>
+                    </h2>
+                    <p>
+                        <%= publicationTime(created_at) %>
+                    </p>
+                </div>
+                <% } %>
+                    <% }) %>
     </div>
-    <a href="#">Fornite</a>
-    <p><%=description%></p>
-    <% if (img !== "none") { %>
-        <img class="comunidad-game" src="/images/usersPostImages/<%= img %>" alt="">
-    <% } %>
-    <div class="postButtons">
-        <!-- <i class="far fa-heart"></i>
-        <i class="fa-regular fa-comment"></i> -->
-        <% if (localUser && localUser.id == user_id) { %>
-            <i class="fa-regular fa-pen-to-square editButton"></i>
-            <form action="/community/delete/<%=id%>?_method=DELETE" method="post">
-                <button type="submit" style="border: none;">
-                    <i class="fa-regular fa-trash-can"></i>
-                </button>
-            </form>
-        <% } %>
-    </div>
-    <section class="postEdit">
-        <form action="/community/edit/<%=id%>?_method=PUT" method="post" enctype="multipart/form-data">
-            <textarea name="description"><%=description%></textarea>
-            <div>
-                <label for="<%=id%>_img">
-                    <i class="fa-regular fa-image"></i>
-                    <input type="file" id="<%=id%>_img" name="imgEdit">
-                </label>
-                <select name="game">
-                    <option value="game">Game</option>
-                    <option value="game">Game</option>
-                    <option value="game">Game</option>
-                </select>
-                <button type="submit">Publicar</button>
-            </div>
-        </form>
-    </section>
+    <% games.forEach(game=> { %>
+        <% if (title==game.id) { %>
+            <a href="/products/productdetail/<%=game.id%>">
+                <%= game.title %>
+            </a>
+            <% } %>
+                <% }) %>
+                    <p>
+                        <%=description%>
+                    </p>
+                    <% if (img !=="none" ) { %>
+                        <img class="comunidad-game" src="/images/usersPostImages/<%= img %>" alt="">
+                        <% } %>
+                            <div class="postButtons">
+                                <!-- <i class="far fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i> -->
+                                <% if (localUser && localUser.id==user_id) { %>
+                                    <i class="fa-regular fa-pen-to-square editButton"
+                                        onclick="showEdit('<%= id %>_edit')"></i>
+                                    <form action="/community/delete/<%=id%>?_method=DELETE" method="post">
+                                        <button type="submit" style="border: none;">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </button>
+                                    </form>
+                                    <% } %>
+                            </div>
+                            <section class="postEdit" id="<%= id %>_edit">
+                                <form action="/community/edit/<%=id%>?_method=PUT" method="post"
+                                    enctype="multipart/form-data">
+                                    <textarea name="description"><%=description%></textarea>
+                                    <div>
+                                        <label for="<%=id%>_img">
+                                            <i class="fa-regular fa-image"></i>
+                                            <input type="file" id="<%=id%>_img" name="imgEdit">
+                                        </label>
+                                        <select name="game">
+                                            <% games.forEach(game=> { %>
+                                                <option value="<%= game.id %>" <%=game.id==title ? 'selected' : null %>><%= game.title %></option>
+                                                <% }) %>
+                                        </select>
+                                        <button type="submit">Publicar</button>
+                                    </div>
+                                </form>
+                            </section>
 </article>
