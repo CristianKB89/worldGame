@@ -31,6 +31,11 @@ app.use(methodOverride('_method'));
 app.use(session({secret: 'secret', resave:false,saveUninitialized:false}));
 app.use(menuIsLogged)
 
+// Cors 
+const cors = require('cors');
+app.use(cors())
+
+
 //routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
