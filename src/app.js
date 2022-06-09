@@ -46,13 +46,10 @@ app.use('/community', comunityRouter);
 app.use('/shoppingCart', shoppingCartRouter)
 
 //routes Api
-<<<<<<< HEAD
 app.use('/api/products', productsRouterApi)
 app.use('/api/users', usersRouterApi);
-=======
 app.use('/api/products', productsControllerApi)
 app.use('/api/community', comunityRouterApi)
->>>>>>> origin/dev_kevinCamacho
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
