@@ -2,7 +2,6 @@ const { validationResult } = require("express-validator");
 const db = require("../../database/models");
 const Games = db.Game;
 const Genres = db.Genre;
-const Library = db.Library;
 
 const productsControllerApi = {
     
@@ -119,6 +118,11 @@ const productsControllerApi = {
       },
     })
       .then((result) => res.json(result))
+      .catch((error) => res.json(error));
+  },
+  getGenres: (req, res) => {
+    Genres.findAll()
+      .then(result => res.json(result))
       .catch((error) => res.json(error));
   }
 }

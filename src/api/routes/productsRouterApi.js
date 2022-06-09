@@ -9,5 +9,6 @@ router.post('/create', productValidation, productsControllerApi.createProductPos
 router.get('/edit/:id', productsControllerApi.edit)
 router.put('/edit/:id', productsControllerApi.update)
 router.delete('/delete/:id', productsControllerApi.delete)
+router.get('/genres', productsControllerApi.getGenres)
 
 module.exports = router;
