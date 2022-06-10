@@ -1,23 +1,15 @@
 const db = require("../../database/models");
 const Publication = db.Publication;
-const User = db.User;
-const Games = db.Game;
 
 const comunityControllerApi = {
   getAllPostApi: (req, res) => {
-    const usersRequest = User.findAll();
-    const publicationsRequest = Publication.findAll();
-    const gamesRequest = Games.findAll();
-    Promise.all([usersRequest, publicationsRequest, gamesRequest]).then(
-      ([users, publicaciones, games]) => {
-        let reversePost = publicaciones.reverse();
-        res.json({
-          users,
-          reversePost,
-          games
-        });
-      }
-    );
+    Publication.findAll()
+      .then(
+        (publicaciones) => {
+          let reversePost = publicaciones.reverse();
+          res.json(reversePost);
+        }
+      );
   },
   updatePostApi: (req, res) => {
     console.log("req.file" + req.file);
