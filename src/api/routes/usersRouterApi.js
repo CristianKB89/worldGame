@@ -17,5 +17,6 @@ let upload = multer({storage});
 router.get('/', usersControllerApi.getUsers);
 router.get('/profile/:id', usersControllerApi.userProfile)
 router.put('/edit/:id', usersControllerApi.updateUserProfile)
+router.get('/library', usersControllerApi.getLibrary)
 
 module.exports = router;
