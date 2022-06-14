@@ -20,7 +20,7 @@
         <td>
             <ul>
                 <li>https://www.xbox.com/es-CO/?xr=mebarnav : .
-                <img src="https://es.m.wikipedia.org/wiki/Archivo:Xbox_one_logo.svg.png" alt="udemy" width="200"/></li>
+                <img src="https://es.m.wikipedia.org/wiki/Archivo:Xbox_one_logo.svg" alt="udemy" width="200"/></li>
                 <li>https://www.edx.org/es : Edx es un proveedor de cursos en línea masivos y abiertos. Muchas universidades y organizaciones top a nivel mundial ofrecen sus cursos en línea de alta calidad dirigido a cualquier persona que desee aprender. Cuenta con más de 3500 cursos, que tienen contetnido de texto y video, foros de discusión y evaluaciones. Si bien la mayoría de cursos se pueden acceder gratis con un costo opcional es posible acceder a tareas calificadas y obtener un certificado el cual varía de acuerdo al curso. Estos certificados sirven para mostrar habilidades y conocimientos adquiridos y ayudan para avanzar en la carreara profesional o académica.
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/EdX.svg/2560px-EdX.svg.png" alt="edx" width="200"/></li>
                 <li>https://itoo.dev/ : Esta plataforma educativa fue creada con el objetivo de brindad cursos en línea de primera mano a buen precio con el mismo soporte de los instructores, permite ver los videos en Full HD con un excelente renderizado, se puede obtener un certificado de finalización, y existe una garantía de reembolso. Dado que los cursos son originales la mayoría ofrecen solución a preguntas que son resueltas directamente por el creador de contenido. Esta plataforma es muy conocida por haber sido desarrollada y ofrecida por hispano hablantes. 
