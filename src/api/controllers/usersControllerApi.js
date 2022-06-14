@@ -12,6 +12,13 @@ const usersControllerApi = {
           res.json(users);
         });
     },
+    getLibrary: (req, res) => {
+       Library.findAll()
+        .then(library => {
+          res.json(library);
+        })
+
+    },
     userProfile: (req, res) => {
         let userRequest = User.findByPk(req.params.id);
         let publicationsRequest = Publication.findAll({
