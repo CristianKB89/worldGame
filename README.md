@@ -39,8 +39,8 @@
 |:-------------|:-------------|
 |Kevin Camacho| Ingeniero en Energía de la Universidad Autónoma de Bucaramanga, estudiante de Desarrollo Web Full Stack, amante del ultimate freesbe, del deporte y de los videojuegos.|
 |Jimmy Pulido | Lorem ipsum|
-|Cristian Castro | Lorem ipsum| 
-|Kevin Marin | Lorem ipsum| 
+|Cristian Castro     | Lorem ipsum| 
+|Kevin Marin     | Lorem ipsum| 
 
 <table>
     <tr>
