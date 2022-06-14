@@ -9,7 +9,7 @@
     </tr>
     <tr>
         <td>3. Tablero Trello</td>
-        <td>https://trello.com/b/PYRa8aCE/proyecto-integrador</td>
+        <td>https://trello.com/b/08hJ9eBK/worldgames</td>
     </tr>
     
 </table>
