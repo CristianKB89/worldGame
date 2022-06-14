@@ -19,8 +19,9 @@
         <td>4. Referentes </td>
         <td>
             <ul>
-                <li>https://www.xbox.com/es-CO/?xr=mebarnav : hola
-                <img src="https://es.m.wikipedia.org/wiki/Archivo:Xbox_one_logo.svg" alt="udemy" width="200"/></li>
+                <li>https://www.xbox.com/es-CO/?xr=mebarnav : hola!
+
+                <img src="https://user-images.githubusercontent.com/97989061/173708558-465df9de-7ac6-46a0-9b0a-abde9779ceda.png" alt="udemy" width="200"/></li>
                 <li>https://www.facebook.com/ :
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/EdX.svg/2560px-EdX.svg.png" alt="edx" width="200"/></li>
                 <li>https://www.riotgames.com/en :  
