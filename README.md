@@ -19,7 +19,8 @@
         <td>4. Referentes </td>
         <td>
             <ul>
-                <li>https://www.xbox.com/es-CO/?xr=mebarnav : hola!
+                <li>https://www.xbox.com/es-CO/?xr=mebarnav : hola!![Xbox_one_logo svg](https://user-images.githubusercontent.com/97989061/173708690-7a1c6c10-4b24-4382-a867-fdd701dde76b.png)
+
 
                 <img src="https://user-images.githubusercontent.com/97989061/173708558-465df9de-7ac6-46a0-9b0a-abde9779ceda.png" alt="udemy" width="200"/></li>
                 <li>https://www.facebook.com/ :
