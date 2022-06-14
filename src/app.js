@@ -10,6 +10,10 @@ var productsRouter = require('./routes/productsRouter');
 var comunityRouter = require('./routes/comunityRouter');
 var shoppingCartRouter = require('./routes/shoppingCartRouter')
 var indexRouter = require('./routes/indexRouter');
+var productsRouterApi = require('./api/routes/productsRouterApi');
+var usersRouterApi = require('./api/routes/usersRouterApi');
+var productsControllerApi = require('./api/routes/productsRouterApi');
+var comunityRouterApi = require('./api/routes/comunityRouterApi')
 
 var app = express();
 
@@ -29,12 +33,23 @@ app.use(methodOverride('_method'));
 app.use(session({secret: 'secret', resave:false,saveUninitialized:false}));
 app.use(menuIsLogged)
 
+// Cors 
+const cors = require('cors');
+app.use(cors())
+
+
 //routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/community', comunityRouter);
 app.use('/shoppingCart', shoppingCartRouter)
+
+//routes Api
+app.use('/api/products', productsRouterApi)
+app.use('/api/users', usersRouterApi);
+app.use('/api/products', productsControllerApi)
+app.use('/api/community', comunityRouterApi)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
