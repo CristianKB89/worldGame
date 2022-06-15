@@ -19,19 +19,11 @@
         <td>4. Referentes </td>
         <td>
             <ul>
-                <li>https://www.xbox.com/es-CO/?xr=mebarnav : hola!![Xbox_one_logo svg](https://user-images.githubusercontent.com/97989061/173708690-7a1c6c10-4b24-4382-a867-fdd701dde76b.png)
-
-
-                <img src="https://user-images.githubusercontent.com/97989061/173708558-465df9de-7ac6-46a0-9b0a-abde9779ceda.png" alt="udemy" width="200"/></li>
-                <li>https://www.facebook.com/ :
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/EdX.svg/2560px-EdX.svg.png" alt="edx" width="200"/></li>
-                <li>https://www.riotgames.com/en :  
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Dc7WYb2Z9E5Lw4ugqTdOJY3XcQUT6MwvlXvFp3dSR7WamgMt2GVJGlLNnLsD6ujz_jc&usqp=CAU" 
-                alt="itoo" width="200"/></li>
-                <li>https://store.steampowered.com/?l=spanish :
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZO26LnhrL02bFeEkaF6RX7ioRRbDWdG8cQYl2zXsHDkSv-JxnIcMS1Id2kVVnCOheqg&usqp=CAU" alt="amazon" width="200"/></li>
-                <li>https://www.epicgames.com/site/es-ES/home : hola
-                <img src="https://es.m.wikipedia.org/wiki/Archivo:Xbox_one_logo.svg" alt="udemy" width="200"/></li>
+                <li>https://www.xbox.com/es-CO/?xr=mebarnav : Es una plataforma interactiva que permite la compra de videojuegos de interés, su visualización, detalle y referencias.</li>
+                <li>https://www.facebook.com/ :Red social dónde se comparten publicaciones de todo tipo que pueden llegar a incluir imágenes, textos, y reacciones.</li>
+                <li>https://www.riotgames.com/en : Plataforma para descargar de videojuegos, con formulario de registro y login de interés usados como referencia en el proyecto.</li>
+                <li>https://store.steampowered.com/?l=spanish : Plataforma de compra de videojuegos con posibilidad de tener una biblioteca en el dispositivo con el fin de poder instalar el juego que se quiera en el momento.</li>
+                <li>https://www.epicgames.com/site/es-ES/home : Plataforma de compra de videojuegos con aspecto visual referencia para las bibliotecas de juegos.</li>
             </ul>            
         </td>
     </tr>  
@@ -47,6 +39,6 @@
 <table>
     <tr>
         <td>5. Productos y/o servicios ofrecidos</td>
-        <td>Paquetes de cursos,con material en texto plano, y contenido audiovisual extra, para aprendizaje asincrónico.</td>
+        <td>Videojuegos de todos los generos y plataformas, además de una sección tipo foro dónde se pueden compartir publicaciones, de todo tipo, referentes a los videojuegos y las experiencias que estos nos pueden ofrecer.</td>
     </tr>
 </table>
