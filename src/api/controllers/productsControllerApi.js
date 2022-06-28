@@ -48,16 +48,14 @@ const productsControllerApi = {
         description: req.body.description,
         price: req.body.price,
         discount: req.body.discount,
-        // img_card: req.file ? req.file.filename : "default.jpg",
+        img_card: "default.jpg",
         rating_age: req.body.ratingAge,
         genre_id: req.body.genre,
         xbox: req.body.xbox,
         pc: req.body.pc,
         playstation: req.body.play,
       })
-        .then((result) => {
-          res.json(result);
-        })
+        .then((result) => res.json(result))
         .catch((error) => res.json(error));
     }
   },
