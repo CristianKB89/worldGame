@@ -32,7 +32,7 @@
 |Estudiante| Descripción|
 |:-------------|:-------------|
 |Kevin Camacho| Ingeniero en Energía de la Universidad Autónoma de Bucaramanga, estudiante de Desarrollo Web Full Stack, amante del ultimate freesbe, del deporte y de los videojuegos.|
-|Jimmy Pulido | Lorem ipsum|
+|Jimmy Pulido | Desarrollador fullStack, Go developer |
 |Cristian Castro| Lorem ipsum| 
 |Kevin Marin|Músico de la Universidad Central de Bogotá. Estudiante de Desarrollo Web. Tengo 25 años y soy de la ciudad de Bogotá. Me gustan las matemáticas, el deporte y las series.| 
 
