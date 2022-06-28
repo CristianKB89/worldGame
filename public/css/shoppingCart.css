@@ -130,6 +130,7 @@
 
 .cartContainer .cartPay a {
     color: #107c10;
+    cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;

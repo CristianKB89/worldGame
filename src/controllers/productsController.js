@@ -54,7 +54,7 @@ const productsController = {
             result.push(games[i]);
           }
         }
-      }else if(req.query.none == 'on'){
+      }else if(req.query.more == 'on'){
         for(let i = 0; i < games.length; i++){
           if(games[i].discount > 50){
             result.push(games[i]);

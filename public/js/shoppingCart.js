@@ -1,9 +1,6 @@
 function buyProducts(arr, userID) {
-  console.log(arr);
-  console.log(userID);
-
   arr.forEach((data) => {
-    fetch("http://localhost:3000/products/addToLibrary/" + userID, {
+    fetch("http://localhost:3030/products/addToLibrary/" + userID, {
       method: "post",
       headers: {
         "Access-Control-Allow-Origin": "*",
@@ -15,7 +12,7 @@ function buyProducts(arr, userID) {
       }),
     })
       .then((res) => {
-        fetch("http://localhost:3000/shoppingCart/" + data.id, {
+        fetch("http://localhost:3030/shoppingCart/" + data.id, {
           method: "delete",
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -25,7 +22,7 @@ function buyProducts(arr, userID) {
             id: data.id,
           }),
         });
-        window.location.href = "http://localhost:3000/users/profile/" + userID;
+        window.location.href = "http://localhost:3030/users/profile/" + userID;
       })
       .catch((err) => console.log(err));
   });

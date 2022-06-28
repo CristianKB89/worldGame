@@ -20,27 +20,30 @@
 
     <form class="signup-form" action="/users/signup" method="POST" enctype="multipart/form-data">
         <h2>Registrarse</h2>
+        <p class="message"></p>
         <label for="userName"> 
-            <input type="text" name="userName" id="userName" placeholder="Username" value="<%= locals.oldData?oldData.userName:null %>">
+            <input class="input-user" type="text" name="userName" id="userName" placeholder="Username" value="<%= locals.oldData?oldData.userName:null %>">
             <% showError('userName') %>
         </label>
         <label for="userNickname">
-            <input type="text" name="userNickname" id="userNickname" placeholder="Nickname" value="<%= locals.oldData?oldData.userNickname:null %>">
+            <input class="input-nick" type="text" name="userNickname" id="userNickname" placeholder="Nickname" value="<%= locals.oldData?oldData.userNickname:null %>">
+            
             <% showError('userNickname') %>
         </label>
         <label for="userEmail">
-            <input type="userEmail" name="userEmail" id="userEmail" placeholder="Email"value="<%= locals.oldData?oldData.userEmail:null %>">
+            <input class="input-email" type="userEmail" name="userEmail" id="userEmail" placeholder="Email"value="<%= locals.oldData?oldData.userEmail:null %>">
             <% showError('userEmail') %>
         </label>
         <label for="userPassword">
-            <input type="password" name="userPassword" id="userPassword" placeholder="Password"value="<%= locals.oldData?oldData.userPassword:null %>">
+            <input class="input-password" type="password" name="userPassword" id="userPassword" placeholder="Password"value="<%= locals.oldData?oldData.userPassword:null %>">
             <% showError('userPassword') %>
         </label>
         <label class="form-img" for="userProfileImage">
-            <input type="file" name="userProfileImage" id="userImg" placeholder="Image">
+            <input class="input-image" type="file" name="userProfileImage" id="userImg" placeholder="Image" accept="image/*">
         </label>
         <button type="submit">Registrarse</button>
         <p>¿Ya tienes cuenta? <a href="/users/login">Inicia sesión</a></p>
     </form>
+    <script src="/js/signup.js"></script>
 </body>
 </html>

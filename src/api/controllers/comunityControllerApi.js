@@ -24,7 +24,7 @@ const comunityControllerApi = {
         Publication.update(
           {
             description: req.body.description,
-            img: "publicationInfraction",
+            img: "publicationInfraction.jpg",
           },
           {
             where: {

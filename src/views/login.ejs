@@ -8,15 +8,16 @@
 
     <form class="signup-form" action="/users/login" method="POST">
         <h2>Login</h2>
+        <p class="message"></p>
         <label for="email">
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input class="input-email" type="email" name="email" id="email" placeholder="Email">
             <% if(locals.errors && errors.email) {%>
                 <p><%=errors.email.msg%></p>
             <%}%>
             
         </label>
         <label for="password">
-            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input class="input-password" type="password" name="password" id="password" placeholder="Contraseña">
             <% if(locals.errors && errors.password) {%>
                 <p><%=errors.password.msg%></p>
             <%}%>
@@ -29,5 +30,6 @@
         <button type="submit">Ingresar</button>
         <p>¿No tienes cuenta? <a href="/users/signup">Registrarse</a></p>
     </form>
+    <script src="/js/login.js"></script>
 </body>
 </html>
