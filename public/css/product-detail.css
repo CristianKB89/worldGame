@@ -1,27 +1,29 @@
-body{
+body {
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.det-main{
+
+.det-main {
     background-color: #2f2f2f;
     color: white;
     width: 100%;
 }
-.det-container{
+
+.det-container {
     display: flex;
     flex-direction: column;
 }
 
-.det-header{
+.det-header {
     position: relative;
     display: inline-block;
     width: 100%;
     padding: 0 1rem 1rem 1rem;
 }
 
-.det-overlay{
+.det-overlay {
     background-color: #000000a3;
     background: #333232a3;
     backdrop-filter: blur(16px);
@@ -32,7 +34,7 @@ body{
     top: 0;
 }
 
-.det-back-img{
+.det-back-img {
     bottom: 0;
     left: 0;
     overflow: hidden;
@@ -41,11 +43,11 @@ body{
     top: 0;
 }
 
-.det-back-img img{
+.det-back-img img {
     width: 100%;
 }
 
-.det-content{
+.det-content {
     margin-bottom: 0;
     margin-top: 1rem;
     display: flex;
@@ -53,65 +55,64 @@ body{
     align-items: center;
 }
 
-.det-img-prd{
+.det-img-prd {
     height: 100%;
     margin-inline-end: 1rem;
 }
 
-.det-img-prd img{
-    width: 100px;
-    height: 120px;
+.det-img-prd img {
+    max-width: 100px;
 }
 
-.det-det-prd{
+.det-det-prd {
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
 }
 
-.det-det-prd-1{
+.det-det-prd-1 {
     display: flex;
 }
 
-.det-det-prd-1 h1{
+.det-det-prd-1 h1 {
     font-size: 1.5rem;
     line-height: 1.75rem;
     font-weight: unset;
     margin-bottom: 0.5rem;
 }
 
-.det-des{
+.det-des {
     font-size: 0.875rem;
     line-height: 1.5rem;
     opacity: 0.65;
 }
 
-.det-price{
+.det-price {
     font-size: 1.25rem;
     line-height: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.det-cont-1{
+.det-cont-1 {
     display: block;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
     position: inherit;
 }
 
-.det-cont-1_1{
+.det-cont-1_1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.det-row-1{
+.det-row-1 {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.det-acce{
+.det-acce {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -120,11 +121,11 @@ body{
     margin-top: 1rem;
 }
 
-.det-acce i{
+.det-acce i {
     vertical-align: top;
 }
 
-.det-i-acc{
+.det-i-acc {
     background-color: #3a5b99;
     border-radius: 0.3125rem;
     fill: #fff;
@@ -134,7 +135,7 @@ body{
     width: 1.5rem;
 }
 
-.det-i-idioms{
+.det-i-idioms {
     background-color: #505050;
     border-radius: 0.3125rem;
     fill: #fff;
@@ -144,7 +145,7 @@ body{
     width: 1.5rem;
 }
 
-.det-buttons button{
+.det-buttons button {
     border: 0px;
     margin: 5px;
     background: none;
@@ -153,33 +154,34 @@ body{
     border-radius: 50px;
 }
 
-.det-but-green button{
+.det-but-green button {
     width: 100%;
     background-color: #008746;
     align-items: center;
     justify-content: center;
 }
 
-.det-but-grey{
+.det-but-grey {
     margin: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.det-but-grey button{
+.det-but-grey button {
     background-color: #008746;
 }
 
-.det-but-game{
+.det-but-game {
     cursor: pointer;
 }
 
-.det-but-1{
+.det-but-1 {
     width: 85%;
     cursor: pointer;
 }
-.det-but-2{
+
+.det-but-2 {
     border-radius: 50%;
     display: inline-block;
     font-size: .5rem;
@@ -191,7 +193,8 @@ body{
     width: 2.5rem;
     cursor: pointer;
 }
-.det-but-123{
+
+.det-but-123 {
     text-decoration: none;
     color: #fff;
     background-color: #008746;
@@ -199,20 +202,20 @@ body{
     border-radius: 15px;
 }
 
-.det-cat{
-   background-color: #151517; 
-   padding-top: 1rem;
-   margin-bottom: 1rem;
-   display: flex;
-   padding-bottom: 1rem;
+.det-cat {
+    background-color: #151517;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    padding-bottom: 1rem;
 }
 
-.det-cat-content{
+.det-cat-content {
     display: flex;
     flex-wrap: nowrap;
 }
 
-.det-cat-content img{
+.det-cat-content img {
     display: flex;
     top: unset;
     left: unset;
@@ -223,7 +226,7 @@ body{
     padding: 0 0 0 10px;
 }
 
-.det-cat-content h1{
+.det-cat-content h1 {
     font-size: 1rem;
     line-height: 1.75rem;
     font-weight: unset;
@@ -231,7 +234,21 @@ body{
     margin: 0%;
 }
 
-.det-cat-content span{
+.det-cat-content span {
     color: ffffffa6;
 }
 
+@media screen and (min-width: 768px) {
+    
+    .det-det-prd-1 h1 {
+        font-size: 2rem;
+        line-height: 1.75rem;
+        font-weight: unset;
+        margin-bottom: 0.5rem;
+    }
+
+    .det-img-prd img {
+        max-width: 350px;
+    }
+
+}
