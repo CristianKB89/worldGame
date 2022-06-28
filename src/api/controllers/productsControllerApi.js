@@ -91,7 +91,6 @@ const productsControllerApi = {
           description: req.body.description,
           price: req.body.price,
           discount: req.body.discount,
-          //img_card: req.file ? req.file.filename : result.dataValues.img_card,
           rating_age: req.body.ratingAge,
           genre_id: req.body.genre,
           xbox: req.body.xbox,
