@@ -82,7 +82,6 @@ const usersController = {
             errors: { password: { msg: "Usuario o contraseña incorrectos" } },
             oldData,
           });
-          console.log(errors);
         }
       });
     }
