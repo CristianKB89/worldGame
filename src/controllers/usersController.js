@@ -190,7 +190,9 @@ const usersController = {
       where: { id: req.params.id },
     })
       .then(() => {
-        return res.send("Usuario eliminado correctamente");
+        req.session.destroy();
+        res.redirect("/");
+        // res.send("Usuario eliminado correctamente");
       })
       .catch((err) => {
         res.send(err);

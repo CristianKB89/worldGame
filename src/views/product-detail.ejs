@@ -8,12 +8,12 @@
                 <div class="det-container">
                     <div class="det-header">
                         <div class="det-back-img">
-                            <img src="/images/img_product_1.jpg" alt="">
+                            <img src="/images/products/<%=game.img_card%>" alt="">
                         </div>
                         <div class="det-overlay"></div>
                         <div class="det-content">
                             <div class="det-img-prd">
-                                <img src="/images/img_product_2.jpg" alt="">
+                                <img src="/images/products/<%=game.img_card%>" alt="">
                             </div>
                             <div class="det-det-prd">
                                 <div class="det-det-prd-1">
@@ -21,11 +21,12 @@
                                 </div>
                                 <div class="det-des">
                                     <span>
-                                        Humble Games • Acción y aventura • Puzles y curiosidades
+                                        <% let genre = genres.find(findGenre => findGenre.id == game.genre_id)%>
+                                            <%= genre.title%>
                                     </span>
                                 </div>
                                 <div class="det-price">
-                                    <span>COP$80.000</span>
+                                    <span>COP $<%=game.price%></span>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +52,7 @@
                                 </div>
                             </div>
                             <div class="det-buttons">
-                                <div class="det-but-green">
-                                  <button class="det-but-game">
-                                      OBTENER GAME PASS
-                                  </button>
-                                </div>
+                                
                                 <div class="det-but-grey">
                                    <form action="/shoppingCart/<%=game.id%>" method="post">
                                     <% if (localUser) { %>
@@ -63,12 +60,9 @@
                                             COMPRAR
                                         </button>
                                     <% } else { %>
-                                        <a href="/users/login">COMPRAR</a>
+                                        <a class="det-but-123" href="/users/login">COMPRAR</a>
                                     <% } %>
                                    </form>
-                                    <button class="det-but-2">
-                                        ● ● ●
-                                    </button>
                                 </div>  
                           </div>
                         </div>
@@ -83,18 +77,6 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h1>Galeria</h1>
-                    </div>
-                    <div>
-                        <h1>Detalles</h1>
-                    </div>
-                    <div>
-                        <h1>Plataformas</h1>
-                    </div>
-                    <div>
-                        <h1>Funcionalidades</h1>
                     </div>
                 </div>
             </main>

@@ -161,13 +161,14 @@ body{
 }
 
 .det-but-grey{
+    margin: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .det-but-grey button{
-    background-color: #484e58;
+    background-color: #008746;
 }
 
 .det-but-game{
@@ -189,6 +190,13 @@ body{
     white-space: nowrap;
     width: 2.5rem;
     cursor: pointer;
+}
+.det-but-123{
+    text-decoration: none;
+    color: #fff;
+    background-color: #008746;
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
 .det-cat{
