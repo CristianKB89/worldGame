@@ -154,7 +154,8 @@ const usersController = {
     // res.render('userProfile');
   },
   updateUserProfile: (req, res) => {
-    User.findByPk(req.params.id)
+    const userId = req.params.id
+    User.findByPk(userId)
       .then((user) => {
         User.update(
           {
@@ -169,7 +170,7 @@ const usersController = {
           }
         )
           .then((result) => {
-            res.redirect("/users/profile/" + result.dataValues.id);
+           res.redirect("/users/profile/" + userId);
           })
           .catch((err) => {
             res.send(err);
