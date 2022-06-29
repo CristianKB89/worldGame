@@ -6,6 +6,7 @@ const indexController = {
         .then(games => {
             const numX = () => Math.floor(Math.random() * games.length)
             const freeGames = games.filter(i => i.dataValues.discount === 100)
+            console.log(res.locals.user)
             res.render('index', {
                 game1: games[numX()].dataValues,
                 game2: games[numX()].dataValues,
@@ -20,18 +21,6 @@ const indexController = {
                 userLog: res.locals.user
             })
         })
-    },
-    /* search: (req, res) =>{
-        Games.findAll()
-        .then(games =>{
-            let searchedProduct = req.query.keywords.toLowerCase();
-            let obtainedProduct = games.filter((specificProduct) => specificProduct.productName.toLowerCase().includes(searchedProduct));
-            res.render('results', {obtainedProduct});
-        })
-        .catch(error => console.log(error));
-    }, */
-    comunidad: (req, res) =>{
-        res.render('community')
     }
 }
 module.exports = indexController;

@@ -8,14 +8,15 @@
     <%- include('nav-bar') %>
     <form class="signup-form" action="/products/create" method="POST" enctype="multipart/form-data">
         <h2 class="form-create-product">Agregar Juego</h2>
+        <p class="message"></p>
         <label for="title">
-            <input type="text" name="title" id="title" placeholder="Título del juego">
+            <input class="input-title" type="text" name="title" id="title" placeholder="Título del juego">
             <% if (locals.errors && errors.title){%>
                 <span class="error"><%= errors.title.msg %></span>
             <%}%>
         </label>
         <label for="description">
-            <textarea placeholder="Descripción" name="description" id="description" cols="38" rows="5"></textarea>
+            <textarea class="input-description" placeholder="Descripción" name="description" id="description" cols="38" rows="5"></textarea>
             <% if (locals.errors && errors.description){%>
                 <span class="error"><%= errors.description.msg %></span>
             <%}%>
@@ -66,5 +67,6 @@
         <%}%>
         <button type="submit">Agregar</button>
     </form>
+    <script src="/js/createProduct.js"></script>
 </body>
 </html>
